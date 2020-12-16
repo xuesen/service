@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.System" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Attribute" table="S_ATTRIBUTE" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="AttributeName">
+      <column name="ATTRIBUTE_NAME" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="AttributeCode">
+      <column name="ATTRIBUTE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Type">
+      <column name="TYPE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Elements">
+      <column name="ELEMENTS" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Sequence">
+      <column name="SEQUENCE" sql-type="int" not-null="true" />
+    </property>
+    <property name="MustInput">
+      <column name="MUSTINPUT" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="RuleSet">
+      <column name="RULESET" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Description">
+      <column name="DESCRIPTION" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Editable">
+      <column name="EDITABLE" sql-type="int" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

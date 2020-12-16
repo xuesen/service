@@ -1,0 +1,367 @@
+09:12:03.174 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+09:12:03.176 +08:00 [ERROR] [21] [NHibernate.Event.Default.AbstractFlushingEventListener] Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not execute batch command.[SQL: SQL not available]
+ ---> System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:8267030e-9f67-4a60-99e2-f366767cac1f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at IIMes.Infrastructure.Hibernate.Data.Transaction.Commit() in D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\Data\Transaction.cs:line 14
+   at IIMes.Infrastructure.Aspect.TransactionalAttribute.Invoke(AspectContext context, AspectDelegate next) in D:\LeanMES\CODE\service\IIMes.Infrastructure\Aspect\TransactionalAttribute.cs:line 19
+09:13:11.580 +08:00 [ERROR] [24] [NHibernate.Util.ADOExceptionReporter] The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+09:13:11.581 +08:00 [ERROR] [24] [NHibernate.Event.Default.AbstractFlushingEventListener] Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not execute batch command.[SQL: SQL not available]
+ ---> System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:8267030e-9f67-4a60-99e2-f366767cac1f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at IIMes.Infrastructure.Hibernate.Data.Transaction.Commit() in D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\Data\Transaction.cs:line 14
+   at IIMes.Infrastructure.Aspect.TransactionalAttribute.Invoke(AspectContext context, AspectDelegate next) in D:\LeanMES\CODE\service\IIMes.Infrastructure\Aspect\TransactionalAttribute.cs:line 19
+09:14:05.936 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+09:14:05.937 +08:00 [ERROR] [5] [NHibernate.Event.Default.AbstractFlushingEventListener] Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not execute batch command.[SQL: SQL not available]
+ ---> System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:8267030e-9f67-4a60-99e2-f366767cac1f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at IIMes.Infrastructure.Hibernate.Data.Transaction.Commit() in D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\Data\Transaction.cs:line 14
+   at IIMes.Infrastructure.Aspect.TransactionalAttribute.Invoke(AspectContext context, AspectDelegate next) in D:\LeanMES\CODE\service\IIMes.Infrastructure\Aspect\TransactionalAttribute.cs:line 19
+09:16:21.066 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+09:16:21.067 +08:00 [ERROR] [21] [NHibernate.Event.Default.AbstractFlushingEventListener] Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not execute batch command.[SQL: SQL not available]
+ ---> System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:8267030e-9f67-4a60-99e2-f366767cac1f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at IIMes.Infrastructure.Hibernate.Data.Transaction.Commit() in D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\Data\Transaction.cs:line 14
+   at IIMes.Infrastructure.Aspect.TransactionalAttribute.Invoke(AspectContext context, AspectDelegate next) in D:\LeanMES\CODE\service\IIMes.Infrastructure\Aspect\TransactionalAttribute.cs:line 19
+09:21:27.012 +08:00 [ERROR] [6] [NHibernate.Util.ADOExceptionReporter] The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+09:21:27.012 +08:00 [ERROR] [6] [NHibernate.Event.Default.AbstractFlushingEventListener] Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not execute batch command.[SQL: SQL not available]
+ ---> System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:8267030e-9f67-4a60-99e2-f366767cac1f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at IIMes.Infrastructure.Hibernate.Data.Transaction.Commit() in D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\Data\Transaction.cs:line 14
+   at IIMes.Infrastructure.Aspect.TransactionalAttribute.Invoke(AspectContext context, AspectDelegate next) in D:\LeanMES\CODE\service\IIMes.Infrastructure\Aspect\TransactionalAttribute.cs:line 19
+09:32:30.274 +08:00 [ERROR] [41] [NHibernate.Util.ADOExceptionReporter] The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+09:32:30.275 +08:00 [ERROR] [41] [NHibernate.Event.Default.AbstractFlushingEventListener] Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not execute batch command.[SQL: SQL not available]
+ ---> System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:8267030e-9f67-4a60-99e2-f366767cac1f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at IIMes.Infrastructure.Hibernate.Data.Transaction.Commit() in D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\Data\Transaction.cs:line 14
+   at IIMes.Infrastructure.Aspect.TransactionalAttribute.Invoke(AspectContext context, AspectDelegate next) in D:\LeanMES\CODE\service\IIMes.Infrastructure\Aspect\TransactionalAttribute.cs:line 19
+09:37:03.535 +08:00 [ERROR] [29] [NHibernate.Util.ADOExceptionReporter] The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+09:37:03.536 +08:00 [ERROR] [29] [NHibernate.Event.Default.AbstractFlushingEventListener] Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not execute batch command.[SQL: SQL not available]
+ ---> System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:8267030e-9f67-4a60-99e2-f366767cac1f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at IIMes.Infrastructure.Hibernate.Data.Transaction.Commit() in D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\Data\Transaction.cs:line 14
+   at IIMes.Infrastructure.Aspect.TransactionalAttribute.Invoke(AspectContext context, AspectDelegate next) in D:\LeanMES\CODE\service\IIMes.Infrastructure\Aspect\TransactionalAttribute.cs:line 19
+14:28:22.824 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+14:28:22.874 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+14:28:22.884 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+14:28:22.917 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+14:28:22.918 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+14:28:22.918 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+14:28:22.919 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+14:28:22.924 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+14:28:22.924 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+14:28:22.924 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+14:28:22.927 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+14:28:22.927 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+14:28:22.927 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+14:28:22.927 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+14:28:22.927 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+14:28:22.979 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+14:28:22.981 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+14:28:22.981 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+14:28:22.981 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+14:28:22.981 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+14:28:22.981 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."ConfirmFeeding"; method will not be bound
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."QueryFsStatus"; method will not be bound
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."UpdateFsStatus"; method will not be bound
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+14:28:22.982 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."Check"; method will not be bound
+14:28:22.982 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IFeedingService".
+14:35:15.574 +08:00 [ERROR] [23] [NHibernate.Util.ADOExceptionReporter] The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+14:35:15.575 +08:00 [ERROR] [23] [NHibernate.Event.Default.AbstractFlushingEventListener] Could not synchronize database state with session
+NHibernate.Exceptions.GenericADOException: could not execute batch command.[SQL: SQL not available]
+ ---> System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_S_BOP_BASE_PART_ID_S_PART_ID". The conflict occurred in database "LeanMES", table "dbo.S_PART", column 'ID'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+ClientConnectionId:e184bc44-1d30-4008-b38f-8129c60ed221
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at NHibernate.AdoNet.GenericBatchingBatcher.DoExecuteBatch(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatchWithTiming(DbCommand ps)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteBatch()
+   at NHibernate.Engine.ActionQueue.ExecuteActions()
+   at NHibernate.Event.Default.AbstractFlushingEventListener.PerformExecutions(IEventSource session)
+   at NHibernate.Event.Default.DefaultFlushEventListener.OnFlush(FlushEvent event)
+   at NHibernate.Impl.SessionImpl.Flush()
+   at NHibernate.Impl.SessionImpl.FlushBeforeTransactionCompletion()
+   at NHibernate.Impl.SessionImpl.BeforeTransactionCompletion(ITransaction tx)
+   at NHibernate.Transaction.AdoTransaction.Commit()
+   at IIMes.Infrastructure.Hibernate.Data.Transaction.Commit() in D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\Data\Transaction.cs:line 14
+14:52:20.673 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+14:52:20.708 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+14:52:20.716 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+14:52:20.733 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+14:52:20.734 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+14:52:20.735 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+14:52:20.735 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+14:52:20.737 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+14:52:20.737 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+14:52:20.737 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+14:52:20.738 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+14:52:20.738 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+14:52:20.738 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+14:52:20.738 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+14:52:20.738 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+14:52:20.792 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+14:52:20.794 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+14:52:20.794 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+14:52:20.794 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+14:52:20.794 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+14:52:20.794 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."ConfirmFeeding"; method will not be bound
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."QueryFsStatus"; method will not be bound
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."UpdateFsStatus"; method will not be bound
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+14:52:20.795 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."Check"; method will not be bound
+14:52:20.795 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IFeedingService".
+17:57:42.849 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+17:57:42.884 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+17:57:42.890 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+17:57:42.908 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+17:57:42.909 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+17:57:42.909 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+17:57:42.909 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+17:57:42.911 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+17:57:42.911 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+17:57:42.911 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+17:57:42.913 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+17:57:42.913 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+17:57:42.913 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+17:57:42.913 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+17:57:42.913 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+17:57:42.953 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+17:57:42.956 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+17:57:42.956 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+17:57:42.956 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+17:57:42.956 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+17:57:42.956 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."ConfirmFeeding"; method will not be bound
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."QueryFsStatus"; method will not be bound
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."UpdateFsStatus"; method will not be bound
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+17:57:42.958 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."Check"; method will not be bound
+17:57:42.958 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IFeedingService".
+19:20:23.855 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+19:20:23.887 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+19:20:23.893 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+19:20:23.908 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+19:20:23.910 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+19:20:23.910 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+19:20:23.910 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+19:20:23.912 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+19:20:23.913 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+19:20:23.913 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+19:20:23.914 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+19:20:23.914 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+19:20:23.914 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+19:20:23.914 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+19:20:23.914 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+19:20:23.962 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+19:20:23.965 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+19:20:23.965 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+19:20:23.965 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+19:20:23.965 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+19:20:23.965 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."ConfirmFeeding"; method will not be bound
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."QueryFsStatus"; method will not be bound
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."UpdateFsStatus"; method will not be bound
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+19:20:23.966 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."Check"; method will not be bound
+19:20:23.967 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IFeedingService".

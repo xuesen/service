@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WoFsSub" table="WO_FS_SUB" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="WoFsDetailId">
+      <column name="WO_FS_DETAIL_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="SubPartId">
+      <column name="SUB_PART_ID" sql-type="int" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

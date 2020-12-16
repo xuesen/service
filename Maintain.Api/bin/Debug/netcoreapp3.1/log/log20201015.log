@@ -1,0 +1,48 @@
+11:35:08.037 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IProductLineService".
+11:35:08.073 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IFactoryService".
+11:35:08.074 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IWorkShopService".
+11:35:08.076 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.ITerminalService".
+11:35:08.077 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IModelService".
+11:35:08.079 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IProcessService".
+11:35:08.080 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IProcessTypeService".
+11:35:08.082 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IStageService".
+11:35:08.083 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IEquipmentService".
+11:35:08.085 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IEquipmentTypeService".
+11:35:08.096 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IEquipmentCatagoryService".
+11:35:08.097 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IShiftService".
+11:35:08.099 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IShiftGroupService".
+11:35:08.100 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IDepartmentService".
+11:35:08.102 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IEmployeeService".
+11:35:08.200 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Maintain.Interface.IMaintainService": 5
+11:35:08.205 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+11:35:08.205 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.IPartFsService"."CheckPartWo"; method will not be bound
+11:35:08.207 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Maintain.Interface.IPartFsService": 1
+11:35:08.214 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.IWoFsService"."SaveWoFsDetailInfo"; method will not be bound
+11:35:08.228 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Maintain.Interface.IWoFsService": 3
+11:35:08.230 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IImportService".
+11:35:08.232 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Core.Model.STerminal"
+11:35:08.233 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."GetTerminal"; method will not be bound
+11:35:08.233 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Core.Model.SPart"
+11:35:08.233 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."GetPart"; method will not be bound
+11:35:08.234 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Core.Model.SEquipment"
+11:35:08.234 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."GetEquipment"; method will not be bound
+11:35:08.235 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Linq.IQueryable`1[[IIMes.Services.Core.Model.SSetting, IIMes.Services.Core.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+11:35:08.235 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."GetSetting"; method will not be bound
+11:35:08.235 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Core.Model.WoBase"
+11:35:08.235 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."GetWo"; method will not be bound
+11:35:08.235 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Core.Model.WoFsDetail, IIMes.Services.Core.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+11:35:08.235 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."GetWoFsDetail"; method will not be bound
+11:35:08.236 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Core.Model.WoFsSub, IIMes.Services.Core.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+11:35:08.236 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."GetWoFsSub"; method will not be bound
+11:35:08.236 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Core.Model.SProcess"
+11:35:08.236 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."GetProcess"; method will not be bound
+11:35:08.236 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Core.Model.SWoStatus"
+11:35:08.236 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."GetWoStaus"; method will not be bound
+11:35:08.238 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Maintain.Interface.ICommonService"."IsEqualWoFsDetail"; method will not be bound
+11:35:08.241 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Maintain.Interface.ICommonService": 3
+11:35:08.243 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IFamilyService".
+11:35:08.244 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IWoBomService".
+11:35:08.245 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IScrapReasonService".
+11:35:08.246 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IWoBaseService".
+11:35:08.256 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Maintain.Interface.IWoService": 3
+11:35:08.258 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Maintain.Interface.IWoStatusService".

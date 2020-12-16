@@ -1,0 +1,263 @@
+11:48:45.969 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+11:48:46.020 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+11:48:46.026 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+11:48:46.047 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+11:48:46.050 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+11:48:46.050 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+11:48:46.050 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+11:48:46.052 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+11:48:46.053 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+11:48:46.053 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+11:48:46.055 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+11:48:46.055 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+11:48:46.055 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+11:48:46.055 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+11:48:46.055 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+11:48:46.109 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+11:48:46.112 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+11:48:46.112 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+11:48:46.112 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+11:48:46.112 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+11:48:46.112 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+15:08:23.128 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+15:08:23.172 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+15:08:23.193 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+15:08:23.203 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+15:08:23.204 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+15:08:23.205 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+15:08:23.205 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+15:08:23.207 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+15:08:23.207 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+15:08:23.207 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+15:08:23.209 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+15:08:23.209 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+15:08:23.209 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+15:08:23.209 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+15:08:23.209 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+15:08:23.281 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+15:08:23.283 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+15:08:23.283 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+15:08:23.284 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+15:08:23.284 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+15:08:23.284 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+16:03:03.017 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+16:03:03.061 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+16:03:03.068 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+16:03:03.086 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+16:03:03.088 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+16:03:03.088 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+16:03:03.088 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+16:03:03.091 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+16:03:03.091 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+16:03:03.091 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+16:03:03.094 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+16:03:03.094 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+16:03:03.094 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+16:03:03.094 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+16:03:03.094 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+16:03:03.149 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+16:03:03.152 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+16:03:03.152 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+16:03:03.152 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+16:03:03.152 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+16:03:03.152 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+16:06:29.636 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+16:06:29.676 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+16:06:29.682 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+16:06:29.701 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+16:06:29.702 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+16:06:29.702 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+16:06:29.703 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+16:06:29.705 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+16:06:29.705 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+16:06:29.705 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+16:06:29.707 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+16:06:29.707 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+16:06:29.707 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+16:06:29.707 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+16:06:29.707 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+16:06:29.749 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+16:06:29.752 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+16:06:29.753 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+16:06:29.753 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+16:06:29.753 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+16:06:29.753 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+17:42:07.594 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+17:42:07.637 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+17:42:07.645 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+17:42:07.664 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+17:42:07.666 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+17:42:07.666 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+17:42:07.666 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+17:42:07.669 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+17:42:07.669 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+17:42:07.669 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+17:42:07.670 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+17:42:07.670 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+17:42:07.671 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+17:42:07.671 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+17:42:07.671 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+17:42:07.730 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+17:42:07.732 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+17:42:07.732 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+17:42:07.732 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+17:42:07.733 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+17:42:07.733 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+17:42:07.734 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+17:42:07.734 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+17:42:07.734 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."ConfirmFeeding"; method will not be bound
+17:42:07.734 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IFeedingService".
+21:03:09.792 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:03:09.793 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:03:09.793 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:03:09.793 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:03:09.898 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:03:09.899 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:03:09.899 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:03:09.899 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:03:09.902 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:03:09.902 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:03:09.902 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:03:09.902 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:03:13.263 +08:00 [ERROR] [21] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+NHibernate.Exceptions.GenericADOException: could not execute query
+[ select scrapreaso0_.ID as id1_76_, scrapreaso0_.CODE as code2_76_, scrapreaso0_.NAME as name3_76_, scrapreaso0_.DESCRIPTION as description4_76_, scrapreaso0_.DESCRIPTION2 as description5_76_, scrapreaso0_.EMPLOYEE_CODE as employee6_76_, scrapreaso0_.CREATE_TIME as create7_76_, scrapreaso0_.UPDATE_TIME as update8_76_ from S_SCRAPREASON scrapreaso0_ ]
+[SQL: select scrapreaso0_.ID as id1_76_, scrapreaso0_.CODE as code2_76_, scrapreaso0_.NAME as name3_76_, scrapreaso0_.DESCRIPTION as description4_76_, scrapreaso0_.DESCRIPTION2 as description5_76_, scrapreaso0_.EMPLOYEE_CODE as employee6_76_, scrapreaso0_.CREATE_TIME as create7_76_, scrapreaso0_.UPDATE_TIME as update8_76_ from S_SCRAPREASON scrapreaso0_]
+ ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): 找不到网络路径。
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(DbCommand st, QueryParameters queryParameters, ISessionImplementor session, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters, IResultTransformer forcedResultTransformer)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Hql.Ast.ANTLR.QueryTranslatorImpl.List(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Engine.Query.HQLQueryPlan.PerformList(QueryParameters queryParameters, ISessionImplementor session, IList results)
+   at NHibernate.Impl.SessionImpl.List(IQueryExpression queryExpression, QueryParameters queryParameters, IList results, Object filterConnection)
+   at NHibernate.Impl.SessionImpl.List(IQueryExpression queryExpression, QueryParameters queryParameters, IList results)
+   at NHibernate.Impl.AbstractSessionImpl.List(IQueryExpression queryExpression, QueryParameters parameters)
+   at NHibernate.Impl.AbstractQueryImpl2.List()
+   at NHibernate.Linq.DefaultQueryProvider.ExecuteQuery(NhLinqExpression nhLinqExpression, IQuery query, NhLinqExpression nhQuery)
+   at NHibernate.Linq.DefaultQueryProvider.Execute(Expression expression)
+   at NHibernate.Linq.DefaultQueryProvider.Execute[TResult](Expression expression)
+   at Remotion.Linq.QueryableBase`1.System.Collections.IEnumerable.GetEnumerator()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   at Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+21:07:52.590 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:07:52.591 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:07:52.614 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:07:52.614 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:07:52.614 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:07:52.615 +08:00 [ERROR] [13] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:07:52.692 +08:00 [ERROR] [13] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+NHibernate.Exceptions.GenericADOException: could not execute query
+[ select scrapreaso0_.ID as id1_76_, scrapreaso0_.CODE as code2_76_, scrapreaso0_.NAME as name3_76_, scrapreaso0_.DESCRIPTION as description4_76_, scrapreaso0_.DESCRIPTION2 as description5_76_, scrapreaso0_.EMPLOYEE_CODE as employee6_76_, scrapreaso0_.CREATE_TIME as create7_76_, scrapreaso0_.UPDATE_TIME as update8_76_ from S_SCRAPREASON scrapreaso0_ ]
+[SQL: select scrapreaso0_.ID as id1_76_, scrapreaso0_.CODE as code2_76_, scrapreaso0_.NAME as name3_76_, scrapreaso0_.DESCRIPTION as description4_76_, scrapreaso0_.DESCRIPTION2 as description5_76_, scrapreaso0_.EMPLOYEE_CODE as employee6_76_, scrapreaso0_.CREATE_TIME as create7_76_, scrapreaso0_.UPDATE_TIME as update8_76_ from S_SCRAPREASON scrapreaso0_]
+ ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): 找不到网络路径。
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(DbCommand st, QueryParameters queryParameters, ISessionImplementor session, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters, IResultTransformer forcedResultTransformer)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Hql.Ast.ANTLR.QueryTranslatorImpl.List(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Engine.Query.HQLQueryPlan.PerformList(QueryParameters queryParameters, ISessionImplementor session, IList results)
+   at NHibernate.Impl.SessionImpl.List(IQueryExpression queryExpression, QueryParameters queryParameters, IList results, Object filterConnection)
+   at NHibernate.Impl.SessionImpl.List(IQueryExpression queryExpression, QueryParameters queryParameters, IList results)
+   at NHibernate.Impl.AbstractSessionImpl.List(IQueryExpression queryExpression, QueryParameters parameters)
+   at NHibernate.Impl.AbstractQueryImpl2.List()
+   at NHibernate.Linq.DefaultQueryProvider.ExecuteQuery(NhLinqExpression nhLinqExpression, IQuery query, NhLinqExpression nhQuery)
+   at NHibernate.Linq.DefaultQueryProvider.Execute(Expression expression)
+   at NHibernate.Linq.DefaultQueryProvider.Execute[TResult](Expression expression)
+   at Remotion.Linq.QueryableBase`1.System.Collections.IEnumerable.GetEnumerator()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   at Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+21:11:46.020 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:11:46.021 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:11:46.023 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:11:46.023 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:11:46.324 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:11:46.324 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:11:46.324 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:11:46.324 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:11:46.325 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:11:46.325 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:11:46.325 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:11:46.325 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:11:51.523 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:11:51.523 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:11:51.523 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:11:51.523 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:11:51.523 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:11:51.524 +08:00 [ERROR] [21] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:12:01.968 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:12:01.968 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:12:01.968 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:12:01.968 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。
+21:12:01.969 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+21:12:01.969 +08:00 [ERROR] [5] [NHibernate.Util.ADOExceptionReporter] 找不到网络路径。

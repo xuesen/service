@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SBarcodeRule" table="S_BARCODE_RULE" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="RuleName">
+      <column name="RULE_NAME" sql-type="nvarchar" not-null="true" />
+    </property>
+    <many-to-one name="SSetting">
+      <column name="RULE_TYPE" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="RuleDesc">
+      <column name="RULE_DESC" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="SerialJson">
+      <column name="SERIAL_JSON" sql-type="ntext" not-null="false" />
+    </property>
+    <property name="Prefix">
+      <column name="PREFIX" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Suffix">
+      <column name="SUFFIX" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Status">
+      <column name="STATUS" sql-type="char" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

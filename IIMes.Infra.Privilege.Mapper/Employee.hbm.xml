@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Infra.Privilege.Model" namespace="IIMes.Infra.Privilege.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Employee" table="s_employee" lazy="true" >
+    <id name="Id" column="id">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="SDepartment">
+      <column name="department_id" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SEmployee">
+      <column name="manager_id" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="Code">
+      <column name="code" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Password">
+      <column name="password" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Name">
+      <column name="name" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Duty">
+      <column name="duty" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Email">
+      <column name="email" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="PhoneNo">
+      <column name="phone_no" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Description">
+      <column name="description" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Type">
+      <column name="type" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Domain">
+      <column name="domain" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LeaveTime">
+      <column name="leave_time" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="create_time" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="created_by" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="update_time" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="UpdateEditor">
+      <column name="updated_by" sql-type="varchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

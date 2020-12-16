@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Product" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="BomItem" table="S_BOM_ITEM" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Bom">
+      <column name="BOM_ID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Part">
+      <column name="ITEM_PART_ID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="ItemCount">
+      <column name="ITEM_COUNT" sql-type="decimal" not-null="true" />
+    </property>
+    <property name="ItemGroup">
+      <column name="ITEM_GROUP" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ItemVersion">
+      <column name="ITEM_VERSION" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="PrimaryKey">
+      <column name="PRIMARY_KEY" sql-type="char" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

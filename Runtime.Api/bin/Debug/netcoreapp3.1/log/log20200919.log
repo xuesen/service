@@ -1,0 +1,27 @@
+13:37:02.491 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.EquipmentDTO"
+13:37:02.614 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IEquipmentService"."GetEquipment"; method will not be bound
+13:37:02.627 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IEquipmentService".
+13:37:02.673 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.ITerminalService".
+13:37:02.677 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoDTO"
+13:37:02.678 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."GetWo"; method will not be bound
+13:37:02.678 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WoRequestDTO"
+13:37:02.683 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Collections.Generic.IList`1[[IIMes.Services.Runtime.Interface.DTO.WoDTO, IIMes.Services.Runtime.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+13:37:02.683 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWoService"."Query"; method will not be bound
+13:37:02.683 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWoService".
+13:37:02.687 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+13:37:02.687 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByReel"; method will not be bound
+13:37:02.688 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.MaterialDTO"
+13:37:02.688 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IMaterialService"."GetPartByPart"; method will not be bound
+13:37:02.688 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IMaterialService".
+13:37:02.891 +08:00 [INFORMATION] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] RPC services being provided by "IIMes.Services.Runtime.Interface.IWORService": 1
+13:37:02.902 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+13:37:02.902 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."QueryScrapReason"; method will not be bound
+13:37:02.902 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.WorScrapRequestDTO"
+13:37:02.902 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IWORScrapService"."SaveWorScrap"; method will not be bound
+13:37:02.903 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IWORScrapService".
+13:37:02.905 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "IIMes.Services.Runtime.Interface.DTO.FeedingRequestDTO"
+13:37:02.905 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+13:37:02.905 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."ConfirmFeeding"; method will not be bound
+13:37:02.905 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Type cannot be serialized; ignoring: "System.Object"
+13:37:02.905 +08:00 [WARNING] [1] [ProtoBuf.Grpc.Server.ServicesExtensions.CodeFirstServiceMethodProvider] Signature not recognized for "IIMes.Services.Runtime.Interface.IFeedingService"."QueryFsStatus"; method will not be bound
+13:37:02.905 +08:00 [WARNING] [1] [Grpc.AspNetCore.Server.Model.Internal.ServiceRouteBuilder] No gRPC methods discovered for "IIMes.Services.Runtime.Interface.IFeedingService".

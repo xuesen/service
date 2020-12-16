@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>IIMes.Infrastructure.Hibernate</PackageId>
+    <Version>1.0.2-dev-0012</Version>
+    <Authors>itc000038</Authors>
+    <Company>itc</Company>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>..\rules\Analyzers.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <!-- <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference> -->
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="nhibernate" Version="5.2.6" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+    <!-- <PackageReference Include="IIMes.Infrastructure" Version="1.0.2-dev-0012" /> -->
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IIMes.Infrastructure\IIMes.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

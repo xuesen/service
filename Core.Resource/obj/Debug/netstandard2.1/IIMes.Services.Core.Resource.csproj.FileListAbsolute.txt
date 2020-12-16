@@ -1,0 +1,11 @@
+D:\LeanMES\CODE\service\Core.Resource\bin\Debug\netstandard2.1\IIMes.Services.Core.Resource.deps.json
+D:\LeanMES\CODE\service\Core.Resource\bin\Debug\netstandard2.1\IIMes.Services.Core.Resource.dll
+D:\LeanMES\CODE\service\Core.Resource\bin\Debug\netstandard2.1\IIMes.Services.Core.Resource.pdb
+D:\LeanMES\CODE\service\Core.Resource\bin\Debug\netstandard2.1\IIMes.Services.Core.Resource.xml
+D:\LeanMES\CODE\service\Core.Resource\obj\Debug\netstandard2.1\IIMes.Services.Core.Resource.AssemblyInfoInputs.cache
+D:\LeanMES\CODE\service\Core.Resource\obj\Debug\netstandard2.1\IIMes.Services.Core.Resource.AssemblyInfo.cs
+D:\LeanMES\CODE\service\Core.Resource\obj\Debug\netstandard2.1\IIMes.Services.Core.Resource.csproj.CoreCompileInputs.cache
+D:\LeanMES\CODE\service\Core.Resource\obj\Debug\netstandard2.1\IIMes.Services.Core.Resource.dll
+D:\LeanMES\CODE\service\Core.Resource\obj\Debug\netstandard2.1\IIMes.Services.Core.Resource.xml
+D:\LeanMES\CODE\service\Core.Resource\obj\Debug\netstandard2.1\IIMes.Services.Core.Resource.pdb
+D:\LeanMES\CODE\service\Core.Resource\obj\Debug\netstandard2.1\IIMes.Services.Core.Resource.csprojAssemblyReference.cache

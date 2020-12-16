@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ModuleType" table="SETTING_MODULE_TYPE" lazy="false" mutable="false">
+    <id name="Type" column="Type" access="property"/>
+    <!-- <id name="Type" column="Type" access="readonly"/> -->
+    <property name="Conditions">
+      <column name="Conditions" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ConditionComposition">
+      <column name="ConditionComposition" sql-type="int" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

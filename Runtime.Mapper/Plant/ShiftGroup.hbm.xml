@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Plant" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ShiftGroup" table="S_SHIFT_GROUP" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="Code">
+      <column name="SHIFT_GROUP_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Name">
+      <column name="SHIFT__GROUP_NAME" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- <ItemGroup>
+    <PackageReference Include="IIMes.Stylecop" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup> -->
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.0.0-develop.2763" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.0.0-develop.2763" />
+    <PackageReference Include="nhibernate" Version="5.2.6" />
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="DotNetCore.NPOI" Version="1.2.2" />
+    <!-- <PackageReference Include="IIMes.Infrastructure" Version="1.0.2-dev-0011" /> -->
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <ProjectReference Include="..\Runtime.DomainObject\Runtime.DomainObject.csproj" /> -->
+    <ProjectReference Include="..\IIMes.Infrastructure\IIMes.Infrastructure.csproj" />
+    <!-- <ProjectReference Include="..\SFC.Interface\IIMes.Services.SFC.Interface.csproj" /> -->
+  </ItemGroup>
+  <ItemGroup><!-- <EmbeddedResource Include=".\Mapper\Rep.hbm.xml" /> -->
+  
+    <ProjectReference Include="..\IIMes.Infrastructure.Hibernate\IIMes.Infrastructure.Hibernate.csproj" />
+  
+    <ProjectReference Include="..\IIMes.Infra.Privilege.Interface\IIMes.Infra.Privilege.Interface.csproj" />
+  
+    <ProjectReference Include="..\IIMes.Infra.Privilege.Model\IIMes.Infra.Privilege.Model.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DCConsumer.TestLog" namespace="Consumer.TestLog.DomainObject" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="TestLog" table="TEST_LOG" lazy="true" >
+    <id name="Id" column="Id">
+      <generator class="identity" />
+    </id>
+    <property name="Type">
+      <column name="TYPE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Model">
+      <column name="MODEL" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="BigPcbBarcode">
+      <column name="BIG_PCB_BARCODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Side">
+      <column name="SIDE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Result">
+      <column name="RESULT" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="EquipmentCode">
+      <column name="EQUIPMENT_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ShiftCode">
+      <column name="SHIFT_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ProductLineCode">
+      <column name="PRODUCT_LINE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="PcName">
+      <column name="PC_NAME" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="TestTime" type="timestamp">
+      <column name="PCB_TEST_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+D:\LeanMES\CODE\service\Core.Message\bin\Debug\netstandard2.1\IIMes.Services.Core.Message.deps.json
+D:\LeanMES\CODE\service\Core.Message\bin\Debug\netstandard2.1\IIMes.Services.Core.Message.dll
+D:\LeanMES\CODE\service\Core.Message\bin\Debug\netstandard2.1\IIMes.Services.Core.Message.pdb
+D:\LeanMES\CODE\service\Core.Message\bin\Debug\netstandard2.1\IIMes.Services.Core.Message.xml
+D:\LeanMES\CODE\service\Core.Message\obj\Debug\netstandard2.1\IIMes.Services.Core.Message.csprojAssemblyReference.cache
+D:\LeanMES\CODE\service\Core.Message\obj\Debug\netstandard2.1\IIMes.Services.Core.Message.AssemblyInfoInputs.cache
+D:\LeanMES\CODE\service\Core.Message\obj\Debug\netstandard2.1\IIMes.Services.Core.Message.AssemblyInfo.cs
+D:\LeanMES\CODE\service\Core.Message\obj\Debug\netstandard2.1\IIMes.Services.Core.Message.csproj.CoreCompileInputs.cache
+D:\LeanMES\CODE\service\Core.Message\obj\Debug\netstandard2.1\IIMes.Services.Core.Message.dll
+D:\LeanMES\CODE\service\Core.Message\obj\Debug\netstandard2.1\IIMes.Services.Core.Message.xml
+D:\LeanMES\CODE\service\Core.Message\obj\Debug\netstandard2.1\IIMes.Services.Core.Message.pdb

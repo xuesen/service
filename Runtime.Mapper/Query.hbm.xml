@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <sql-query name="GetEquipmentbyLine">
+    <return-scalar column="ID" type="int" />
+    <return-scalar column="CODE" type="String" />
+    <return-scalar column="NAME" type="String" />
+    <![CDATA[
+      SELECT SE."ID", SE."CODE", SE."NAME" FROM "S_EQUIPMENT" AS SE 
+        JOIN "S_TERMINAL" AS ST ON ST."EQUIPMENT_ID" = SE."ID" 
+        JOIN "S_EQUIPMENT_TYPE" AS SETY ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"
+        JOIN "S_EQUIPMENT_CATAGORY" AS SEC ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID" 
+        JOIN "S_SETTING" AS SS ON SEC."CODE" = SS."CODE"
+      WHERE 
+        SS."PROGRAM" = 'SMTEquipmentType' 
+        AND ST."LINE_ID" = :lineId
+    ]]>
+  </sql-query> 
+  <sql-query name="GetWoFsInfo">
+    <return-scalar column="WorkOrder" type="String" />
+    <return-scalar column="Qty" type="int" />
+    <return-scalar column="PartId" type="int" />
+    <return-scalar column="PartNo" type="String" />
+    <return-scalar column="WoStatus" type="String" />
+    <return-scalar column="PdLineId" type="int" />
+    <return-scalar column="PdLineCode" type="String" />
+    <return-scalar column="EquipmentId" type="int" />
+    <return-scalar column="EquipmentCode" type="String" />
+    <return-scalar column="Side" type="String" />
+    <return-scalar column="WoFsId" type="int" />
+    <![CDATA[
+      SELECT WB."WORK_ORDER" AS "WorkOrder", WB."TARGET_QTY" AS "Qty", SP."ID" AS "PartId", SP."PART_NO" AS "PartNo", SWS."NAME" AS "WoStatus", SPL."ID" AS "PdLineId", SPL."CODE" AS "PdLineCode", SE."ID" AS "EquipmentId", SE."CODE" AS "EquipmentCode", SS."NAME" AS "Side", WF."ID" AS "WoFsId" FROM "WO_BASE" AS WB 
+        JOIN "S_WO_STATUS" AS SWS ON WB."WO_STATUS_ID" = SWS."ID" 
+        JOIN "S_PART" AS SP ON SP."ID" = WB."PART_ID"
+        JOIN "S_PRODUCT_LINE" AS SPL ON SPL."ID" = WB."PRODUCT_LINE_ID"
+        JOIN "WO_FS" AS WF ON WF."WORK_ORDER" = WB."WORK_ORDER"
+        JOIN "S_EQUIPMENT" AS SE ON SE."ID" = WF."EQUIPMENT_ID"
+        JOIN "S_SETTING" AS SS ON SS."PROGRAM" = 'Side' AND SS."CODE" = WF."SIDE"
+      WHERE WF."WORK_ORDER" LIKE '%' + :workOrder + '%' AND WF."PRODUCT_LINE_ID" LIKE '%' + :lineId + '%' AND WF."SIDE" LIKE '%' + :sideCode + '%'
+    ]]>
+  </sql-query>
+  <sql-query name="GetTerminalInfo">
+    <return-scalar column="ProcessTypeCode" type="String" />
+    <return-scalar column="ProcessCode" type="String" />
+    <![CDATA[
+      SELECT SPT.CODE AS ProcessTypeCode, SPC.CODE AS ProcessCode FROM S_TERMINAL AS ST
+        JOIN S_PROCESS AS SPC ON ST.PROCESS_ID = SPC.ID 
+        JOIN S_PROCESS_TYPE AS SPT ON SPC.PROCESS_TYPE_ID = SPT.ID WHERE ST.CODE = :terminalCode
+    ]]>
+  </sql-query>
+  <sql-query name="GetFailBatch">
+    <return-scalar column="NAME" type="String" />
+    <![CDATA[
+      SELECT SS.NAME AS NAME FROM S_WORKFLOW_STEP SW
+      JOIN S_SETTING SS ON SW.CONDITION_ID = SS.ID
+      WHERE SW.PROCESS_ID = :processId AND SW.WORKFLOW_ID = :workflowId AND SS.PROGRAM = 'NextProcessCondition' AND SS.NAME = 'FAIL'
+    ]]>
+  </sql-query>  
+  <sql-query name="GetTerminalPartInfoForSMT">
+    <return-scalar column="Id" type="int" />
+    <return-scalar column="TerminalId" type="int" />
+    <return-scalar column="EquipmentId" type="int" />
+    <return-scalar column="Station" type="String" />
+    <return-scalar column="ScanPartNo" type="String" />
+    <return-scalar column="ScanNo" type="String" />
+    <return-scalar column="ItemPartNo" type="String" />
+    <return-scalar column="Sequence" type="int" />
+    <return-scalar column="StationId" type="int" />
+    <![CDATA[
+	    select * 
+      from(
+        select ID as Id, TERMINAL_ID as TerminalId , EQUIPMENT_ID as EquipmentId, STATION as Station, SCAN_PART_NO as ScanPartNo, SCAN_NO as ScanNo,SEQUENCE as Sequence,  STATION_ID as StationId, ITEM_PART_NO as ItemPartNo,
+          row_number() over(partition by EQUIPMENT_ID, STATION order by SEQUENCE desc) 'RANK'
+        from TERMINAL_PARTS
+        ) as tp
+      where tp.RANK = 1 and tp.EquipmentId = :equipmentId order by STATION, ItemPartNo
+    ]]>
+  </sql-query> 
+  <sql-query name="GetTerminalPartInfoForBom">
+    <return-scalar column="Id" type="int" />
+    <return-scalar column="TerminalId" type="int" />
+    <return-scalar column="EquipmentId" type="int" />
+    <return-scalar column="Station" type="String" />
+    <return-scalar column="ScanPartNo" type="String" />
+    <return-scalar column="ScanNo" type="String" />
+    <return-scalar column="ItemPartNo" type="String" />
+    <return-scalar column="Sequence" type="int" />
+    <return-scalar column="StationId" type="int" />
+    <![CDATA[
+	    select * 
+      from(
+        select ID as Id, TERMINAL_ID as TerminalId , EQUIPMENT_ID as EquipmentId, STATION as Station, SCAN_PART_NO as ScanPartNo, SCAN_NO as ScanNo,SEQUENCE as Sequence,  STATION_ID as StationId, ITEM_PART_NO as ItemPartNo,
+          row_number() over(partition by EQUIPMENT_ID, ITEM_PART_NO order by CREATE_TIME desc) 'RANK'
+        from TERMINAL_PARTS
+        ) as tp
+      where tp.RANK = 1 and tp.EquipmentId = :equipmentId order by ItemPartNo
+    ]]>
+  </sql-query>
+</hibernate-mapping>  

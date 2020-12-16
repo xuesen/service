@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="RcStatus" table="RC_STATUS" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="RcNo">
+      <column name="RC_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="WorkOrder">
+      <column name="WORK_ORDER" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="WorkflowId">
+      <column name="WORKFLOW_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="PartId">
+      <column name="PART_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="PartNo">
+      <column name="PART_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Qty">
+      <column name="QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProductLineId">
+      <column name="PRODUCT_LINE_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProductLineCode">
+      <column name="PRODUCT_LINE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ProcessId">
+      <column name="PROCESS_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="ProcessCode">
+      <column name="PROCESS_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="NextProcessId">
+      <column name="NEXT_PROCESS_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="NextProcessCode">
+      <column name="NEXT_PROCESS_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="TerminalId">
+      <column name="TERMINAL_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="TerminalCode">
+      <column name="TERMINAL_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ProcessStarttime">
+      <column name="PROCESS_STARTTIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ProcessEndttime">
+      <column name="PROCESS_ENDTTIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="RcStarttime">
+      <column name="RC_STARTTIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="RcEndtime">
+      <column name="RC_ENDTIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="RcStatusVal">
+      <column name="RC_STATUS" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="EmployeeCode">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="CreateTime">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="UpdateTime">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

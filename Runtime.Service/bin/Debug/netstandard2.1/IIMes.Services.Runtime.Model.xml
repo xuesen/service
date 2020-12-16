@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IIMes.Services.Runtime.Model</name>
+    </assembly>
+    <members>
+        <member name="P:IIMes.Services.Runtime.Model.Process.ICollectionSpecItem.Id">
+            <summary>
+            bop_process_bom.id
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:IIMes.Services.Runtime.Model.Process.ICollectionSpecItem.Qty">
+            <summary>
+            bop_process_bom.qty
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:IIMes.Services.Runtime.Model.Process.ICollectionSpecItem.MainCandidateId">
+            <summary>
+            bop_process_bom.item_part_id
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:IIMes.Services.Runtime.Model.Process.ICollectionSpecItemValue.Id">
+            <summary>
+            terminal_part.Id
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:IIMes.Services.Runtime.Model.Process.ICollectionSpecItemValue.ItemId">
+            <summary>
+            terminal_part.itemId === bop_process_bom.id
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:IIMes.Services.Runtime.Model.Process.ICollectionSpecItemValue.CandidateId">
+            <summary>
+            part.id == terminal_part.scan_part_id
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:IIMes.Services.Runtime.Model.Process.ICollectionSpecItemValue.Value">
+            <summary>
+            terminal_part.scanno
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:IIMes.Services.Runtime.Model.Process.ICollectionSpecItemValue.Sequence">
+            <summary>
+            terminal_part.sequence
+            </summary>
+            <value></value>
+        </member>
+        <member name="F:IIMes.Services.Runtime.Model.QcLotState.IDLE">
+            <summary>
+            IDLE
+            </summary>
+        </member>
+        <member name="F:IIMes.Services.Runtime.Model.QcLotState.RUNNING">
+            <summary>
+            RUNNING
+            </summary>
+        </member>
+        <member name="F:IIMes.Services.Runtime.Model.QcLotState.DONE">
+            <summary>
+            DONE
+            </summary>
+        </member>
+        <member name="F:IIMes.Services.Runtime.Model.QcLotState.CANCELL">
+            <summary>
+            CANCELL
+            </summary>
+        </member>
+    </members>
+</doc>

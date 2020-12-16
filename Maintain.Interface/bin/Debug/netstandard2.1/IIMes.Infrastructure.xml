@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IIMes.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:IIMes.Infrastructure.Data.Interface.IRepository`1">
+            <summary>
+            Generic Repository interface.
+            </summary>
+        </member>
+        <member name="M:IIMes.Infrastructure.Data.Interface.IRepository`1.Get(System.Object)">
+            <summary>
+            Get a aggregate root object with given identity.
+            </summary>
+            <param name="id">identity.</param>
+            <returns>aggregate root object.</returns>
+        </member>
+        <member name="M:IIMes.Infrastructure.Data.Interface.IRepository`1.Add(`0)">
+            <summary>
+            add a new aggregate root object.
+            </summary>
+            <param name="item">aggregete root.</param>
+            <returns>identity.</returns>
+        </member>
+        <member name="M:IIMes.Infrastructure.Data.Interface.IRepository`1.Add(System.Collections.Generic.IList{`0})">
+            <summary>
+            add multiple aggregate root objects.
+            </summary>
+            <param name="items">objects to add.</param>
+        </member>
+        <member name="M:IIMes.Infrastructure.Data.Interface.IRepository`1.Delete(`0)">
+            <summary>
+            delete aggregate root object.
+            </summary>
+            <param name="item">object to delete.</param>
+        </member>
+        <member name="M:IIMes.Infrastructure.Data.Interface.IRepository`1.DeleteByLambda(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            delete by lamda.
+            </summary>
+            <param name="expression">condition expresion.</param>
+        </member>
+        <member name="M:IIMes.Infrastructure.Data.Interface.IRepository`1.Update(`0)">
+            <summary>
+            update an object with given value.
+            </summary>
+            <param name="item">object with given value.</param>
+            <returns>updated object.</returns>
+        </member>
+        <member name="T:IIMes.Infrastructure.Exception.BizException">
+            <summary>
+            系统自定义异常类.
+            </summary>
+        </member>
+        <member name="F:IIMes.Infrastructure.Exception.Level.Info">
+            <summary>
+            Info will be returned to service client, no influence on wf instance.
+            </summary>
+        </member>
+        <member name="F:IIMes.Infrastructure.Exception.Level.Warning">
+            <summary>
+            Warning will be returned to service client, no influence on wf instance.
+            </summary>
+        </member>
+        <member name="F:IIMes.Infrastructure.Exception.Level.Error">
+            <summary>
+            Error will be returned to service client,
+            it will cause subsequent activites to be skipped,
+            but it won't stop wf instance.
+            </summary>
+        </member>
+        <member name="F:IIMes.Infrastructure.Exception.Level.Fatal">
+            <summary>
+            fatal exception will cause a wf instance being
+            terminated immediately
+            </summary>
+        </member>
+    </members>
+</doc>

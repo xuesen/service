@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\IIMes.Infrastructure\IIMes.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\IIMes.Infrastructure.Hibernate\IIMes.Infrastructure.Hibernate.csproj" />
+    <ProjectReference Include="..\Generate.Model\Generate.Model.csproj" />
+    <ProjectReference Include="..\Generate.Barcode\Generate.Barcode.csproj" />
+    <ProjectReference Include="..\Generate.Base\Generate.Base.csproj" />
+    <ProjectReference Include="..\Generate.Interface\Generate.Interface.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nhibernate" Version="5.2.6" />
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>

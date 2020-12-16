@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\IIMes.Infra.Privilege.Model\IIMes.Infra.Privilege.Model.csproj" />
+    <ProjectReference Include="..\IIMes.Infrastructure.Hibernate\IIMes.Infrastructure.Hibernate.csproj" />
+  </ItemGroup>
+  <!-- <ItemGroup>
+    <PackageReference Include="IIMes.Infrastructure.Hibernate" Version="1.0.2-dev-0011" />
+  </ItemGroup> -->
+  <ItemGroup>
+    <EmbeddedResource Include=".\Company.hbm.xml" />
+    <EmbeddedResource Include=".\Department.hbm.xml" />
+    <EmbeddedResource Include=".\Employee.hbm.xml" />
+    <EmbeddedResource Include=".\Permission.hbm.xml" />
+    <EmbeddedResource Include=".\Resource.hbm.xml" />
+    <EmbeddedResource Include=".\ResourcePermission.hbm.xml" />
+    <EmbeddedResource Include=".\Role.hbm.xml" />
+    <EmbeddedResource Include=".\RoleDepartment.hbm.xml" />
+    <EmbeddedResource Include=".\RoleEmployee.hbm.xml" />
+    <EmbeddedResource Include=".\RoleResourcePermission.hbm.xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>

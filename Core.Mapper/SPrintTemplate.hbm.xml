@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SPrintTemplate" table="S_PRINT_TEMPLATE" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="Name">
+      <column name="NAME" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="FileString">
+      <column name="FILE_STRING" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="Description">
+      <column name="DESCRIPTION" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="SpName">
+      <column name="SP_NAME" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Rotate180">
+      <column name="ROTATE180" sql-type="int" not-null="true" />
+    </property>
+
+    <property name="Layout">
+      <column name="LAYOUT" sql-type="int" not-null="true" />
+    </property>
+
+    <property name="Collate">
+      <column name="COLLATE" sql-type="bit" not-null="true" />
+    </property>
+
+    <property name="PrintMode">
+      <column name="PRINT_MODE" sql-type="int" not-null="false" />
+    </property>
+
+    <property name="Continuous">
+      <column name="CONTINUOUS" sql-type="int" not-null="false" />
+    </property>
+    
+    <many-to-one name="SSetting">
+      <column name="PRINT_KEY" sql-type="int" not-null="true" />
+    </many-to-one>
+
+    <property name="Remark">
+      <column name="REMARK" sql-type="int" not-null="false" />
+    </property>
+
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Process" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WorkflowStep" table="S_WORKFLOW_STEP" lazy="false" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Workflow"  lazy="false">
+      <column name="WORKFLOW_ID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Process">
+      <column name="PROCESS_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Setting"  lazy="false">
+      <column name="CONDITION_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="NextProcess">
+      <column name="NEXT_PROCESS_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="Priority">
+      <column name="PRIORITY" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Spname">
+      <column name="SPNAME" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

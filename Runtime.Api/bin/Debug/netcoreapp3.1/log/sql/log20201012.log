@@ -1,0 +1,212 @@
+09:58:26.513 +08:00 [DEBUG] [8] [NHibernate.SQL] 
+    select
+        scrapreaso0_.ID as id1_76_,
+        scrapreaso0_.CODE as code2_76_,
+        scrapreaso0_.NAME as name3_76_,
+        scrapreaso0_.DESCRIPTION as description4_76_,
+        scrapreaso0_.DESCRIPTION2 as description5_76_,
+        scrapreaso0_.EMPLOYEE_CODE as employee6_76_,
+        scrapreaso0_.CREATE_TIME as create7_76_,
+        scrapreaso0_.UPDATE_TIME as update8_76_ 
+    from
+        S_SCRAPREASON scrapreaso0_
+15:25:28.330 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        scrapreaso0_.ID as id1_76_,
+        scrapreaso0_.CODE as code2_76_,
+        scrapreaso0_.NAME as name3_76_,
+        scrapreaso0_.DESCRIPTION as description4_76_,
+        scrapreaso0_.DESCRIPTION2 as description5_76_,
+        scrapreaso0_.EMPLOYEE_CODE as employee6_76_,
+        scrapreaso0_.CREATE_TIME as create7_76_,
+        scrapreaso0_.UPDATE_TIME as update8_76_ 
+    from
+        S_SCRAPREASON scrapreaso0_
+15:42:55.917 +08:00 [DEBUG] [16] [NHibernate.SQL] 
+    select
+        scrapreaso0_.ID as id1_76_,
+        scrapreaso0_.CODE as code2_76_,
+        scrapreaso0_.NAME as name3_76_,
+        scrapreaso0_.DESCRIPTION as description4_76_,
+        scrapreaso0_.DESCRIPTION2 as description5_76_,
+        scrapreaso0_.EMPLOYEE_CODE as employee6_76_,
+        scrapreaso0_.CREATE_TIME as create7_76_,
+        scrapreaso0_.UPDATE_TIME as update8_76_ 
+    from
+        S_SCRAPREASON scrapreaso0_
+15:43:32.284 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        scrapreaso0_.ID as id1_76_,
+        scrapreaso0_.CODE as code2_76_,
+        scrapreaso0_.NAME as name3_76_,
+        scrapreaso0_.DESCRIPTION as description4_76_,
+        scrapreaso0_.DESCRIPTION2 as description5_76_,
+        scrapreaso0_.EMPLOYEE_CODE as employee6_76_,
+        scrapreaso0_.CREATE_TIME as create7_76_,
+        scrapreaso0_.UPDATE_TIME as update8_76_ 
+    from
+        S_SCRAPREASON scrapreaso0_
+15:48:26.815 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        scrapreaso0_.ID as id1_76_,
+        scrapreaso0_.CODE as code2_76_,
+        scrapreaso0_.NAME as name3_76_,
+        scrapreaso0_.DESCRIPTION as description4_76_,
+        scrapreaso0_.DESCRIPTION2 as description5_76_,
+        scrapreaso0_.EMPLOYEE_CODE as employee6_76_,
+        scrapreaso0_.CREATE_TIME as create7_76_,
+        scrapreaso0_.UPDATE_TIME as update8_76_ 
+    from
+        S_SCRAPREASON scrapreaso0_
+16:02:25.975 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+16:02:26.088 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+16:07:12.269 +08:00 [DEBUG] [21] [NHibernate.SQL] 
+    select
+        scrapreaso0_.ID as id1_76_,
+        scrapreaso0_.CODE as code2_76_,
+        scrapreaso0_.NAME as name3_76_,
+        scrapreaso0_.DESCRIPTION as description4_76_,
+        scrapreaso0_.DESCRIPTION2 as description5_76_,
+        scrapreaso0_.EMPLOYEE_CODE as employee6_76_,
+        scrapreaso0_.CREATE_TIME as create7_76_,
+        scrapreaso0_.UPDATE_TIME as update8_76_ 
+    from
+        S_SCRAPREASON scrapreaso0_
+16:07:12.425 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+16:07:12.433 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+16:08:23.574 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+16:08:23.581 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+16:08:23.794 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        scrapreaso0_.ID as id1_76_,
+        scrapreaso0_.CODE as code2_76_,
+        scrapreaso0_.NAME as name3_76_,
+        scrapreaso0_.DESCRIPTION as description4_76_,
+        scrapreaso0_.DESCRIPTION2 as description5_76_,
+        scrapreaso0_.EMPLOYEE_CODE as employee6_76_,
+        scrapreaso0_.CREATE_TIME as create7_76_,
+        scrapreaso0_.UPDATE_TIME as update8_76_ 
+    from
+        S_SCRAPREASON scrapreaso0_
+16:08:29.375 +08:00 [DEBUG] [21] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+16:08:29.383 +08:00 [DEBUG] [21] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+16:08:29.432 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        scrapreaso0_.ID as id1_76_,
+        scrapreaso0_.CODE as code2_76_,
+        scrapreaso0_.NAME as name3_76_,
+        scrapreaso0_.DESCRIPTION as description4_76_,
+        scrapreaso0_.DESCRIPTION2 as description5_76_,
+        scrapreaso0_.EMPLOYEE_CODE as employee6_76_,
+        scrapreaso0_.CREATE_TIME as create7_76_,
+        scrapreaso0_.UPDATE_TIME as update8_76_ 
+    from
+        S_SCRAPREASON scrapreaso0_

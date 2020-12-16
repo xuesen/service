@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <sql-query name="GetMarketPart">
+    <return-scalar column="PartId" type="int" />
+    <return-scalar column="PartNo" type="String" />
+    <return-scalar column="PartName" type="String" />
+    <![CDATA[
+      select sp.ID as PartId,
+      sp.PART_NO as PartNo,
+      sp.PART_NAME as PartName
+      from S_PART as sp join S_SETTING as ss on sp.MATERIAL_TYPE_ID = ss.ID
+      where ss.CODE = '002' order by PartNo
+    ]]>
+  </sql-query>
+  <sql-query name="GetCatchPart">
+    <return-scalar column="PartId" type="int" />
+    <return-scalar column="PartNo" type="String" />
+    <return-scalar column="PartName" type="String" />
+    <return-scalar column="Spec1" type="String" />
+    <![CDATA[
+      select sp.ID as PartId,sp.PART_NO as PartNo,sp.PART_NAME as PartName,sp.SPEC1 as Spec1 from S_PART as sp
+      join S_SETTING as ss on sp.MATERIAL_TYPE_ID = ss.ID where ss.CODE = '001' order by PartNo
+    ]]>
+  </sql-query>
+  <sql-query name="GetEquipmentbyLine">
+    <return-scalar column="ID" type="int" />
+    <return-scalar column="CODE" type="String" />
+    <return-scalar column="NAME" type="String" />
+    <![CDATA[
+      SELECT DISTINCT SE."ID", SE."CODE", SE."NAME" FROM "S_EQUIPMENT" AS SE 
+        JOIN "S_TERMINAL" AS ST ON ST."EQUIPMENT_ID" = SE."ID" 
+        JOIN "S_EQUIPMENT_TYPE" AS SETY ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"
+        JOIN "S_EQUIPMENT_CATAGORY" AS SEC ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID" 
+        JOIN "S_SETTING" AS SS ON SEC."CODE" = SS."CODE"
+      WHERE 
+        SS."PROGRAM" = 'SMTEquipmentType' 
+        AND ST."LINE_ID" = :lineId
+        ORDER BY SE.CODE
+    ]]>
+  </sql-query>
+  <sql-query name="GetBomItemsbyPartid">
+    <return-scalar column="ItemPartId" type="int" />
+    <![CDATA[
+      SELECT item.ITEM_PART_ID AS ItemPartId
+        FROM S_BOM_ITEM AS item
+        JOIN S_BOM AS bom ON item.BOM_ID = bom.ID
+        JOIN S_BOM_BASE AS base ON bom.BOM_BASE_ID = base.ID and base.LAST_VERSION = bom.VERSION
+        JOIN S_PART AS part ON part.ID = base.PART_ID
+		where part.ID = :partId
+    ]]>
+  </sql-query>
+  <sql-query name="GetWoFsInfo">
+    <return-scalar column="WorkOrder" type="String" />
+    <return-scalar column="Qty" type="int" />
+    <return-scalar column="PartId" type="int" />
+    <return-scalar column="PartNo" type="String" />
+    <return-scalar column="WoStatus" type="String" />
+    <return-scalar column="PdLineCode" type="String" />
+    <return-scalar column="EquipmentId" type="int" />
+    <return-scalar column="EquipmentCode" type="String" />
+    <return-scalar column="Side" type="String" />
+    <return-scalar column="WoFsId" type="int" />
+    <![CDATA[
+      SELECT WB."WORK_ORDER" AS "WorkOrder", WB."TARGET_QTY" AS "Qty", SP."ID" AS "PartId", SP."PART_NO" AS "PartNo", SWS."NAME" AS "WoStatus", SPL."ID" AS "PdLineId", SPL."CODE" AS "PdLineCode", SE."ID" AS "EquipmentId", SE."CODE" AS "EquipmentCode", SS."NAME" AS "Side", WF."ID" AS "WoFsId" FROM "WO_BASE" AS WB 
+        JOIN "S_WO_STATUS" AS SWS ON WB."WO_STATUS_ID" = SWS."ID" 
+        JOIN "S_PART" AS SP ON SP."ID" = WB."PART_ID"
+        JOIN "S_PRODUCT_LINE" AS SPL ON SPL."ID" = WB."PRODUCT_LINE_ID"
+        JOIN "WO_FS" AS WF ON WF."WORK_ORDER" = WB."WORK_ORDER"
+        JOIN "S_EQUIPMENT" AS SE ON SE."ID" = WF."EQUIPMENT_ID"
+        JOIN "S_SETTING" AS SS ON SS."PROGRAM" = 'Side' AND SS."CODE" = WF."SIDE"
+      WHERE WF."WORK_ORDER" LIKE '%' + :workOrder + '%' AND WF."SIDE" LIKE '%' + :sideCode + '%' AND WF."EQUIPMENT_ID" LIKE '%' + :equipmentId + '%'
+    ]]>
+  </sql-query>
+  <sql-query name="GetTerminalInfo">
+    <return-scalar column="ProcessTypeCode" type="String" />
+    <return-scalar column="ProcessCode" type="String" />
+    <![CDATA[
+      SELECT SPT.CODE AS ProcessTypeCode, SPC.CODE AS ProcessCode FROM S_TERMINAL AS ST
+        JOIN S_PROCESS AS SPC ON ST.PROCESS_ID = SPC.ID 
+        JOIN S_PROCESS_TYPE AS SPT ON SPC.PROCESS_TYPE_ID = SPT.ID WHERE ST.CODE = :terminalCode
+    ]]>
+  </sql-query>
+
+  <sql-query name="GetBomVersion">
+    <return-scalar column="Version" type="String" />
+    <![CDATA[
+      SELECT DISTINCT B.VERSION AS Version FROM S_BOM_ITEM AS A
+        JOIN S_BOM AS B ON A.BOM_ID = B.ID 
+        JOIN S_BOM_BASE AS C ON B.BOM_BASE_ID = C.ID WHERE C.PART_ID = :partId
+    ]]>
+  </sql-query>
+  <sql-query name="GetBomData">
+    <return-scalar column="Part_name" type="String" />
+    <return-scalar column="Item_count" type="String" />
+    <return-scalar column="Part_id" type="String" />
+    <return-scalar column="Version" type="String" />
+    <![CDATA[
+      SELECT part.PART_NAME AS Part_name, item.ITEM_COUNT AS Item_count, item.ITEM_PART_ID AS Part_id, bom.VERSION AS Version
+        FROM S_BOM_ITEM AS item
+        JOIN S_BOM AS bom ON item.BOM_ID = bom.ID
+        JOIN S_BOM_BASE AS base ON bom.BOM_BASE_ID = base.ID
+        JOIN S_PART AS part ON part.ID = item.ITEM_PART_ID
+          WHERE base.PART_ID = :partId and bom.VERSION = base.LAST_VERSION and item.PRIMARY_KEY = '1'
+    ]]>
+  </sql-query>
+  <sql-query name="GetBomData2">
+    <return-scalar column="Part_name" type="String" />
+    <return-scalar column="Item_count" type="String" />
+    <return-scalar column="Part_id" type="String" />
+    <return-scalar column="Version" type="String" />
+    <![CDATA[
+      SELECT part.PART_NAME AS Part_name, item.ITEM_COUNT AS Item_count, item.ITEM_PART_ID AS Part_id, bom.VERSION AS Version
+        FROM S_BOM_ITEM AS item
+        JOIN S_BOM AS bom ON item.BOM_ID = bom.ID
+        JOIN S_BOM_BASE AS base ON bom.BOM_BASE_ID = base.ID
+        JOIN S_PART AS part ON part.ID = item.ITEM_PART_ID
+          WHERE base.PART_ID = :partId and bom.VERSION = :version and item.PRIMARY_KEY = '1'
+    ]]>
+  </sql-query>
+  <sql-query name="GetPartInofo">
+    <return-scalar column="Partname" type="String" />
+    <return-scalar column="Spec1" type="String" />
+    <return-scalar column="Itemcount" type="String" />
+    <return-scalar column="Location" type="String" />
+    <![CDATA[
+      SELECT part.PART_NAME AS Partname, part.SPEC1 AS Spec1, item.ITEM_COUNT AS Itemcount, location.LOCATION AS Location
+        FROM S_BOM_ITEM AS item
+        JOIN S_BOM AS bom ON item.BOM_ID = bom.ID 
+        JOIN S_BOM_BASE AS base ON bom.BOM_BASE_ID = base.ID
+        JOIN S_PART AS part ON part.ID = item.ITEM_PART_ID
+        LEFT JOIN S_BOM_LOCATION AS location ON location.BOM_ITEM_ID = item.ID
+          WHERE base.PART_ID = :partid and item.ITEM_PART_ID = :itempartid and bom.VERSION = :version
+    ]]>
+  </sql-query>
+  <sql-query name="GetPart">
+    <return-scalar column="id" type="int" />
+    <return-scalar column="part_id" type="String" />
+    <return-scalar column="part_name" type="String" />
+    <return-scalar column="part_no" type="String" />
+    <return-scalar column="family_id" type="String" />
+    <return-scalar column="family_name" type="String" />
+    <return-scalar column="family_code" type="String" />
+    <return-scalar column="workflowBasename" type="String" />
+    <return-scalar column="workflowlastversion" type="String" />
+    <return-scalar column="workflowid" type="String" />
+    <return-scalar column="lastestedittime" type="DateTime" />
+    <return-scalar column="latestpubtime" type="DateTime" />
+    <![CDATA[
+      SELECT 
+        sbopBase.ID as id,
+        part.ID as part_id,
+        part.PART_NAME as part_name,
+        part.PART_NO as part_no,
+        family.ID as family_id,
+        family.NAME as family_name,
+        family.CODE as family_code, 
+        workflowBase.NAME as workflowBasename,
+        workflow.VERSION as workflowlastversion,
+        workflow.ID as workflowid,
+        sbopBase.UPDATE_TIME as lastestedittime,
+        subQuery.latestpubtime as latestpubtime
+      FROM S_BOP_BASE AS sbopBase
+      JOIN S_WORKFLOW AS workflow ON workflow.ID = sbopBase.WORKFLOW_ID
+      JOIN S_WORKFLOW_BASE AS workflowBase ON workflowBase.ID = workflow.WORKFLOW_BASE_ID
+      LEFT JOIN S_PART AS part ON part.ID = sbopBase.PART_ID
+      JOIN S_FAMILY AS family ON family.ID = sbopBase.FAMILY_ID
+      LEFT JOIN (
+        SELECT 
+          bopbase.UPDATE_TIME as latestpubtime,
+          bopbase.WORKFLOW_ID as workflowid
+        FROM S_BOP_BASE as bopbase WHERE STATUS = '1'
+      ) AS subQuery ON subQuery.workflowid = workflow.ID
+      WHERE sbopBase.STATUS = 0 
+      AND workflowBase.LAST_VERSION = workflow.VERSION
+      GROUP BY 
+        part.ID, part.PART_NAME, part.PART_NO, 
+        family.ID, family.NAME, family.CODE,
+        sbopBase.ID, workflow.ID, workflowBase.NAME, sbopBase.UPDATE_TIME, subQuery.latestpubtime, workflow.VERSION
+      ORDER BY workflowBase.NAME
+    ]]>
+  </sql-query>
+  <sql-query name="QueryWo">
+    <return-scalar column="Id" type="int" />
+    <return-scalar column="WorkOrder" type="String" />
+    <return-scalar column="Type" type="String" />
+    <return-scalar column="TargetQty" type="int" />
+    <return-scalar column="PartId" type="int" />
+    <return-scalar column="WoStatusId" type="int" />
+    <return-scalar column="PdLineId" type="int" />
+    <return-scalar column="Sequence" type="int" />
+    <return-scalar column="InputQty" type="int" />
+    <return-scalar column="OutputQty" type="int" />
+    <return-scalar column="WoScheduleTime" type="DateTime" />
+    <return-scalar column="WoScheduleFinishTime" type="DateTime" />
+    <return-scalar column="SnBarcodeRuleId" type="int" />
+    <return-scalar column="RcBarcodeRuleId" type="int" />
+    <return-scalar column="WoCreateTime" type="DateTime" />
+    <return-scalar column="WoUpdateTime" type="DateTime" />
+    <return-scalar column="Po" type="String" />
+    <return-scalar column="Description" type="String" />
+    <return-scalar column="UpdateTime" type="DateTime" />
+    <return-scalar column="Editor" type="String" />
+    <![CDATA[
+      select wb.ID AS Id, wb.WORK_ORDER AS WorkOrder, wb.Type AS Type, wb.TARGET_QTY AS TargetQty, wb.PART_ID AS PartId, wb.WO_STATUS_ID AS WoStatusId, wb.PRODUCT_LINE_ID AS PdLineId, 
+      wb.SEQUENCE AS Sequence, wb.INPUT_QTY AS InputQty, wb.OUTPUT_QTY AS OutputQty, wb.WO_SCHEDULE_TIME AS WoScheduleTime, wb.WO_SCHEDULE_FINISH_TIME AS WoScheduleFinishTime,  
+      ISNULL(wb.SN_BARCODE_RULE_ID, -1) AS SnBarcodeRuleId,  ISNULL(wb.RC_BARCODE_RULE_ID, -1) AS RcBarcodeRuleId, wb.WO_CREATE_TIME AS WoCreateTime, wb.UPDATE_TIME AS WoUpdateTime,  ISNULL(wb.PO, '') as Po,  ISNULL(wb.DESCRIPTION, '') AS Description, wb.UPDATE_TIME AS UpdateTime, wb.EMPLOYEE_CODE AS Editor from WO_BASE wb where WORK_ORDER like '%' + :wo + '%' and WO_STATUS_ID like '%' + :wostatusid + '%' and PART_ID like '%' + :partid + '%' and PRODUCT_LINE_ID like '%' + :pdlineid + '%' and CONVERT(varchar,WO_SCHEDULE_TIME, 120)  like '%' + :scheduletime + '%'
+    ]]>
+  </sql-query>
+</hibernate-mapping>  

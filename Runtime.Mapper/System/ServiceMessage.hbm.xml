@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Infrastructure" namespace="IIMes.Infrastructure.Exception" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ExceptionMessage" table="S_SERVICE_MESSAGE" lazy="true" >
+    <composite-id>
+      <key-property name="Code" column="CODE" />
+      <key-property name="LanguageCode" column="LANGUAGE_CODE" />
+    </composite-id>
+    <property name="Message">
+      <column name="CONTENT" sql-type="nvarchar" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

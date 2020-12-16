@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+
+  <!-- an ISessionFactory instance -->
+  <session-factory>
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+    <!-- <property name="connection.connection_string"> Data Source=10.190.80.53;Initial Catalog=CCD; Persist Security Info=True;User ID=sa;Password=1q2w3e4r5t~;Connect Timeout=60;Application Name=FCCLDataCollection;Max Pool Size=50;Min Pool Size=10 </property> -->
+    <property name="connection.connection_string"> Data Source=10.190.80.224;Initial Catalog=LeanMES_NEW; Persist Security Info=True;User ID=sa;Password=Litemes@prd3;Connect Timeout=60;Application Name=LeanMESCollection;Max Pool Size=50;Min Pool Size=10 </property>
+    <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="hbm2ddl.keywords">auto-quote</property>
+    <property name="current_session_context_class">thread_static</property>
+    <property name='prepare_sql'>true</property>
+    <property name="connection.isolation">ReadCommitted</property>
+    <property name="command_timeout">60</property>
+    <!-- mapping files -->
+    <mapping assembly="IIMes.Services.Runtime.Mapper" />
+    <mapping assembly="IIMes.Services.Runtime.Service" />
+  </session-factory>
+</hibernate-configuration>

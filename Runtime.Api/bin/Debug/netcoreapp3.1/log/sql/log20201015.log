@@ -1,0 +1,93 @@
+17:38:55.079 +08:00 [DEBUG] [29] [NHibernate.SQL] 
+    select
+        wofs0_.ID as id1_36_,
+        wofs0_.PART_FS_ID as part2_36_,
+        wofs0_.WORK_ORDER as work3_36_,
+        wofs0_.PART_ID as part4_36_,
+        wofs0_.SIDE as side5_36_,
+        wofs0_.EQUIPMENT_ID as equipment6_36_,
+        wofs0_.EMPLOYEE_CODE as employee7_36_,
+        wofs0_.CREATE_TIME as create8_36_,
+        wofs0_.UPDATE_TIME as update9_36_ 
+    from
+        WO_FS wofs0_ 
+    where
+        wofs0_.WORK_ORDER=@p0 
+        and wofs0_.EQUIPMENT_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 12 [Type: Int32 (0:0:0)]
+17:38:55.489 +08:00 [DEBUG] [29] [NHibernate.SQL] 
+    select
+        TOP (1) fsstatus0_.ID as id1_39_,
+        fsstatus0_.TERMINAL_ID as terminal2_39_,
+        fsstatus0_.EQUIPMENT_ID as equipment3_39_,
+        fsstatus0_.WORK_ORDER as work4_39_,
+        fsstatus0_.STATUS as status5_39_,
+        fsstatus0_.EMPLOYEE_CODE as employee6_39_,
+        fsstatus0_.CREATE_TIME as create7_39_,
+        fsstatus0_.UPDATE_TIME as update8_39_ 
+    from
+        FS_STATUS fsstatus0_ 
+    where
+        fsstatus0_.WORK_ORDER=@p0 
+        and fsstatus0_.EQUIPMENT_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 12 [Type: Int32 (0:0:0)]
+17:38:55.835 +08:00 [DEBUG] [29] [NHibernate.SQL] 
+    select
+        TOP (1) wofs0_.ID as id1_36_,
+        wofs0_.PART_FS_ID as part2_36_,
+        wofs0_.WORK_ORDER as work3_36_,
+        wofs0_.PART_ID as part4_36_,
+        wofs0_.SIDE as side5_36_,
+        wofs0_.EQUIPMENT_ID as equipment6_36_,
+        wofs0_.EMPLOYEE_CODE as employee7_36_,
+        wofs0_.CREATE_TIME as create8_36_,
+        wofs0_.UPDATE_TIME as update9_36_ 
+    from
+        WO_FS wofs0_ 
+    where
+        wofs0_.WORK_ORDER=@p0 
+        and wofs0_.EQUIPMENT_ID=@p1 
+    order by
+        wofs0_.ID desc;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)],
+    @p1 = 12 [Type: Int32 (0:0:0)]
+17:38:55.865 +08:00 [DEBUG] [29] [NHibernate.SQL] 
+    select
+        wofs0_.ID as col_0_0_ 
+    from
+        WO_FS wofs0_ 
+    where
+        wofs0_.EQUIPMENT_ID=@p0;
+    @p0 = 12 [Type: Int32 (0:0:0)]
+17:38:55.943 +08:00 [DEBUG] [29] [NHibernate.SQL] 
+    select
+        TOP (1) terminalpa0_.ITEM_PART_ID as col_0_0_ 
+    from
+        TERMINAL_PARTS terminalpa0_ 
+    where
+        terminalpa0_.EQUIPMENT_ID=@p0 
+        and  not (exists (select
+            wofsdetail1_.ITEM_PART_ID 
+        from
+            WO_FS_DETAIL wofsdetail1_ 
+        where
+            (cast(wofsdetail1_.WO_FS_ID as INT) in (@p1 , @p2 , @p3 , @p4 , @p5)) 
+            and (wofsdetail1_.ITEM_PART_ID=terminalpa0_.ITEM_PART_ID 
+            or (wofsdetail1_.ITEM_PART_ID is null) 
+            and (terminalpa0_.ITEM_PART_ID is null))));
+    @p0 = 12 [Type: Int32 (0:0:0)], @p1 = 15 [Type: Int32 (0:0:0)], @p2 = 22 [Type: Int32 (0:0:0)], @p3 = 23 [Type: Int32 (0:0:0)], @p4 = 25 [Type: Int32 (0:0:0)], @p5 = 26 [Type: Int32 (0:0:0)]
+17:41:43.609 +08:00 [DEBUG] [29] [NHibernate.SQL] 
+    select
+        wostatus0_.ID as id1_48_,
+        wostatus0_.CODE as code2_48_,
+        wostatus0_.NAME as name3_48_,
+        wostatus0_.DESCRIPTION as description4_48_,
+        wostatus0_.DESCRIPTION2 as description5_48_,
+        wostatus0_.EMPLOYEE_CODE as employee6_48_,
+        wostatus0_.CREATE_TIME as create7_48_,
+        wostatus0_.UPDATE_TIME as update8_48_ 
+    from
+        S_WO_STATUS wostatus0_ 
+    where
+        wostatus0_.NAME=@p0;
+    @p0 = 'RELEASE,WIP' [Type: String (4000:0:0)]

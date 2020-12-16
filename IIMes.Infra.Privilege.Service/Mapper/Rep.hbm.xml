@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Infra.Privilege.Service" namespace="IIMes.Infra.Privilege.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Rep" table="REP" lazy="true" dynamic-update="true" >
+    <id name="Id" column="RepairId">
+      <generator class="identity" />
+    </id>
+    <property name="Sno">
+      <column name="Sno" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Wc">
+      <column name="Wc" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Symptom">
+      <column name="Symptom" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Data">
+      <column name="Data" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Type">
+      <column name="Type" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Pdline">
+      <column name="Pdline" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="Editor" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp">
+      <column name="Cdt" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="Udt" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="DiagDefect">
+      <column name="DiagDefect" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="OriginalId">
+      <column name="OriginalId" sql-type="int" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

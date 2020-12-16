@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="RcScrap" table="RC_SCRAP" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="RcNo">
+      <column name="RC_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Qty">
+      <column name="QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="TerminalId">
+      <column name="TERMINAL_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="TerminalCode">
+      <column name="TERMINAL_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ProcessId">
+      <column name="PROCESS_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProcessCode">
+      <column name="PROCESS_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ScrapType">
+      <column name="SCRAP_TYPE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ScrapMemo">
+      <column name="SCRAP_MEMO" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="EmployeeCode">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="CreateTime">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

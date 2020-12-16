@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SPart" table="S_PART" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="SWorkflow">
+      <column name="WORKFLOW_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SVendor">
+      <column name="VENDOR_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SCustomer">
+      <column name="CUSTOMER_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SFamily">
+      <column name="FAMILY_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SSetting">
+      <column name="MATERIAL_TYPE_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="PartNo">
+      <column name="PART_NO" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PartName">
+      <column name="PART_NAME" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Type">
+      <column name="TYPE" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Spec1">
+      <column name="SPEC1" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Spec2">
+      <column name="SPEC2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Version">
+      <column name="VERSION" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PartDl">
+      <column name="PART_DL" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PartXl">
+      <column name="PART_XL" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+    <property name="VendorPartNo">
+      <column name="VENDOR_PART_NO" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CustomerPartNo">
+      <column name="CUSTOMER_PART_NO" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Uom">
+      <column name="UOM" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Keypart">
+      <column name="KEYPART" sql-type="bit" not-null="false" />
+    </property>
+    <property name="MatchRule">
+      <column name="MATCH_RULE" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="UniqueCheck">
+      <column name="UNIQUE_CHECK" sql-type="bit" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

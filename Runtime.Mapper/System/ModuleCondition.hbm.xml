@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.System" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ModuleCondition" table="SETTING_MODULE_CONDITION" lazy="false" >
+    <id name="Id" column="Id">
+      <generator class="identity" />
+    </id>
+    <property name="Plant">
+      <column name="Plant" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Customer">
+      <column name="Customer" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Family">
+      <column name="Family" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Model">
+      <column name="Model" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Site">
+      <column name="Site" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Process">
+      <column name="Process" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Wc">
+      <column name="Wc" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Line">
+      <column name="Line" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Module">
+      <column name="Module" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ModuleType">
+      <column name="ModuleType" sql-type="varchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

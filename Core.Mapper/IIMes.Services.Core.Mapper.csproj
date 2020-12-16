@@ -1,0 +1,113 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Model\IIMes.Services.Core.Model.csproj" />
+    <!-- <ProjectReference Include="..\IIMes.Infrastructure.Hibernate\IIMes.Infrastructure.Hibernate.csproj" /> -->
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IIMes.Infrastructure.Hibernate\IIMes.Infrastructure.Hibernate.csproj" />
+  </ItemGroup>
+  <!-- <ItemGroup>
+    <PackageReference Include="IIMes.Infrastructure.Hibernate" Version="1.0.2-dev-0011" />
+  </ItemGroup> -->
+  <ItemGroup>
+    <EmbeddedResource Include=".\WoFs.hbm.xml" />
+    <EmbeddedResource Include=".\WoFsDetail.hbm.xml" />
+    <EmbeddedResource Include=".\WoFsSub.hbm.xml" />
+    <EmbeddedResource Include=".\SPartFs.hbm.xml" />
+    <EmbeddedResource Include=".\SPartFsDetail.hbm.xml" />
+    <EmbeddedResource Include=".\SPartFsSub.hbm.xml" />
+    <EmbeddedResource Include=".\SBarcodeRule.hbm.xml"/>
+    <EmbeddedResource Include=".\SSetting.hbm.xml" />
+    <EmbeddedResource Include=".\ModuleCondition.hbm.xml" />
+    <EmbeddedResource Include=".\ModuleType.hbm.xml" />
+    <EmbeddedResource Include=".\SBopBase.hbm.xml" />
+    <EmbeddedResource Include=".\SBopProcessSampling.hbm.xml" />
+    <EmbeddedResource Include=".\STestItem.hbm.xml" />
+    <EmbeddedResource Include=".\STestItemType.hbm.xml" />
+    <EmbeddedResource Include=".\SBopProcessTestitem.hbm.xml" />
+    <EmbeddedResource Include=".\SSymptom.hbm.xml" />
+    <EmbeddedResource Include=".\SSymptomType.hbm.xml" />
+    <EmbeddedResource Include=".\ProductStatus.hbm.xml" />
+    <EmbeddedResource Include=".\WoBase.hbm.xml"/>
+    <EmbeddedResource Include=".\LabelSerial.hbm.xml"/>
+    <EmbeddedResource Include=".\QcDefect.hbm.xml" />
+    <EmbeddedResource Include=".\QcTestitemResult.hbm.xml" />
+    <EmbeddedResource Include=".\SSamplingPlan.hbm.xml" />
+    <EmbeddedResource Include=".\SSamplingRule.hbm.xml" />
+    <EmbeddedResource Include=".\SSamplingRuleDetail.hbm.xml" />
+    <EmbeddedResource Include=".\SSamplingPlanDetail.hbm.xml" />
+    <EmbeddedResource Include=".\SWoStatus.hbm.xml" />
+    <EmbeddedResource Include=".\SWorkflowBase.hbm.xml" />
+    <EmbeddedResource Include=".\SWorkflow.hbm.xml" />
+    <EmbeddedResource Include=".\SPart.hbm.xml" />
+    <EmbeddedResource Include=".\SProcessType.hbm.xml" />
+    <EmbeddedResource Include=".\SStage.hbm.xml" />
+    <EmbeddedResource Include=".\SDepartment.hbm.xml" />
+    <EmbeddedResource Include=".\SEquipmentCatagory.hbm.xml" />
+    <EmbeddedResource Include=".\SFactory.hbm.xml" />
+    <EmbeddedResource Include=".\SWorkshop.hbm.xml" />
+    <EmbeddedResource Include=".\SEquipment.hbm.xml" />
+    <EmbeddedResource Include=".\SEquipmentType.hbm.xml" />
+    <EmbeddedResource Include=".\SProcess.hbm.xml" />
+    <EmbeddedResource Include=".\SProductLine.hbm.xml" />
+    <EmbeddedResource Include=".\STerminal.hbm.xml" />
+    <EmbeddedResource Include=".\SPartPack.hbm.xml" />
+    <EmbeddedResource Include=".\PackContainer.hbm.xml"/>
+    <EmbeddedResource Include=".\PackUnit.hbm.xml" />
+    <EmbeddedResource Include=".\SBopProcessBom.hbm.xml" />
+    <EmbeddedResource Include=".\SServiceMessage.hbm.xml" />
+    <EmbeddedResource Include=".\ProductLog.hbm.xml" />
+    <EmbeddedResource Include=".\QcLotDetail.hbm.xml" />
+    <EmbeddedResource Include=".\QcLotResult.hbm.xml" />
+    <EmbeddedResource Include=".\QcSampleResult.hbm.xml" />
+    <EmbeddedResource Include=".\ProductInfo.hbm.xml" />
+    <EmbeddedResource Include=".\PackRemove.hbm.xml" />
+    <EmbeddedResource Include=".\PackRemoveUnit.hbm.xml" />
+    <EmbeddedResource Include=".\SWorkflowStep.hbm.xml" />
+    <EmbeddedResource Include=".\QcSampleStatus.hbm.xml" />
+    <EmbeddedResource Include=".\SBopProcessLabel.hbm.xml" />
+    <EmbeddedResource Include=".\ProductInfoRemove.hbm.xml"/>
+    <EmbeddedResource Include=".\SCause.hbm.xml" />
+    <EmbeddedResource Include=".\SDuty.hbm.xml" />
+    <EmbeddedResource Include=".\SRepairType.hbm.xml" />
+    <EmbeddedResource Include=".\RepairKeyparts.hbm.xml" />
+    <EmbeddedResource Include=".\RepairLog.hbm.xml" />
+    <EmbeddedResource Include=".\RepairLogDetail.hbm.xml"/>
+    <EmbeddedResource Include=".\ReworkLog.hbm.xml" />
+    <EmbeddedResource Include=".\ReworkLot.hbm.xml" />
+    <EmbeddedResource Include=".\LabelPrintLog.hbm.xml" />
+    <EmbeddedResource Include=".\SBom.hbm.xml" />
+    <EmbeddedResource Include=".\SBomBase.hbm.xml" />
+    <EmbeddedResource Include=".\SBomItem.hbm.xml" />
+    <EmbeddedResource Include=".\SBomLocation.hbm.xml" />
+    <EmbeddedResource Include=".\Query.hbm.xml"/>
+    <EmbeddedResource Include=".\WoStatusLog.hbm.xml" />
+    <EmbeddedResource Include=".\SVendor.hbm.xml" />
+    <EmbeddedResource Include=".\SCustomer.hbm.xml" />
+    <EmbeddedResource Include=".\SModel.hbm.xml" />
+    <EmbeddedResource Include=".\SPrintSettings.hbm.xml" />
+    <EmbeddedResource Include=".\SPrintTemplate.hbm.xml" />
+    <EmbeddedResource Include=".\FsLog.hbm.xml" />
+    <EmbeddedResource Include=".\FsStatus.hbm.xml" />
+    <EmbeddedResource Include=".\RcStatus.hbm.xml" />
+    <EmbeddedResource Include=".\RcInfo.hbm.xml" />
+    <EmbeddedResource Include=".\WoBom.hbm.xml" />
+    <EmbeddedResource Include=".\Material.hbm.xml" />
+    <EmbeddedResource Include=".\RcLog.hbm.xml" />
+    <EmbeddedResource Include=".\RcScrap.hbm.xml" />
+    <EmbeddedResource Include=".\RcWorkoutLog.hbm.xml" />
+    <EmbeddedResource Include=".\SShift.hbm.xml" />
+    <EmbeddedResource Include=".\SShiftGroup.hbm.xml" />
+    <EmbeddedResource Include=".\SEmployee.hbm.xml" />
+    <EmbeddedResource Include=".\SBopSpec.hbm.xml" />
+    <EmbeddedResource Include=".\SFamily.hbm.xml" />
+    <EmbeddedResource Include=".\SScrapReason.hbm.xml" />
+    <EmbeddedResource Include=".\SBop.hbm.xml" />
+    <EmbeddedResource Include=".\TemporaryTable.hbm.xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>

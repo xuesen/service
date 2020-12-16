@@ -1,0 +1,15 @@
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\bin\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.deps.json
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\bin\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.dll
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\bin\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.pdb
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\bin\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.xml
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\bin\Debug\netstandard2.1\IIMes.Infrastructure.dll
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\bin\Debug\netstandard2.1\IIMes.Infrastructure.pdb
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\bin\Debug\netstandard2.1\IIMes.Infrastructure.xml
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\obj\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.csprojAssemblyReference.cache
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\obj\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.AssemblyInfoInputs.cache
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\obj\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.AssemblyInfo.cs
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\obj\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.csproj.CoreCompileInputs.cache
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\obj\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.csproj.CopyComplete
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\obj\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.dll
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\obj\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.xml
+D:\LeanMES\CODE\service\IIMes.Infrastructure.hibernate\obj\Debug\netstandard2.1\IIMes.Infrastructure.hibernate.pdb

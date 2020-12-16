@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Plant" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Workshop" table="S_WORKSHOP" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="Factory" insert="false" update="false">
+      <column name="FACTORY_ID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="FactoryId">
+      <column name="FACTORY_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="Code">
+      <column name="CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Name">
+      <column name="NAME" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Description">
+      <column name="DESCRIPTION" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Description2">
+      <column name="DESCRIPTION2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

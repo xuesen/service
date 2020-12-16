@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Product" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Part" table="S_PART" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="PartNo">
+      <column name="PART_NO" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PartName">
+      <column name="PART_NAME" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Type">
+      <column name="TYPE" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Spec1">
+      <column name="SPEC1" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Spec2">
+      <column name="SPEC2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Version">
+      <column name="VERSION" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PartDl">
+      <column name="PART_DL" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PartXl">
+      <column name="PART_XL" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="VendorPartNo">
+      <column name="VENDOR_PART_NO" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CustomerPartNo">
+      <column name="CUSTOMER_PART_NO" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Uom">
+      <column name="UOM" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Keypart">
+      <column name="KEYPART" sql-type="bit" not-null="false" />
+    </property>
+    <property name="MatchRule">
+      <column name="MATCH_RULE" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="UniqueCheck">
+      <column name="UNIQUE_CHECK" sql-type="bit" not-null="false" />
+    </property>
+    <many-to-one name="Workflow">
+      <column name="WORKFLOW_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Vendor">
+      <column name="VENDOR_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Customer">
+      <column name="CUSTOMER_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Family">
+      <column name="FAMILY_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Setting">
+      <column name="MATERIAL_TYPE_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>
+
+

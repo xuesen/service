@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Resource" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Employee" table="S_EMPLOYEE" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="EmployeeCode">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+    <property name="Code">
+      <column name="CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Password">
+      <column name="PASSWORD" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Name">
+      <column name="NAME" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Duty">
+      <column name="DUTY" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Email">
+      <column name="EMAIL" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="PhoneNo">
+      <column name="PHONE_NO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Description">
+      <column name="DESCRIPTION" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Type">
+      <column name="TYPE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Domain">
+      <column name="DOMAIN" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LeaveTime">
+      <column name="LEAVE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <many-to-one name="Department">
+      <column name="DEPARTMENT_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Manager">
+      <column name="MANAGER_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

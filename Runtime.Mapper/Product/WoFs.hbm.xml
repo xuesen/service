@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Product" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WoFs" table="WO_FS" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="PartFsId">
+      <column name="PART_FS_ID" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="WorkOrder">
+      <column name="WORK_ORDER" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="PartId">
+      <column name="PART_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="Side">
+      <column name="SIDE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="EquipmentId">
+      <column name="EQUIPMENT_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

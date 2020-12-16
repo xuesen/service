@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Packing" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PartPack" table="S_PART_PACK" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="PartId">
+      <column name="PART_ID" sql-type="int" not-null="true" />
+    </property>    
+    <property name="BoxQty">
+      <column name="BOX_QTY" sql-type="int" not-null="false" />
+    </property>
+    <property name="CartonQty">
+      <column name="CARTON_QTY" sql-type="int" not-null="false" />
+    </property>
+    <property name="PalletQty">
+      <column name="PALLET_QTY" sql-type="int" not-null="false" />
+    </property>
+    <property name="BoxBarcodeRuleId">
+      <column name="BOX_BARCODE_RULE_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="CartonBarcodeRuleId">
+      <column name="CARTON_BARCODE_RULE_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="PalletBarcodeRuleId">
+      <column name="PALLET_BARCODE_RULE_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

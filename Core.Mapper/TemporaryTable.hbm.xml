@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="TemporaryTable" table="TEMPORARY_TABLE" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="C1">
+      <column name="C1" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C2">
+      <column name="C2" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C3">
+      <column name="C3" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C4">
+      <column name="C4" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C5">
+      <column name="C5" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C6">
+      <column name="C6" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C7">
+      <column name="C7" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C8">
+      <column name="C8" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C9">
+      <column name="C9" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C10">
+      <column name="C10" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C11">
+      <column name="C11" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C12">
+      <column name="C12" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C13">
+      <column name="C13" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C14">
+      <column name="C14" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C15">
+      <column name="C15" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C16">
+      <column name="C16" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C17">
+      <column name="C17" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C18">
+      <column name="C18" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C19">
+      <column name="C19" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C20">
+      <column name="C20" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C21">
+      <column name="C21" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C22">
+      <column name="C22" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C23">
+      <column name="C23" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C24">
+      <column name="C24" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C25">
+      <column name="C25" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C26">
+      <column name="C26" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C27">
+      <column name="C27" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C28">
+      <column name="C28" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C29">
+      <column name="C29" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C30">
+      <column name="C30" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C31">
+      <column name="C31" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C32">
+      <column name="C32" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C33">
+      <column name="C33" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C34">
+      <column name="C34" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="C35">
+      <column name="C35" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Entityname">
+      <column name="ENTITYNAME" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Status">
+      <column name="STATUS" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

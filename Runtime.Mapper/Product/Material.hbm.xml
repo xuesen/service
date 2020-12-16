@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Product" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Material" table="MATERIAL" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="ReelId">
+      <column name="REEL_ID" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Pn">
+      <column name="PN" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="MnfPn">
+      <column name="MNF_PN" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="MnfDate">
+      <column name="MNF_DATE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Manufacturer">
+      <column name="MANUFACTURER" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="OrderId">
+      <column name="ORDER_ID" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Supplier">
+      <column name="SUPPLIER" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ReceiveDate">
+      <column name="RECEIVE_DATE" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="LotNo">
+      <column name="LOT_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Amount">
+      <column name="AMOUNT" sql-type="int" not-null="true" />
+    </property>
+    <property name="LeftAmount">
+      <column name="LEFT_AMOUNT" sql-type="int" not-null="true" />
+    </property>
+    <property name="Type">
+      <column name="TYPE" sql-type="int" not-null="true" />
+    </property>
+    <property name="Remark">
+      <column name="REMARK" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Remark2">
+      <column name="REMARK2" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Remark3">
+      <column name="REMARK3" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="RohsStatus">
+      <column name="ROHS_STATUS" sql-type="int" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

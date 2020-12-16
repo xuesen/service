@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Infra.Privilege.Model" namespace="IIMes.Infra.Privilege.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Resource" table="s_resource" lazy="true" >
+    <id name="Id" column="id">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="SResource">
+      <column name="parent_id" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="Application">
+      <column name="application" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SubApplication">
+      <column name="sub_application" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Code">
+      <column name="code" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Name">
+      <column name="name" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Description">
+      <column name="description" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="IsLeaf">
+      <column name="is_leaf" sql-type="bit" not-null="false" />
+    </property>
+    <property name="Url">
+      <column name="url" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Icon">
+      <column name="icon" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Sequence">
+      <column name="sequence" sql-type="int" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="create_time" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="created_by" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="update_time" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="UpdateEditor">
+      <column name="updated_by" sql-type="varchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

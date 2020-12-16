@@ -1,0 +1,11 @@
+D:\LeanMES\CODE\service\IIMes.Infrastructure\bin\Debug\netstandard2.1\IIMes.Infrastructure.deps.json
+D:\LeanMES\CODE\service\IIMes.Infrastructure\bin\Debug\netstandard2.1\IIMes.Infrastructure.dll
+D:\LeanMES\CODE\service\IIMes.Infrastructure\bin\Debug\netstandard2.1\IIMes.Infrastructure.pdb
+D:\LeanMES\CODE\service\IIMes.Infrastructure\bin\Debug\netstandard2.1\IIMes.Infrastructure.xml
+D:\LeanMES\CODE\service\IIMes.Infrastructure\obj\Debug\netstandard2.1\IIMes.Infrastructure.csprojAssemblyReference.cache
+D:\LeanMES\CODE\service\IIMes.Infrastructure\obj\Debug\netstandard2.1\IIMes.Infrastructure.AssemblyInfoInputs.cache
+D:\LeanMES\CODE\service\IIMes.Infrastructure\obj\Debug\netstandard2.1\IIMes.Infrastructure.AssemblyInfo.cs
+D:\LeanMES\CODE\service\IIMes.Infrastructure\obj\Debug\netstandard2.1\IIMes.Infrastructure.csproj.CoreCompileInputs.cache
+D:\LeanMES\CODE\service\IIMes.Infrastructure\obj\Debug\netstandard2.1\IIMes.Infrastructure.dll
+D:\LeanMES\CODE\service\IIMes.Infrastructure\obj\Debug\netstandard2.1\IIMes.Infrastructure.xml
+D:\LeanMES\CODE\service\IIMes.Infrastructure\obj\Debug\netstandard2.1\IIMes.Infrastructure.pdb

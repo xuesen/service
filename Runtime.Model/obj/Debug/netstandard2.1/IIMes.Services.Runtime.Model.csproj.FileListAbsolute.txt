@@ -1,0 +1,15 @@
+D:\LeanMES\CODE\service\Runtime.Model\bin\Debug\netstandard2.1\IIMes.Services.Runtime.Model.deps.json
+D:\LeanMES\CODE\service\Runtime.Model\bin\Debug\netstandard2.1\IIMes.Services.Runtime.Model.dll
+D:\LeanMES\CODE\service\Runtime.Model\bin\Debug\netstandard2.1\IIMes.Services.Runtime.Model.pdb
+D:\LeanMES\CODE\service\Runtime.Model\bin\Debug\netstandard2.1\IIMes.Services.Runtime.Model.xml
+D:\LeanMES\CODE\service\Runtime.Model\bin\Debug\netstandard2.1\IIMes.Infrastructure.dll
+D:\LeanMES\CODE\service\Runtime.Model\bin\Debug\netstandard2.1\IIMes.Infrastructure.pdb
+D:\LeanMES\CODE\service\Runtime.Model\bin\Debug\netstandard2.1\IIMes.Infrastructure.xml
+D:\LeanMES\CODE\service\Runtime.Model\obj\Debug\netstandard2.1\IIMes.Services.Runtime.Model.csprojAssemblyReference.cache
+D:\LeanMES\CODE\service\Runtime.Model\obj\Debug\netstandard2.1\IIMes.Services.Runtime.Model.AssemblyInfoInputs.cache
+D:\LeanMES\CODE\service\Runtime.Model\obj\Debug\netstandard2.1\IIMes.Services.Runtime.Model.AssemblyInfo.cs
+D:\LeanMES\CODE\service\Runtime.Model\obj\Debug\netstandard2.1\IIMes.Services.Runtime.Model.csproj.CoreCompileInputs.cache
+D:\LeanMES\CODE\service\Runtime.Model\obj\Debug\netstandard2.1\IIMes.Services.Runtime.Model.csproj.CopyComplete
+D:\LeanMES\CODE\service\Runtime.Model\obj\Debug\netstandard2.1\IIMes.Services.Runtime.Model.dll
+D:\LeanMES\CODE\service\Runtime.Model\obj\Debug\netstandard2.1\IIMes.Services.Runtime.Model.xml
+D:\LeanMES\CODE\service\Runtime.Model\obj\Debug\netstandard2.1\IIMes.Services.Runtime.Model.pdb

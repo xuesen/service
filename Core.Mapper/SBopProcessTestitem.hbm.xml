@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SBopProcessTestitem" table="S_BOP_PROCESS_TESTITEM" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="BopBaseId">
+      <column name="BOP_BASE_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProcessId">
+      <column name="PROCESS_ID" sql-type="int" not-null="true" />
+    </property>
+    <many-to-one name="STestItem">
+      <column name="TEST_ITEM_ID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="Sl">
+      <column name="SL" sql-type="decimal" not-null="false" />
+    </property>
+    <property name="Usl">
+      <column name="USL" sql-type="decimal" not-null="false" />
+    </property>
+    <property name="Lsl">
+      <column name="LSL" sql-type="decimal" not-null="false" />
+    </property>
+    <property name="Cl">
+      <column name="CL" sql-type="decimal" not-null="false" />
+    </property>
+    <property name="Ucl">
+      <column name="UCL" sql-type="decimal" not-null="false" />
+    </property>
+    <property name="Lcl">
+      <column name="LCL" sql-type="decimal" not-null="false" />
+    </property>
+    <property name="Unit">
+      <column name="UNIT" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Sequence">
+      <column name="SEQUENCE" sql-type="int" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

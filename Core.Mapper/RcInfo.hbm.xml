@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="RcInfo" table="RC_INFO" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity"/>
+    </id>
+    <property name="RcNo">
+      <column name="RC_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ProcessId">
+      <column name="PROCESS_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="ProcessCode">
+      <column name="PROCESS_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Type">
+      <column name="TYPE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ItemPartId">
+      <column name="ITEM_PART_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="ItemPartNo">
+      <column name="ITEM_PART_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ScanPartId">
+      <column name="SCAN_PART_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="ScanPartNo">
+      <column name="SCAN_PART_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ScanPartValue">
+      <column name="SCAN_PART_VALUE" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="EmployeeCode">
+      <column name="EMPLOYEE_CODE" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="CreateTime">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="UpdateTime">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

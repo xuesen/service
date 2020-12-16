@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+    <ItemGroup>
+    <ProjectReference Include="..\Generate.Base\Generate.Base.csproj" />
+    <ProjectReference Include="..\..\IIMes.Infrastructure\IIMes.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\IIMes.Infrastructure.Hibernate\IIMes.Infrastructure.Hibernate.csproj" />
+    <ProjectReference Include="..\Generate.Model\Generate.Model.csproj" />
+  </ItemGroup>
+
+</Project>

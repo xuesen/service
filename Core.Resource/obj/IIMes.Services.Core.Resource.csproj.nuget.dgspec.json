@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\LeanMES\\CODE\\service\\Core.Resource\\IIMes.Services.Core.Resource.csproj": {}
+  },
+  "projects": {
+    "D:\\LeanMES\\CODE\\service\\Core.Resource\\IIMes.Services.Core.Resource.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\LeanMES\\CODE\\service\\Core.Resource\\IIMes.Services.Core.Resource.csproj",
+        "projectName": "IIMes.Services.Core.Resource",
+        "projectPath": "D:\\LeanMES\\CODE\\service\\Core.Resource\\IIMes.Services.Core.Resource.csproj",
+        "packagesPath": "C:\\Users\\itc200005.ITC\\.nuget\\packages\\",
+        "outputPath": "D:\\LeanMES\\CODE\\service\\Core.Resource\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\itc200005.ITC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "IIMes.Stylecop": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

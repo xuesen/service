@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.System" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Module" table="SETTING_MODULE" lazy="false" >
+    <composite-id class="ModuleId" name="BizKey">
+      <key-property name="Name" column="Name" access="property"/>
+      <key-property name="Type" column="Type" access="property"/>
+    </composite-id>    
+    <property name="Priority"  access="property" insert="false" update="false">
+      <column name="Priority" sql-type="int" not-null="true" />
+    </property>
+    <many-to-one name="Type" access="property" insert="false" update="false">
+      <column name="Type" sql-type="varchar" not-null="true"/>
+    </many-to-one>
+    <set name="ModuleConditions" inverse="false" lazy="false" fetch="join" access="property">
+      <key>
+        <column name="Module"/>
+        <column name="ModuleType"/>
+      </key>
+      <one-to-many class="ModuleCondition" />
+    </set>
+  </class>
+</hibernate-mapping>

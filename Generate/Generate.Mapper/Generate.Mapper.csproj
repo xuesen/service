@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\IIMes.Infrastructure.Hibernate\IIMes.Infrastructure.Hibernate.csproj" />
+    <ProjectReference Include="..\Generate.Model\Generate.Model.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include=".\GenerateBarcodeRule.hbm.xml"/>
+    <EmbeddedResource Include=".\GenerateLabelSerial.hbm.xml"/>    
+  </ItemGroup>  
+</Project>

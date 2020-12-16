@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SShift" table="S_SHIFT" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="SShiftGroup">
+      <column name="SHIFT_GROUP_ID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="Code">
+      <column name="SHIFT_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Name">
+      <column name="SHIFT_NAME" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="StartTime">
+      <column name="START_TIME" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="EndTime">
+      <column name="END_TIME" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

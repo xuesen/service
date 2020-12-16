@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IIMes.Services.Maintain.Service</name>
+    </assembly>
+    <members>
+        <member name="F:IIMes.Services.Maintain.Model.FsStatusCode.NONE">
+            <summary>
+            未上料
+            </summary>
+        </member>
+        <member name="F:IIMes.Services.Maintain.Model.FsStatusCode.LAYINGOFF">
+            <summary>
+            已下料
+            </summary>
+        </member>
+        <member name="F:IIMes.Services.Maintain.Model.FsStatusCode.FEEDING">
+            <summary>
+            已上料
+            </summary>
+        </member>
+    </members>
+</doc>

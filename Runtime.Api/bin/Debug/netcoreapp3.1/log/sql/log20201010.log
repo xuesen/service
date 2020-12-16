@@ -1,0 +1,2851 @@
+15:12:52.774 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        wofs0_.ID as id1_36_,
+        wofs0_.PART_FS_ID as part2_36_,
+        wofs0_.WORK_ORDER as work3_36_,
+        wofs0_.PART_ID as part4_36_,
+        wofs0_.SIDE as side5_36_,
+        wofs0_.EQUIPMENT_ID as equipment6_36_,
+        wofs0_.EMPLOYEE_CODE as employee7_36_,
+        wofs0_.CREATE_TIME as create8_36_,
+        wofs0_.UPDATE_TIME as update9_36_ 
+    from
+        WO_FS wofs0_ 
+    where
+        wofs0_.WORK_ORDER=@p0 
+        and wofs0_.EQUIPMENT_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 12 [Type: Int32 (0:0:0)]
+15:12:52.931 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        TOP (1) fsstatus0_.ID as id1_39_,
+        fsstatus0_.TERMINAL_ID as terminal2_39_,
+        fsstatus0_.EQUIPMENT_ID as equipment3_39_,
+        fsstatus0_.WORK_ORDER as work4_39_,
+        fsstatus0_.STATUS as status5_39_,
+        fsstatus0_.EMPLOYEE_CODE as employee6_39_,
+        fsstatus0_.CREATE_TIME as create7_39_,
+        fsstatus0_.UPDATE_TIME as update8_39_ 
+    from
+        FS_STATUS fsstatus0_ 
+    where
+        fsstatus0_.WORK_ORDER=@p0 
+        and fsstatus0_.EQUIPMENT_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 12 [Type: Int32 (0:0:0)]
+15:13:03.406 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) fsstatus0_.ID as id1_39_,
+        fsstatus0_.TERMINAL_ID as terminal2_39_,
+        fsstatus0_.EQUIPMENT_ID as equipment3_39_,
+        fsstatus0_.WORK_ORDER as work4_39_,
+        fsstatus0_.STATUS as status5_39_,
+        fsstatus0_.EMPLOYEE_CODE as employee6_39_,
+        fsstatus0_.CREATE_TIME as create7_39_,
+        fsstatus0_.UPDATE_TIME as update8_39_ 
+    from
+        FS_STATUS fsstatus0_ 
+    where
+        fsstatus0_.WORK_ORDER=@p0 
+        and fsstatus0_.TERMINAL_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 15 [Type: Int32 (0:0:0)]
+15:13:03.529 +08:00 [DEBUG] [12] [NHibernate.SQL] 
+    select
+        wostatus0_.ID as id1_48_,
+        wostatus0_.CODE as code2_48_,
+        wostatus0_.NAME as name3_48_,
+        wostatus0_.DESCRIPTION as description4_48_,
+        wostatus0_.DESCRIPTION2 as description5_48_,
+        wostatus0_.EMPLOYEE_CODE as employee6_48_,
+        wostatus0_.CREATE_TIME as create7_48_,
+        wostatus0_.UPDATE_TIME as update8_48_ 
+    from
+        S_WO_STATUS wostatus0_ 
+    where
+        wostatus0_.NAME=@p0;
+    @p0 = 'WIP' [Type: String (4000:0:0)]
+15:13:03.590 +08:00 [DEBUG] [12] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0 
+        and wobase0_.WO_STATUS_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 4 [Type: Int32 (0:0:0)]
+15:13:03.900 +08:00 [DEBUG] [12] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 69 [Type: Int32 (0:0:0)]
+15:13:10.785 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofs0_.ID as id1_36_,
+        wofs0_.PART_FS_ID as part2_36_,
+        wofs0_.WORK_ORDER as work3_36_,
+        wofs0_.PART_ID as part4_36_,
+        wofs0_.SIDE as side5_36_,
+        wofs0_.EQUIPMENT_ID as equipment6_36_,
+        wofs0_.EMPLOYEE_CODE as employee7_36_,
+        wofs0_.CREATE_TIME as create8_36_,
+        wofs0_.UPDATE_TIME as update9_36_ 
+    from
+        WO_FS wofs0_ 
+    where
+        wofs0_.WORK_ORDER=@p0 
+        and wofs0_.EQUIPMENT_ID=@p1 
+    order by
+        wofs0_.ID desc;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)],
+    @p1 = 12 [Type: Int32 (0:0:0)]
+15:13:10.797 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        terminal0_.ID as id1_9_0_,
+        terminal0_.LINE_ID as line2_9_0_,
+        terminal0_.PROCESS_ID as process3_9_0_,
+        terminal0_.EQUIPMENT_ID as equipment4_9_0_,
+        terminal0_.CODE as code5_9_0_,
+        terminal0_.NAME as name6_9_0_,
+        terminal0_.IP as ip7_9_0_,
+        terminal0_.DESCRIPTION as description8_9_0_,
+        terminal0_.DESCRIPTION2 as description9_9_0_,
+        terminal0_.EMPLOYEE_CODE as employee10_9_0_,
+        terminal0_.CREATE_TIME as create11_9_0_,
+        terminal0_.UPDATE_TIME as update12_9_0_ 
+    FROM
+        S_TERMINAL terminal0_ 
+    WHERE
+        terminal0_.ID=@p0;
+    @p0 = 15 [Type: Int32 (0:0:0)]
+15:13:10.969 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        terminalpa0_.ID as id1_46_,
+        terminalpa0_.TERMINAL_ID as terminal2_46_,
+        terminalpa0_.EQUIPMENT_ID as equipment3_46_,
+        terminalpa0_.STATION_ID as station4_46_,
+        terminalpa0_.STATION as station5_46_,
+        terminalpa0_.[SEQUENCE] as SEQUENCE6_46_,
+        terminalpa0_.ITEM_PART_ID as item7_46_,
+        terminalpa0_.ITEM_PART_NO as item8_46_,
+        terminalpa0_.SCAN_PART_ID as scan9_46_,
+        terminalpa0_.SCAN_PART_NO as scan10_46_,
+        terminalpa0_.SCAN_NO as scan11_46_,
+        terminalpa0_.EMPLOYEE_CODE as employee12_46_,
+        terminalpa0_.CREATE_TIME as create13_46_ 
+    from
+        TERMINAL_PARTS terminalpa0_ 
+    where
+        terminalpa0_.TERMINAL_ID=@p0 
+    order by
+        terminalpa0_.[SEQUENCE] asc;
+    @p0 = 15 [Type: Int32 (0:0:0)]
+15:13:36.031 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofsdetail0_.ID as id1_37_,
+        wofsdetail0_.WO_FS_ID as wo2_37_,
+        wofsdetail0_.STATION as station3_37_,
+        wofsdetail0_.ITEM_PART_ID as item4_37_,
+        wofsdetail0_.ITEM_COUNT as item5_37_,
+        wofsdetail0_.LOCATION as location6_37_,
+        wofsdetail0_.FEEDER_TYPE as feeder7_37_,
+        wofsdetail0_.FEEDER_SPEC as feeder8_37_ 
+    from
+        WO_FS_DETAIL wofsdetail0_ 
+    where
+        wofsdetail0_.WO_FS_ID=@p0;
+    @p0 = '15' [Type: String (4000:0:0)]
+15:13:36.050 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 93 [Type: Int32 (0:0:0)]
+15:13:36.055 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 97 [Type: Int32 (0:0:0)]
+15:13:36.092 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '121Kohm1040201' [Type: String (4000:0:0)]
+15:13:36.123 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '121Kohm1040201' [Type: String (4000:0:0)]
+15:13:36.128 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 94 [Type: Int32 (0:0:0)]
+15:13:36.133 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 88 [Type: Int32 (0:0:0)]
+15:13:36.137 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '47uF040210V01' [Type: String (4000:0:0)]
+15:13:36.141 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '47uF040210V01' [Type: String (4000:0:0)]
+15:13:36.176 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 95 [Type: Int32 (0:0:0)]
+15:13:36.179 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 94 [Type: Int32 (0:0:0)]
+15:13:36.185 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '0ohm0402501' [Type: String (4000:0:0)]
+15:13:36.190 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '0ohm0402501' [Type: String (4000:0:0)]
+15:13:36.195 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 96 [Type: Int32 (0:0:0)]
+15:13:36.198 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 89 [Type: Int32 (0:0:0)]
+15:13:36.204 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+15:13:36.210 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+15:13:36.216 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 97 [Type: Int32 (0:0:0)]
+15:13:36.220 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 90 [Type: Int32 (0:0:0)]
+15:13:36.224 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '47uF040263V01' [Type: String (4000:0:0)]
+15:13:36.230 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '47uF040263V01' [Type: String (4000:0:0)]
+15:13:36.236 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 98 [Type: Int32 (0:0:0)]
+15:13:36.243 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 98 [Type: Int32 (0:0:0)]
+15:13:36.249 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '523Kohm1040201' [Type: String (4000:0:0)]
+15:13:36.259 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '523Kohm1040201' [Type: String (4000:0:0)]
+15:13:36.268 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 99 [Type: Int32 (0:0:0)]
+15:13:36.276 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 91 [Type: Int32 (0:0:0)]
+15:13:36.284 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040210V01' [Type: String (4000:0:0)]
+15:13:36.298 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040210V01' [Type: String (4000:0:0)]
+15:13:36.308 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 100 [Type: Int32 (0:0:0)]
+15:13:36.316 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 92 [Type: Int32 (0:0:0)]
+15:13:36.323 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '1uF060350V01' [Type: String (4000:0:0)]
+15:13:36.332 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '1uF060350V01' [Type: String (4000:0:0)]
+15:13:36.342 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 101 [Type: Int32 (0:0:0)]
+15:13:36.347 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 93 [Type: Int32 (0:0:0)]
+15:13:36.359 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '1uF040216V01' [Type: String (4000:0:0)]
+15:13:36.369 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '1uF040216V01' [Type: String (4000:0:0)]
+15:13:36.379 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 102 [Type: Int32 (0:0:0)]
+15:13:36.387 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 95 [Type: Int32 (0:0:0)]
+15:13:36.395 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '20Kohm0402101' [Type: String (4000:0:0)]
+15:13:36.403 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '20Kohm0402101' [Type: String (4000:0:0)]
+15:13:36.410 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 103 [Type: Int32 (0:0:0)]
+15:13:36.414 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 96 [Type: Int32 (0:0:0)]
+15:13:36.419 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '75Kohm0402101' [Type: String (4000:0:0)]
+15:13:36.423 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '75Kohm0402101' [Type: String (4000:0:0)]
+15:13:55.548 +08:00 [DEBUG] [11] [NHibernate.SQL] 
+    select
+        TOP (1) fsstatus0_.ID as id1_39_,
+        fsstatus0_.TERMINAL_ID as terminal2_39_,
+        fsstatus0_.EQUIPMENT_ID as equipment3_39_,
+        fsstatus0_.WORK_ORDER as work4_39_,
+        fsstatus0_.STATUS as status5_39_,
+        fsstatus0_.EMPLOYEE_CODE as employee6_39_,
+        fsstatus0_.CREATE_TIME as create7_39_,
+        fsstatus0_.UPDATE_TIME as update8_39_ 
+    from
+        FS_STATUS fsstatus0_ 
+    where
+        fsstatus0_.WORK_ORDER=@p0 
+        and fsstatus0_.TERMINAL_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 15 [Type: Int32 (0:0:0)]
+15:13:55.793 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wostatus0_.ID as id1_48_,
+        wostatus0_.CODE as code2_48_,
+        wostatus0_.NAME as name3_48_,
+        wostatus0_.DESCRIPTION as description4_48_,
+        wostatus0_.DESCRIPTION2 as description5_48_,
+        wostatus0_.EMPLOYEE_CODE as employee6_48_,
+        wostatus0_.CREATE_TIME as create7_48_,
+        wostatus0_.UPDATE_TIME as update8_48_ 
+    from
+        S_WO_STATUS wostatus0_ 
+    where
+        wostatus0_.NAME=@p0;
+    @p0 = 'WIP' [Type: String (4000:0:0)]
+15:13:55.816 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0 
+        and wobase0_.WO_STATUS_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 4 [Type: Int32 (0:0:0)]
+15:13:56.411 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 69 [Type: Int32 (0:0:0)]
+15:14:00.470 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofs0_.ID as id1_36_,
+        wofs0_.PART_FS_ID as part2_36_,
+        wofs0_.WORK_ORDER as work3_36_,
+        wofs0_.PART_ID as part4_36_,
+        wofs0_.SIDE as side5_36_,
+        wofs0_.EQUIPMENT_ID as equipment6_36_,
+        wofs0_.EMPLOYEE_CODE as employee7_36_,
+        wofs0_.CREATE_TIME as create8_36_,
+        wofs0_.UPDATE_TIME as update9_36_ 
+    from
+        WO_FS wofs0_ 
+    where
+        wofs0_.WORK_ORDER=@p0 
+        and wofs0_.EQUIPMENT_ID=@p1 
+    order by
+        wofs0_.ID desc;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)],
+    @p1 = 12 [Type: Int32 (0:0:0)]
+15:14:00.478 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        terminal0_.ID as id1_9_0_,
+        terminal0_.LINE_ID as line2_9_0_,
+        terminal0_.PROCESS_ID as process3_9_0_,
+        terminal0_.EQUIPMENT_ID as equipment4_9_0_,
+        terminal0_.CODE as code5_9_0_,
+        terminal0_.NAME as name6_9_0_,
+        terminal0_.IP as ip7_9_0_,
+        terminal0_.DESCRIPTION as description8_9_0_,
+        terminal0_.DESCRIPTION2 as description9_9_0_,
+        terminal0_.EMPLOYEE_CODE as employee10_9_0_,
+        terminal0_.CREATE_TIME as create11_9_0_,
+        terminal0_.UPDATE_TIME as update12_9_0_ 
+    FROM
+        S_TERMINAL terminal0_ 
+    WHERE
+        terminal0_.ID=@p0;
+    @p0 = 15 [Type: Int32 (0:0:0)]
+15:14:00.519 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        terminalpa0_.ID as id1_46_,
+        terminalpa0_.TERMINAL_ID as terminal2_46_,
+        terminalpa0_.EQUIPMENT_ID as equipment3_46_,
+        terminalpa0_.STATION_ID as station4_46_,
+        terminalpa0_.STATION as station5_46_,
+        terminalpa0_.[SEQUENCE] as SEQUENCE6_46_,
+        terminalpa0_.ITEM_PART_ID as item7_46_,
+        terminalpa0_.ITEM_PART_NO as item8_46_,
+        terminalpa0_.SCAN_PART_ID as scan9_46_,
+        terminalpa0_.SCAN_PART_NO as scan10_46_,
+        terminalpa0_.SCAN_NO as scan11_46_,
+        terminalpa0_.EMPLOYEE_CODE as employee12_46_,
+        terminalpa0_.CREATE_TIME as create13_46_ 
+    from
+        TERMINAL_PARTS terminalpa0_ 
+    where
+        terminalpa0_.TERMINAL_ID=@p0 
+    order by
+        terminalpa0_.[SEQUENCE] asc;
+    @p0 = 15 [Type: Int32 (0:0:0)]
+15:14:00.541 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofsdetail0_.ID as id1_37_,
+        wofsdetail0_.WO_FS_ID as wo2_37_,
+        wofsdetail0_.STATION as station3_37_,
+        wofsdetail0_.ITEM_PART_ID as item4_37_,
+        wofsdetail0_.ITEM_COUNT as item5_37_,
+        wofsdetail0_.LOCATION as location6_37_,
+        wofsdetail0_.FEEDER_TYPE as feeder7_37_,
+        wofsdetail0_.FEEDER_SPEC as feeder8_37_ 
+    from
+        WO_FS_DETAIL wofsdetail0_ 
+    where
+        wofsdetail0_.WO_FS_ID=@p0;
+    @p0 = '15' [Type: String (4000:0:0)]
+15:14:00.562 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 93 [Type: Int32 (0:0:0)]
+15:14:00.569 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 97 [Type: Int32 (0:0:0)]
+15:14:00.601 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '121Kohm1040201' [Type: String (4000:0:0)]
+15:14:00.633 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '121Kohm1040201' [Type: String (4000:0:0)]
+15:14:00.638 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 94 [Type: Int32 (0:0:0)]
+15:14:00.642 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 88 [Type: Int32 (0:0:0)]
+15:14:00.646 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '47uF040210V01' [Type: String (4000:0:0)]
+15:14:00.659 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '47uF040210V01' [Type: String (4000:0:0)]
+15:14:00.672 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 95 [Type: Int32 (0:0:0)]
+15:14:00.683 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 94 [Type: Int32 (0:0:0)]
+15:14:00.694 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '0ohm0402501' [Type: String (4000:0:0)]
+15:14:00.709 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '0ohm0402501' [Type: String (4000:0:0)]
+15:14:00.716 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 96 [Type: Int32 (0:0:0)]
+15:14:00.721 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 89 [Type: Int32 (0:0:0)]
+15:14:00.728 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+15:14:00.735 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+15:14:00.738 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 97 [Type: Int32 (0:0:0)]
+15:14:00.742 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 90 [Type: Int32 (0:0:0)]
+15:14:00.747 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '47uF040263V01' [Type: String (4000:0:0)]
+15:14:00.754 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '47uF040263V01' [Type: String (4000:0:0)]
+15:14:00.758 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 98 [Type: Int32 (0:0:0)]
+15:14:00.764 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 98 [Type: Int32 (0:0:0)]
+15:14:00.770 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '523Kohm1040201' [Type: String (4000:0:0)]
+15:14:00.777 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '523Kohm1040201' [Type: String (4000:0:0)]
+15:14:00.789 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 99 [Type: Int32 (0:0:0)]
+15:14:00.795 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 91 [Type: Int32 (0:0:0)]
+15:14:00.803 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040210V01' [Type: String (4000:0:0)]
+15:14:00.814 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040210V01' [Type: String (4000:0:0)]
+15:14:00.823 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 100 [Type: Int32 (0:0:0)]
+15:14:00.832 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 92 [Type: Int32 (0:0:0)]
+15:14:00.840 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '1uF060350V01' [Type: String (4000:0:0)]
+15:14:00.846 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '1uF060350V01' [Type: String (4000:0:0)]
+15:14:00.851 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 101 [Type: Int32 (0:0:0)]
+15:14:00.853 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 93 [Type: Int32 (0:0:0)]
+15:14:00.857 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '1uF040216V01' [Type: String (4000:0:0)]
+15:14:00.861 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '1uF040216V01' [Type: String (4000:0:0)]
+15:14:00.865 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 102 [Type: Int32 (0:0:0)]
+15:14:00.868 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 95 [Type: Int32 (0:0:0)]
+15:14:00.874 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '20Kohm0402101' [Type: String (4000:0:0)]
+15:14:00.878 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '20Kohm0402101' [Type: String (4000:0:0)]
+15:14:00.882 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_38_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_38_,
+        wofssub0_.SUB_PART_ID as sub3_38_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 103 [Type: Int32 (0:0:0)]
+15:14:00.885 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 96 [Type: Int32 (0:0:0)]
+15:14:00.891 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '75Kohm0402101' [Type: String (4000:0:0)]
+15:14:00.899 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '75Kohm0402101' [Type: String (4000:0:0)]
+15:28:42.313 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        wostatus0_.ID as id1_48_,
+        wostatus0_.CODE as code2_48_,
+        wostatus0_.NAME as name3_48_,
+        wostatus0_.DESCRIPTION as description4_48_,
+        wostatus0_.DESCRIPTION2 as description5_48_,
+        wostatus0_.EMPLOYEE_CODE as employee6_48_,
+        wostatus0_.CREATE_TIME as create7_48_,
+        wostatus0_.UPDATE_TIME as update8_48_ 
+    from
+        S_WO_STATUS wostatus0_ 
+    where
+        wostatus0_.NAME=@p0;
+    @p0 = 'WIP' [Type: String (4000:0:0)]
+15:28:42.343 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0 
+        and wobase0_.WO_STATUS_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 4 [Type: Int32 (0:0:0)]
+15:28:42.369 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 69 [Type: Int32 (0:0:0)]
+15:28:42.802 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) terminal0_.ID as id1_9_,
+        terminal0_.LINE_ID as line2_9_,
+        terminal0_.PROCESS_ID as process3_9_,
+        terminal0_.EQUIPMENT_ID as equipment4_9_,
+        terminal0_.CODE as code5_9_,
+        terminal0_.NAME as name6_9_,
+        terminal0_.IP as ip7_9_,
+        terminal0_.DESCRIPTION as description8_9_,
+        terminal0_.DESCRIPTION2 as description9_9_,
+        terminal0_.EMPLOYEE_CODE as employee10_9_,
+        terminal0_.CREATE_TIME as create11_9_,
+        terminal0_.UPDATE_TIME as update12_9_ 
+    from
+        S_TERMINAL terminal0_ 
+    where
+        terminal0_.CODE=@p0;
+    @p0 = 'SMT02-S01-01' [Type: String (4000:0:0)]
+15:28:42.813 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        worstatus0_.ID as id1_75_,
+        worstatus0_.WORK_ORDER as work2_75_,
+        worstatus0_.PART_ID as part3_75_,
+        worstatus0_.PART_NO as part4_75_,
+        worstatus0_.PRODUCT_LINE_ID as product5_75_,
+        worstatus0_.PRODUCT_LINE_CODE as product6_75_,
+        worstatus0_.PROCESS_ID as process7_75_,
+        worstatus0_.PROCESS_CODE as process8_75_,
+        worstatus0_.INPUT_QTY as input9_75_,
+        worstatus0_.PASS_QTY as pass10_75_,
+        worstatus0_.FAIL_QTY as fail11_75_,
+        worstatus0_.PROCESS_STARTTIME as process12_75_,
+        worstatus0_.PROCESS_ENDTTIME as process13_75_,
+        worstatus0_.EMPLOYEE_CODE as employee14_75_,
+        worstatus0_.CREATE_TIME as create15_75_,
+        worstatus0_.UPDATE_TIME as update16_75_ 
+    from
+        WOR_STATUS worstatus0_ 
+    where
+        worstatus0_.WORK_ORDER=@p0 
+        and worstatus0_.PROCESS_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 15 [Type: Int32 (0:0:0)]
+15:28:42.869 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) terminal0_.ID as id1_9_,
+        terminal0_.LINE_ID as line2_9_,
+        terminal0_.PROCESS_ID as process3_9_,
+        terminal0_.EQUIPMENT_ID as equipment4_9_,
+        terminal0_.CODE as code5_9_,
+        terminal0_.NAME as name6_9_,
+        terminal0_.IP as ip7_9_,
+        terminal0_.DESCRIPTION as description8_9_,
+        terminal0_.DESCRIPTION2 as description9_9_,
+        terminal0_.EMPLOYEE_CODE as employee10_9_,
+        terminal0_.CREATE_TIME as create11_9_,
+        terminal0_.UPDATE_TIME as update12_9_ 
+    from
+        S_TERMINAL terminal0_ 
+    where
+        terminal0_.CODE=@p0;
+    @p0 = 'SMT02-S01-01' [Type: String (4000:0:0)]
+15:28:42.875 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        process0_.ID as id1_19_0_,
+        process0_.PROCESS_TYPE_ID as process2_19_0_,
+        process0_.STAGE_ID as stage3_19_0_,
+        process0_.NAME as name4_19_0_,
+        process0_.CODE as code5_19_0_,
+        process0_.DESCRIPTION as description6_19_0_,
+        process0_.DESCRIPTION2 as description7_19_0_,
+        process0_.EMPLOYEE_CODE as employee8_19_0_,
+        process0_.CREATE_TIME as create9_19_0_,
+        process0_.UPDATE_TIME as update10_19_0_ 
+    FROM
+        S_PROCESS process0_ 
+    WHERE
+        process0_.ID=@p0;
+    @p0 = 15 [Type: Int32 (0:0:0)]
+15:28:42.937 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        stage0_.ID as id1_21_0_,
+        stage0_.NAME as name2_21_0_,
+        stage0_.CODE as code3_21_0_,
+        stage0_.DESCRIPTION as description4_21_0_,
+        stage0_.DESCRIPTION2 as description5_21_0_,
+        stage0_.EMPLOYEE_CODE as employee6_21_0_,
+        stage0_.CREATE_TIME as create7_21_0_,
+        stage0_.UPDATE_TIME as update8_21_0_ 
+    FROM
+        S_STAGE stage0_ 
+    WHERE
+        stage0_.ID=@p0;
+    @p0 = 2 [Type: Int32 (0:0:0)]
+15:28:42.953 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        worstatus0_.ID as id1_75_,
+        worstatus0_.WORK_ORDER as work2_75_,
+        worstatus0_.PART_ID as part3_75_,
+        worstatus0_.PART_NO as part4_75_,
+        worstatus0_.PRODUCT_LINE_ID as product5_75_,
+        worstatus0_.PRODUCT_LINE_CODE as product6_75_,
+        worstatus0_.PROCESS_ID as process7_75_,
+        worstatus0_.PROCESS_CODE as process8_75_,
+        worstatus0_.INPUT_QTY as input9_75_,
+        worstatus0_.PASS_QTY as pass10_75_,
+        worstatus0_.FAIL_QTY as fail11_75_,
+        worstatus0_.PROCESS_STARTTIME as process12_75_,
+        worstatus0_.PROCESS_ENDTTIME as process13_75_,
+        worstatus0_.EMPLOYEE_CODE as employee14_75_,
+        worstatus0_.CREATE_TIME as create15_75_,
+        worstatus0_.UPDATE_TIME as update16_75_ 
+    from
+        WOR_STATUS worstatus0_ 
+    where
+        worstatus0_.WORK_ORDER=@p0;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)]
+15:29:51.693 +08:00 [DEBUG] [20] [NHibernate.SQL] 
+    select
+        wostatus0_.ID as id1_48_,
+        wostatus0_.CODE as code2_48_,
+        wostatus0_.NAME as name3_48_,
+        wostatus0_.DESCRIPTION as description4_48_,
+        wostatus0_.DESCRIPTION2 as description5_48_,
+        wostatus0_.EMPLOYEE_CODE as employee6_48_,
+        wostatus0_.CREATE_TIME as create7_48_,
+        wostatus0_.UPDATE_TIME as update8_48_ 
+    from
+        S_WO_STATUS wostatus0_ 
+    where
+        wostatus0_.NAME=@p0;
+    @p0 = 'WIP' [Type: String (4000:0:0)]
+15:29:51.702 +08:00 [DEBUG] [20] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0 
+        and wobase0_.WO_STATUS_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 4 [Type: Int32 (0:0:0)]
+15:29:51.709 +08:00 [DEBUG] [20] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 69 [Type: Int32 (0:0:0)]
+15:29:51.940 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) terminal0_.ID as id1_9_,
+        terminal0_.LINE_ID as line2_9_,
+        terminal0_.PROCESS_ID as process3_9_,
+        terminal0_.EQUIPMENT_ID as equipment4_9_,
+        terminal0_.CODE as code5_9_,
+        terminal0_.NAME as name6_9_,
+        terminal0_.IP as ip7_9_,
+        terminal0_.DESCRIPTION as description8_9_,
+        terminal0_.DESCRIPTION2 as description9_9_,
+        terminal0_.EMPLOYEE_CODE as employee10_9_,
+        terminal0_.CREATE_TIME as create11_9_,
+        terminal0_.UPDATE_TIME as update12_9_ 
+    from
+        S_TERMINAL terminal0_ 
+    where
+        terminal0_.CODE=@p0;
+    @p0 = 'SMT02-S01-01' [Type: String (4000:0:0)]
+15:29:51.952 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        worstatus0_.ID as id1_75_,
+        worstatus0_.WORK_ORDER as work2_75_,
+        worstatus0_.PART_ID as part3_75_,
+        worstatus0_.PART_NO as part4_75_,
+        worstatus0_.PRODUCT_LINE_ID as product5_75_,
+        worstatus0_.PRODUCT_LINE_CODE as product6_75_,
+        worstatus0_.PROCESS_ID as process7_75_,
+        worstatus0_.PROCESS_CODE as process8_75_,
+        worstatus0_.INPUT_QTY as input9_75_,
+        worstatus0_.PASS_QTY as pass10_75_,
+        worstatus0_.FAIL_QTY as fail11_75_,
+        worstatus0_.PROCESS_STARTTIME as process12_75_,
+        worstatus0_.PROCESS_ENDTTIME as process13_75_,
+        worstatus0_.EMPLOYEE_CODE as employee14_75_,
+        worstatus0_.CREATE_TIME as create15_75_,
+        worstatus0_.UPDATE_TIME as update16_75_ 
+    from
+        WOR_STATUS worstatus0_ 
+    where
+        worstatus0_.WORK_ORDER=@p0 
+        and worstatus0_.PROCESS_ID=@p1;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)], @p1 = 15 [Type: Int32 (0:0:0)]
+15:29:52.059 +08:00 [DEBUG] [16] [NHibernate.SQL] 
+    select
+        TOP (1) terminal0_.ID as id1_9_,
+        terminal0_.LINE_ID as line2_9_,
+        terminal0_.PROCESS_ID as process3_9_,
+        terminal0_.EQUIPMENT_ID as equipment4_9_,
+        terminal0_.CODE as code5_9_,
+        terminal0_.NAME as name6_9_,
+        terminal0_.IP as ip7_9_,
+        terminal0_.DESCRIPTION as description8_9_,
+        terminal0_.DESCRIPTION2 as description9_9_,
+        terminal0_.EMPLOYEE_CODE as employee10_9_,
+        terminal0_.CREATE_TIME as create11_9_,
+        terminal0_.UPDATE_TIME as update12_9_ 
+    from
+        S_TERMINAL terminal0_ 
+    where
+        terminal0_.CODE=@p0;
+    @p0 = 'SMT02-S01-01' [Type: String (4000:0:0)]
+15:29:52.067 +08:00 [DEBUG] [16] [NHibernate.SQL] 
+    SELECT
+        process0_.ID as id1_19_0_,
+        process0_.PROCESS_TYPE_ID as process2_19_0_,
+        process0_.STAGE_ID as stage3_19_0_,
+        process0_.NAME as name4_19_0_,
+        process0_.CODE as code5_19_0_,
+        process0_.DESCRIPTION as description6_19_0_,
+        process0_.DESCRIPTION2 as description7_19_0_,
+        process0_.EMPLOYEE_CODE as employee8_19_0_,
+        process0_.CREATE_TIME as create9_19_0_,
+        process0_.UPDATE_TIME as update10_19_0_ 
+    FROM
+        S_PROCESS process0_ 
+    WHERE
+        process0_.ID=@p0;
+    @p0 = 15 [Type: Int32 (0:0:0)]
+15:29:52.072 +08:00 [DEBUG] [16] [NHibernate.SQL] 
+    SELECT
+        stage0_.ID as id1_21_0_,
+        stage0_.NAME as name2_21_0_,
+        stage0_.CODE as code3_21_0_,
+        stage0_.DESCRIPTION as description4_21_0_,
+        stage0_.DESCRIPTION2 as description5_21_0_,
+        stage0_.EMPLOYEE_CODE as employee6_21_0_,
+        stage0_.CREATE_TIME as create7_21_0_,
+        stage0_.UPDATE_TIME as update8_21_0_ 
+    FROM
+        S_STAGE stage0_ 
+    WHERE
+        stage0_.ID=@p0;
+    @p0 = 2 [Type: Int32 (0:0:0)]
+15:29:52.077 +08:00 [DEBUG] [16] [NHibernate.SQL] 
+    select
+        worstatus0_.ID as id1_75_,
+        worstatus0_.WORK_ORDER as work2_75_,
+        worstatus0_.PART_ID as part3_75_,
+        worstatus0_.PART_NO as part4_75_,
+        worstatus0_.PRODUCT_LINE_ID as product5_75_,
+        worstatus0_.PRODUCT_LINE_CODE as product6_75_,
+        worstatus0_.PROCESS_ID as process7_75_,
+        worstatus0_.PROCESS_CODE as process8_75_,
+        worstatus0_.INPUT_QTY as input9_75_,
+        worstatus0_.PASS_QTY as pass10_75_,
+        worstatus0_.FAIL_QTY as fail11_75_,
+        worstatus0_.PROCESS_STARTTIME as process12_75_,
+        worstatus0_.PROCESS_ENDTTIME as process13_75_,
+        worstatus0_.EMPLOYEE_CODE as employee14_75_,
+        worstatus0_.CREATE_TIME as create15_75_,
+        worstatus0_.UPDATE_TIME as update16_75_ 
+    from
+        WOR_STATUS worstatus0_ 
+    where
+        worstatus0_.WORK_ORDER=@p0;
+    @p0 = 'ZHN-WO-001' [Type: String (4000:0:0)]

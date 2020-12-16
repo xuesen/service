@@ -1,0 +1,9 @@
+D:\LeanMES\CODE\service\Runtime.DomainObject\bin\Debug\netstandard2.0\Runtime.DomainObject.deps.json
+D:\LeanMES\CODE\service\Runtime.DomainObject\bin\Debug\netstandard2.0\Runtime.DomainObject.dll
+D:\LeanMES\CODE\service\Runtime.DomainObject\bin\Debug\netstandard2.0\Runtime.DomainObject.pdb
+D:\LeanMES\CODE\service\Runtime.DomainObject\obj\Debug\netstandard2.0\Runtime.DomainObject.csprojAssemblyReference.cache
+D:\LeanMES\CODE\service\Runtime.DomainObject\obj\Debug\netstandard2.0\Runtime.DomainObject.AssemblyInfoInputs.cache
+D:\LeanMES\CODE\service\Runtime.DomainObject\obj\Debug\netstandard2.0\Runtime.DomainObject.AssemblyInfo.cs
+D:\LeanMES\CODE\service\Runtime.DomainObject\obj\Debug\netstandard2.0\Runtime.DomainObject.csproj.CoreCompileInputs.cache
+D:\LeanMES\CODE\service\Runtime.DomainObject\obj\Debug\netstandard2.0\Runtime.DomainObject.dll
+D:\LeanMES\CODE\service\Runtime.DomainObject\obj\Debug\netstandard2.0\Runtime.DomainObject.pdb

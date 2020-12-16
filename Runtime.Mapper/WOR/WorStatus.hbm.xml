@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.WOR" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WorStatus" table="WOR_STATUS" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="WorkOrder">
+      <column name="WORK_ORDER" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="PartId">
+      <column name="PART_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="PartNo">
+      <column name="PART_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ProductLineId">
+      <column name="PRODUCT_LINE_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProductLineCode">
+      <column name="PRODUCT_LINE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="ProcessId">
+      <column name="PROCESS_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProcessCode">
+      <column name="PROCESS_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="InputQty">
+      <column name="INPUT_QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="PassQty">
+      <column name="PASS_QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="FailQty">
+      <column name="FAIL_QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProcessStartTime">
+      <column name="PROCESS_STARTTIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ProcessEndTime">
+      <column name="PROCESS_ENDTTIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

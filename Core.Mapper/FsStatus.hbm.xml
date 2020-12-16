@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="FsStatus" table="FS_STATUS" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="TerminalId">
+      <column name="TERMINAL_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="EquipmentId">
+      <column name="EQUIPMENT_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="WorkOrder">
+      <column name="WORK_ORDER" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Status">
+      <column name="STATUS" sql-type="int" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

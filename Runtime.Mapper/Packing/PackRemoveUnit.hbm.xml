@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Packing" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PackRemoveUnit" table="PACK_REMOVE_UNIT" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="RemoveId">
+      <column name="REMOVE_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="SerialNumber">
+      <column name="SERIAL_NUMBER" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="PartId">
+      <column name="PART_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="PartNo">
+      <column name="PART_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="WorkOrder">
+      <column name="WORK_ORDER" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="BoxNo">
+      <column name="BOX_NO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="CartonNo">
+      <column name="CARTON_NO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="PalletNo">
+      <column name="PALLET_NO" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="RemoveEmployeeCode">
+      <column name="REMOVE_EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

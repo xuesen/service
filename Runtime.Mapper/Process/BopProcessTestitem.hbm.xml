@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Process" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="BopProcessTestitem" table="S_BOP_PROCESS_TESTITEM" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="BopBaseId">
+      <column name="BOP_BASE_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProcessId">
+      <column name="PROCESS_ID" sql-type="int" not-null="true" />
+    </property>
+    <many-to-one name="TestItem">
+      <column name="TEST_ITEM_ID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="Sl">
+      <column name="SL" sql-type="decimal" not-null="true" />
+    </property>
+    <property name="Usl">
+      <column name="USL" sql-type="decimal" not-null="true" />
+    </property>
+    <property name="Lsl">
+      <column name="LSL" sql-type="decimal" not-null="true" />
+    </property>
+    <property name="Cl">
+      <column name="CL" sql-type="decimal" not-null="true" />
+    </property>
+    <property name="Ucl">
+      <column name="UCL" sql-type="decimal" not-null="true" />
+    </property>
+    <property name="Lcl">
+      <column name="LCL" sql-type="decimal" not-null="true" />
+    </property>
+    <property name="Unit">
+      <column name="UNIT" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Sequence">
+      <column name="SEQUENCE" sql-type="int" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

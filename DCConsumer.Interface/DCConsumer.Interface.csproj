@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" /> -->
+    <PackageReference Include="Serilog.AspNetCore" Version="3.3.0-dev-00152" />
+    <PackageReference Include="Confluent.Kafka" Version="1.5.1" />
+  </ItemGroup>
+
+</Project>

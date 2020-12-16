@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WoFsDetail" table="WO_FS_DETAIL" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="WoFsId">
+      <column name="WO_FS_Id" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Station">
+      <column name="STATION" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="ItemPartId">
+      <column name="ITEM_PART_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ItemCount">
+      <column name="ITEM_COUNT" sql-type="int" not-null="true" />
+    </property>
+    <property name="Location">
+      <column name="LOCATION" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="FeederType">
+      <column name="FEEDER_TYPE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="FeederSpec">
+      <column name="FEEDER_SPEC" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.WOR" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WorScrap" table="WOR_SCRAP" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity"/>
+    </id>
+    <property name="WorkOrder">
+      <column name="WORK_ORDER" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Qty">
+      <column name="QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="ScrapCode">
+      <column name="SCRAP_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

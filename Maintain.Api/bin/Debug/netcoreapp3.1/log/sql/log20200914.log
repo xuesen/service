@@ -1,0 +1,15 @@
+13:46:21.051 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        sscrapreas0_.ID as id1_90_,
+        sscrapreas0_.CODE as code2_90_,
+        sscrapreas0_.NAME as name3_90_,
+        sscrapreas0_.DESCRIPTION as description4_90_,
+        sscrapreas0_.DESCRIPTION2 as description5_90_,
+        sscrapreas0_.EMPLOYEE_CODE as employee6_90_,
+        sscrapreas0_.CREATE_TIME as create7_90_,
+        sscrapreas0_.UPDATE_TIME as update8_90_ 
+    from
+        S_SCRAPREASON sscrapreas0_ 
+    where
+        sscrapreas0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]

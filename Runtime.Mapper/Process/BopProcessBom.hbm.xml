@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Process" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="BopProcessBom" table="S_BOP_PROCESS_BOM" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="BopBaseId">
+      <column name="BOP_BASE_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProcessId">
+      <column name="PROCESS_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ItemPartId">
+      <column name="ITEM_PART_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="Qty">
+      <column name="QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="Location">
+      <column name="LOCATION" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

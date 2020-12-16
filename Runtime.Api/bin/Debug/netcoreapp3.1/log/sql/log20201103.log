@@ -1,0 +1,4709 @@
+18:39:21.557 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_57_1_,
+        this_.CODE as code2_57_1_,
+        this_.NAME as name3_57_1_,
+        this_.SYMPTOM_TYPE_ID as symptom4_57_1_,
+        this_.LEVEL_ID as level5_57_1_,
+        this_.DESCRIPTION as description6_57_1_,
+        this_.DESCRIPTION2 as description7_57_1_,
+        this_.EMPLOYEE_CODE as employee8_57_1_,
+        this_.CREATE_TIME as create9_57_1_,
+        this_.UPDATE_TIME as update10_57_1_,
+        symptomtyp2_.ID as id1_58_0_,
+        symptomtyp2_.NAME as name2_58_0_,
+        symptomtyp2_.CODE as code3_58_0_,
+        symptomtyp2_.DESCRIPTION as description4_58_0_,
+        symptomtyp2_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp2_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp2_.CREATE_TIME as create7_58_0_,
+        symptomtyp2_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM this_ 
+    left outer join
+        S_SYMPTOM_TYPE symptomtyp2_ 
+            on this_.SYMPTOM_TYPE_ID=symptomtyp2_.ID
+18:39:22.076 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_50_0_,
+        this_.CODE as code2_50_0_,
+        this_.NAME as name3_50_0_,
+        this_.DESCRIPTION as description4_50_0_,
+        this_.DESCRIPTION2 as description5_50_0_,
+        this_.EMPLOYEE_CODE as employee6_50_0_,
+        this_.CREATE_TIME as create7_50_0_,
+        this_.UPDATE_TIME as update8_50_0_ 
+    FROM
+        S_CAUSE this_
+18:39:22.111 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_51_0_,
+        this_.CODE as code2_51_0_,
+        this_.NAME as name3_51_0_,
+        this_.DESCRIPTION as description4_51_0_,
+        this_.DESCRIPTION2 as description5_51_0_,
+        this_.EMPLOYEE_CODE as employee6_51_0_,
+        this_.CREATE_TIME as create7_51_0_,
+        this_.UPDATE_TIME as update8_51_0_ 
+    FROM
+        S_DUTY this_
+18:39:22.125 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+18:39:22.266 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:39:22.573 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_52_0_,
+        this_.CODE as code2_52_0_,
+        this_.NAME as name3_52_0_,
+        this_.DESCRIPTION as description4_52_0_,
+        this_.DESCRIPTION2 as description5_52_0_,
+        this_.EMPLOYEE_CODE as employee6_52_0_,
+        this_.CREATE_TIME as create7_52_0_,
+        this_.UPDATE_TIME as update8_52_0_ 
+    FROM
+        S_REPAIR_TYPE this_
+18:39:22.647 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_58_0_,
+        this_.NAME as name2_58_0_,
+        this_.CODE as code3_58_0_,
+        this_.DESCRIPTION as description4_58_0_,
+        this_.DESCRIPTION2 as description5_58_0_,
+        this_.EMPLOYEE_CODE as employee6_58_0_,
+        this_.CREATE_TIME as create7_58_0_,
+        this_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE this_
+18:39:24.782 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) worlog0_.ID as id1_73_,
+        worlog0_.WORK_ORDER as work2_73_,
+        worlog0_.SERIAL_NUMBER as serial3_73_,
+        worlog0_.PART_ID as part4_73_,
+        worlog0_.PART_NO as part5_73_,
+        worlog0_.PRODUCT_LINE_ID as product6_73_,
+        worlog0_.PRODUCT_LINE_CODE as product7_73_,
+        worlog0_.PROCESS_ID as process8_73_,
+        worlog0_.PROCESS_CODE as process9_73_,
+        worlog0_.TERMINAL_ID as terminal10_73_,
+        worlog0_.TERMINAL_CODE as terminal11_73_,
+        worlog0_.QTY as qty12_73_,
+        worlog0_.STATUS as status13_73_,
+        worlog0_.REFLOW as reflow14_73_,
+        worlog0_.REMARK as remark15_73_,
+        worlog0_.EMPLOYEE_CODE as employee16_73_,
+        worlog0_.CREATE_TIME as create17_73_ 
+    from
+        WOR_LOG worlog0_ 
+    where
+        worlog0_.SERIAL_NUMBER=@p0 
+    order by
+        worlog0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+18:39:24.895 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.TEST_WOR_LOG_ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+18:39:24.916 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'TP02' [Type: String (4000:0:0)]
+18:39:25.114 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:39:25.317 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+18:39:25.520 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.TEST_WOR_LOG_ID=@p1 
+    order by
+        worrepairl0_.CREATE_TIME asc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = 126 [Type: Int32 (0:0:0)]
+18:39:25.544 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_79_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_,
+        worrepairl0_.DEFECT_ID as defect3_79_,
+        worrepairl0_.DEFECT_CODE as defect4_79_,
+        worrepairl0_.CAUSE_ID as cause5_79_,
+        worrepairl0_.CAUSE_CODE as cause6_79_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_,
+        worrepairl0_.DUTY_ID as duty9_79_,
+        worrepairl0_.DUTY_CODE as duty10_79_,
+        worrepairl0_.REMARK as remark11_79_,
+        worrepairl0_.LOCATION as location12_79_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_,
+        worrepairl0_.CREATE_TIME as create14_79_ 
+    from
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    where
+        worrepairl0_.WOR_REPAIR_LOG_ID=@p0;
+    @p0 = 83 [Type: Int32 (0:0:0)]
+18:39:25.557 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+18:39:25.690 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+18:39:25.719 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+18:39:25.936 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+18:39:26.089 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 79 [Type: Int32 (0:0:0)]
+18:41:19.001 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_57_1_,
+        this_.CODE as code2_57_1_,
+        this_.NAME as name3_57_1_,
+        this_.SYMPTOM_TYPE_ID as symptom4_57_1_,
+        this_.LEVEL_ID as level5_57_1_,
+        this_.DESCRIPTION as description6_57_1_,
+        this_.DESCRIPTION2 as description7_57_1_,
+        this_.EMPLOYEE_CODE as employee8_57_1_,
+        this_.CREATE_TIME as create9_57_1_,
+        this_.UPDATE_TIME as update10_57_1_,
+        symptomtyp2_.ID as id1_58_0_,
+        symptomtyp2_.NAME as name2_58_0_,
+        symptomtyp2_.CODE as code3_58_0_,
+        symptomtyp2_.DESCRIPTION as description4_58_0_,
+        symptomtyp2_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp2_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp2_.CREATE_TIME as create7_58_0_,
+        symptomtyp2_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM this_ 
+    left outer join
+        S_SYMPTOM_TYPE symptomtyp2_ 
+            on this_.SYMPTOM_TYPE_ID=symptomtyp2_.ID
+18:41:19.139 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_50_0_,
+        this_.CODE as code2_50_0_,
+        this_.NAME as name3_50_0_,
+        this_.DESCRIPTION as description4_50_0_,
+        this_.DESCRIPTION2 as description5_50_0_,
+        this_.EMPLOYEE_CODE as employee6_50_0_,
+        this_.CREATE_TIME as create7_50_0_,
+        this_.UPDATE_TIME as update8_50_0_ 
+    FROM
+        S_CAUSE this_
+18:41:19.187 +08:00 [DEBUG] [16] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_51_0_,
+        this_.CODE as code2_51_0_,
+        this_.NAME as name3_51_0_,
+        this_.DESCRIPTION as description4_51_0_,
+        this_.DESCRIPTION2 as description5_51_0_,
+        this_.EMPLOYEE_CODE as employee6_51_0_,
+        this_.CREATE_TIME as create7_51_0_,
+        this_.UPDATE_TIME as update8_51_0_ 
+    FROM
+        S_DUTY this_
+18:41:19.464 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_52_0_,
+        this_.CODE as code2_52_0_,
+        this_.NAME as name3_52_0_,
+        this_.DESCRIPTION as description4_52_0_,
+        this_.DESCRIPTION2 as description5_52_0_,
+        this_.EMPLOYEE_CODE as employee6_52_0_,
+        this_.CREATE_TIME as create7_52_0_,
+        this_.UPDATE_TIME as update8_52_0_ 
+    FROM
+        S_REPAIR_TYPE this_
+18:41:39.549 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_57_1_,
+        this_.CODE as code2_57_1_,
+        this_.NAME as name3_57_1_,
+        this_.SYMPTOM_TYPE_ID as symptom4_57_1_,
+        this_.LEVEL_ID as level5_57_1_,
+        this_.DESCRIPTION as description6_57_1_,
+        this_.DESCRIPTION2 as description7_57_1_,
+        this_.EMPLOYEE_CODE as employee8_57_1_,
+        this_.CREATE_TIME as create9_57_1_,
+        this_.UPDATE_TIME as update10_57_1_,
+        symptomtyp2_.ID as id1_58_0_,
+        symptomtyp2_.NAME as name2_58_0_,
+        symptomtyp2_.CODE as code3_58_0_,
+        symptomtyp2_.DESCRIPTION as description4_58_0_,
+        symptomtyp2_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp2_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp2_.CREATE_TIME as create7_58_0_,
+        symptomtyp2_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM this_ 
+    left outer join
+        S_SYMPTOM_TYPE symptomtyp2_ 
+            on this_.SYMPTOM_TYPE_ID=symptomtyp2_.ID
+18:41:39.758 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_50_0_,
+        this_.CODE as code2_50_0_,
+        this_.NAME as name3_50_0_,
+        this_.DESCRIPTION as description4_50_0_,
+        this_.DESCRIPTION2 as description5_50_0_,
+        this_.EMPLOYEE_CODE as employee6_50_0_,
+        this_.CREATE_TIME as create7_50_0_,
+        this_.UPDATE_TIME as update8_50_0_ 
+    FROM
+        S_CAUSE this_
+18:41:40.059 +08:00 [DEBUG] [16] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_51_0_,
+        this_.CODE as code2_51_0_,
+        this_.NAME as name3_51_0_,
+        this_.DESCRIPTION as description4_51_0_,
+        this_.DESCRIPTION2 as description5_51_0_,
+        this_.EMPLOYEE_CODE as employee6_51_0_,
+        this_.CREATE_TIME as create7_51_0_,
+        this_.UPDATE_TIME as update8_51_0_ 
+    FROM
+        S_DUTY this_
+18:41:40.274 +08:00 [DEBUG] [21] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_52_0_,
+        this_.CODE as code2_52_0_,
+        this_.NAME as name3_52_0_,
+        this_.DESCRIPTION as description4_52_0_,
+        this_.DESCRIPTION2 as description5_52_0_,
+        this_.EMPLOYEE_CODE as employee6_52_0_,
+        this_.CREATE_TIME as create7_52_0_,
+        this_.UPDATE_TIME as update8_52_0_ 
+    FROM
+        S_REPAIR_TYPE this_
+18:41:49.715 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_57_1_,
+        this_.CODE as code2_57_1_,
+        this_.NAME as name3_57_1_,
+        this_.SYMPTOM_TYPE_ID as symptom4_57_1_,
+        this_.LEVEL_ID as level5_57_1_,
+        this_.DESCRIPTION as description6_57_1_,
+        this_.DESCRIPTION2 as description7_57_1_,
+        this_.EMPLOYEE_CODE as employee8_57_1_,
+        this_.CREATE_TIME as create9_57_1_,
+        this_.UPDATE_TIME as update10_57_1_,
+        symptomtyp2_.ID as id1_58_0_,
+        symptomtyp2_.NAME as name2_58_0_,
+        symptomtyp2_.CODE as code3_58_0_,
+        symptomtyp2_.DESCRIPTION as description4_58_0_,
+        symptomtyp2_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp2_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp2_.CREATE_TIME as create7_58_0_,
+        symptomtyp2_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM this_ 
+    left outer join
+        S_SYMPTOM_TYPE symptomtyp2_ 
+            on this_.SYMPTOM_TYPE_ID=symptomtyp2_.ID
+18:41:50.117 +08:00 [DEBUG] [21] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_50_0_,
+        this_.CODE as code2_50_0_,
+        this_.NAME as name3_50_0_,
+        this_.DESCRIPTION as description4_50_0_,
+        this_.DESCRIPTION2 as description5_50_0_,
+        this_.EMPLOYEE_CODE as employee6_50_0_,
+        this_.CREATE_TIME as create7_50_0_,
+        this_.UPDATE_TIME as update8_50_0_ 
+    FROM
+        S_CAUSE this_
+18:41:50.369 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_51_0_,
+        this_.CODE as code2_51_0_,
+        this_.NAME as name3_51_0_,
+        this_.DESCRIPTION as description4_51_0_,
+        this_.DESCRIPTION2 as description5_51_0_,
+        this_.EMPLOYEE_CODE as employee6_51_0_,
+        this_.CREATE_TIME as create7_51_0_,
+        this_.UPDATE_TIME as update8_51_0_ 
+    FROM
+        S_DUTY this_
+18:41:50.566 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_52_0_,
+        this_.CODE as code2_52_0_,
+        this_.NAME as name3_52_0_,
+        this_.DESCRIPTION as description4_52_0_,
+        this_.DESCRIPTION2 as description5_52_0_,
+        this_.EMPLOYEE_CODE as employee6_52_0_,
+        this_.CREATE_TIME as create7_52_0_,
+        this_.UPDATE_TIME as update8_52_0_ 
+    FROM
+        S_REPAIR_TYPE this_
+18:42:24.946 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:42:24.988 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:42:24.990 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        worlog0_.ID as id1_73_0_,
+        worlog0_.WORK_ORDER as work2_73_0_,
+        worlog0_.SERIAL_NUMBER as serial3_73_0_,
+        worlog0_.PART_ID as part4_73_0_,
+        worlog0_.PART_NO as part5_73_0_,
+        worlog0_.PRODUCT_LINE_ID as product6_73_0_,
+        worlog0_.PRODUCT_LINE_CODE as product7_73_0_,
+        worlog0_.PROCESS_ID as process8_73_0_,
+        worlog0_.PROCESS_CODE as process9_73_0_,
+        worlog0_.TERMINAL_ID as terminal10_73_0_,
+        worlog0_.TERMINAL_CODE as terminal11_73_0_,
+        worlog0_.QTY as qty12_73_0_,
+        worlog0_.STATUS as status13_73_0_,
+        worlog0_.REFLOW as reflow14_73_0_,
+        worlog0_.REMARK as remark15_73_0_,
+        worlog0_.EMPLOYEE_CODE as employee16_73_0_,
+        worlog0_.CREATE_TIME as create17_73_0_ 
+    FROM
+        WOR_LOG worlog0_ 
+    WHERE
+        worlog0_.ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+18:42:25.005 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        worlog0_.ID as id1_73_0_,
+        worlog0_.WORK_ORDER as work2_73_0_,
+        worlog0_.SERIAL_NUMBER as serial3_73_0_,
+        worlog0_.PART_ID as part4_73_0_,
+        worlog0_.PART_NO as part5_73_0_,
+        worlog0_.PRODUCT_LINE_ID as product6_73_0_,
+        worlog0_.PRODUCT_LINE_CODE as product7_73_0_,
+        worlog0_.PROCESS_ID as process8_73_0_,
+        worlog0_.PROCESS_CODE as process9_73_0_,
+        worlog0_.TERMINAL_ID as terminal10_73_0_,
+        worlog0_.TERMINAL_CODE as terminal11_73_0_,
+        worlog0_.QTY as qty12_73_0_,
+        worlog0_.STATUS as status13_73_0_,
+        worlog0_.REFLOW as reflow14_73_0_,
+        worlog0_.REMARK as remark15_73_0_,
+        worlog0_.EMPLOYEE_CODE as employee16_73_0_,
+        worlog0_.CREATE_TIME as create17_73_0_ 
+    FROM
+        WOR_LOG worlog0_ 
+    WHERE
+        worlog0_.ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+18:42:25.049 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:42:25.190 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:42:25.296 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_LOG_DETAIL
+        (WOR_REPAIR_LOG_ID, DEFECT_ID, DEFECT_CODE, CAUSE_ID, CAUSE_CODE, REPAIRTYPE_ID, REPAIRTYPE_CODE, DUTY_ID, DUTY_CODE, REMARK, LOCATION, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 83 [Type: Int32 (0:0:0)],
+    @p1 = 2 [Type: Int32 (0:0:0)],
+    @p2 = 'TP02' [Type: String (4000:0:0)],
+    @p3 = 1 [Type: Int32 (0:0:0)],
+    @p4 = 'CB' [Type: String (4000:0:0)],
+    @p5 = 1 [Type: Int32 (0:0:0)],
+    @p6 = 'Replace' [Type: String (4000:0:0)],
+    @p7 = 1 [Type: Int32 (0:0:0)],
+    @p8 = 'DUTY01' [Type: String (4000:0:0)],
+    @p9 = '22' [Type: String (4000:0:0)],
+    @p10 = '2' [Type: String (4000:0:0)],
+    @p11 = 'ADMIN' [Type: String (4000:0:0)],
+    @p12 = 2020-11-03T18:42:25.1897748+08:00 [Type: DateTime2 (8:0:0)]
+18:42:25.296 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_LOG_DETAIL
+        (WOR_REPAIR_LOG_ID, DEFECT_ID, DEFECT_CODE, CAUSE_ID, CAUSE_CODE, REPAIRTYPE_ID, REPAIRTYPE_CODE, DUTY_ID, DUTY_CODE, REMARK, LOCATION, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 83 [Type: Int32 (0:0:0)],
+    @p1 = 2 [Type: Int32 (0:0:0)],
+    @p2 = 'TP02' [Type: String (4000:0:0)],
+    @p3 = 1 [Type: Int32 (0:0:0)],
+    @p4 = 'CB' [Type: String (4000:0:0)],
+    @p5 = 1 [Type: Int32 (0:0:0)],
+    @p6 = 'Replace' [Type: String (4000:0:0)],
+    @p7 = 1 [Type: Int32 (0:0:0)],
+    @p8 = 'DUTY01' [Type: String (4000:0:0)],
+    @p9 = '22' [Type: String (4000:0:0)],
+    @p10 = '2' [Type: String (4000:0:0)],
+    @p11 = 'ADMIN' [Type: String (4000:0:0)],
+    @p12 = 2020-11-03T18:42:25.2072500+08:00 [Type: DateTime2 (8:0:0)]
+18:42:25.407 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.TEST_WOR_LOG_ID=@p1 
+    order by
+        worrepairl0_.CREATE_TIME asc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = 126 [Type: Int32 (0:0:0)]
+18:42:25.407 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.TEST_WOR_LOG_ID=@p1 
+    order by
+        worrepairl0_.CREATE_TIME asc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = 126 [Type: Int32 (0:0:0)]
+18:42:25.452 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_79_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_,
+        worrepairl0_.DEFECT_ID as defect3_79_,
+        worrepairl0_.DEFECT_CODE as defect4_79_,
+        worrepairl0_.CAUSE_ID as cause5_79_,
+        worrepairl0_.CAUSE_CODE as cause6_79_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_,
+        worrepairl0_.DUTY_ID as duty9_79_,
+        worrepairl0_.DUTY_CODE as duty10_79_,
+        worrepairl0_.REMARK as remark11_79_,
+        worrepairl0_.LOCATION as location12_79_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_,
+        worrepairl0_.CREATE_TIME as create14_79_ 
+    from
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    where
+        worrepairl0_.WOR_REPAIR_LOG_ID=@p0;
+    @p0 = 83 [Type: Int32 (0:0:0)]
+18:42:25.452 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_79_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_,
+        worrepairl0_.DEFECT_ID as defect3_79_,
+        worrepairl0_.DEFECT_CODE as defect4_79_,
+        worrepairl0_.CAUSE_ID as cause5_79_,
+        worrepairl0_.CAUSE_CODE as cause6_79_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_,
+        worrepairl0_.DUTY_ID as duty9_79_,
+        worrepairl0_.DUTY_CODE as duty10_79_,
+        worrepairl0_.REMARK as remark11_79_,
+        worrepairl0_.LOCATION as location12_79_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_,
+        worrepairl0_.CREATE_TIME as create14_79_ 
+    from
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    where
+        worrepairl0_.WOR_REPAIR_LOG_ID=@p0;
+    @p0 = 83 [Type: Int32 (0:0:0)]
+18:42:29.398 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+18:42:38.459 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:42:38.617 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+18:42:40.040 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+18:42:40.243 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+18:42:40.251 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'TP02' [Type: String (4000:0:0)]
+18:42:40.410 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+18:42:40.413 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+18:42:40.432 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+18:42:50.731 +08:00 [DEBUG] [32] [NHibernate.SQL] 
+    SELECT
+        worrepairl0_.ID as id1_79_0_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_0_,
+        worrepairl0_.DEFECT_ID as defect3_79_0_,
+        worrepairl0_.DEFECT_CODE as defect4_79_0_,
+        worrepairl0_.CAUSE_ID as cause5_79_0_,
+        worrepairl0_.CAUSE_CODE as cause6_79_0_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_0_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_0_,
+        worrepairl0_.DUTY_ID as duty9_79_0_,
+        worrepairl0_.DUTY_CODE as duty10_79_0_,
+        worrepairl0_.REMARK as remark11_79_0_,
+        worrepairl0_.LOCATION as location12_79_0_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_0_,
+        worrepairl0_.CREATE_TIME as create14_79_0_ 
+    FROM
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    WHERE
+        worrepairl0_.ID=@p0;
+    @p0 = 134 [Type: Int32 (0:0:0)]
+18:42:50.960 +08:00 [DEBUG] [32] [NHibernate.SQL] 
+    delete 
+    from
+        WOR_REPAIR_LOG_DETAIL 
+    where
+        ID=@p0;
+    @p0 = 134 [Type: Int32 (0:0:0)]
+18:43:02.707 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:43:02.874 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    SELECT
+        worlog0_.ID as id1_73_0_,
+        worlog0_.WORK_ORDER as work2_73_0_,
+        worlog0_.SERIAL_NUMBER as serial3_73_0_,
+        worlog0_.PART_ID as part4_73_0_,
+        worlog0_.PART_NO as part5_73_0_,
+        worlog0_.PRODUCT_LINE_ID as product6_73_0_,
+        worlog0_.PRODUCT_LINE_CODE as product7_73_0_,
+        worlog0_.PROCESS_ID as process8_73_0_,
+        worlog0_.PROCESS_CODE as process9_73_0_,
+        worlog0_.TERMINAL_ID as terminal10_73_0_,
+        worlog0_.TERMINAL_CODE as terminal11_73_0_,
+        worlog0_.QTY as qty12_73_0_,
+        worlog0_.STATUS as status13_73_0_,
+        worlog0_.REFLOW as reflow14_73_0_,
+        worlog0_.REMARK as remark15_73_0_,
+        worlog0_.EMPLOYEE_CODE as employee16_73_0_,
+        worlog0_.CREATE_TIME as create17_73_0_ 
+    FROM
+        WOR_LOG worlog0_ 
+    WHERE
+        worlog0_.ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+18:43:03.078 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:43:03.126 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_LOG_DETAIL
+        (WOR_REPAIR_LOG_ID, DEFECT_ID, DEFECT_CODE, CAUSE_ID, CAUSE_CODE, REPAIRTYPE_ID, REPAIRTYPE_CODE, DUTY_ID, DUTY_CODE, REMARK, LOCATION, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 83 [Type: Int32 (0:0:0)],
+    @p1 = 1 [Type: Int32 (0:0:0)],
+    @p2 = 'CM33' [Type: String (4000:0:0)],
+    @p3 = 1 [Type: Int32 (0:0:0)],
+    @p4 = 'CB' [Type: String (4000:0:0)],
+    @p5 = 1 [Type: Int32 (0:0:0)],
+    @p6 = 'Replace' [Type: String (4000:0:0)],
+    @p7 = 1 [Type: Int32 (0:0:0)],
+    @p8 = 'DUTY01' [Type: String (4000:0:0)],
+    @p9 = '22' [Type: String (4000:0:0)],
+    @p10 = '1' [Type: String (4000:0:0)],
+    @p11 = 'ADMIN' [Type: String (4000:0:0)],
+    @p12 = 2020-11-03T18:43:03.1261031+08:00 [Type: DateTime2 (8:0:0)]
+18:43:03.276 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.TEST_WOR_LOG_ID=@p1 
+    order by
+        worrepairl0_.CREATE_TIME asc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = 126 [Type: Int32 (0:0:0)]
+18:43:03.475 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_79_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_,
+        worrepairl0_.DEFECT_ID as defect3_79_,
+        worrepairl0_.DEFECT_CODE as defect4_79_,
+        worrepairl0_.CAUSE_ID as cause5_79_,
+        worrepairl0_.CAUSE_CODE as cause6_79_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_,
+        worrepairl0_.DUTY_ID as duty9_79_,
+        worrepairl0_.DUTY_CODE as duty10_79_,
+        worrepairl0_.REMARK as remark11_79_,
+        worrepairl0_.LOCATION as location12_79_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_,
+        worrepairl0_.CREATE_TIME as create14_79_ 
+    from
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    where
+        worrepairl0_.WOR_REPAIR_LOG_ID=@p0;
+    @p0 = 83 [Type: Int32 (0:0:0)]
+18:43:03.675 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+18:43:03.878 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:43:03.911 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+18:43:04.044 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+18:43:04.077 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+18:43:04.248 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+18:43:04.277 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+18:43:04.443 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+18:43:04.478 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+18:43:08.880 +08:00 [DEBUG] [32] [NHibernate.SQL] 
+    SELECT
+        worrepairl0_.ID as id1_79_0_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_0_,
+        worrepairl0_.DEFECT_ID as defect3_79_0_,
+        worrepairl0_.DEFECT_CODE as defect4_79_0_,
+        worrepairl0_.CAUSE_ID as cause5_79_0_,
+        worrepairl0_.CAUSE_CODE as cause6_79_0_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_0_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_0_,
+        worrepairl0_.DUTY_ID as duty9_79_0_,
+        worrepairl0_.DUTY_CODE as duty10_79_0_,
+        worrepairl0_.REMARK as remark11_79_0_,
+        worrepairl0_.LOCATION as location12_79_0_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_0_,
+        worrepairl0_.CREATE_TIME as create14_79_0_ 
+    FROM
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    WHERE
+        worrepairl0_.ID=@p0;
+    @p0 = 136 [Type: Int32 (0:0:0)]
+18:43:08.884 +08:00 [DEBUG] [32] [NHibernate.SQL] 
+    delete 
+    from
+        WOR_REPAIR_LOG_DETAIL 
+    where
+        ID=@p0;
+    @p0 = 136 [Type: Int32 (0:0:0)]
+18:43:45.952 +08:00 [DEBUG] [36] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_57_1_,
+        this_.CODE as code2_57_1_,
+        this_.NAME as name3_57_1_,
+        this_.SYMPTOM_TYPE_ID as symptom4_57_1_,
+        this_.LEVEL_ID as level5_57_1_,
+        this_.DESCRIPTION as description6_57_1_,
+        this_.DESCRIPTION2 as description7_57_1_,
+        this_.EMPLOYEE_CODE as employee8_57_1_,
+        this_.CREATE_TIME as create9_57_1_,
+        this_.UPDATE_TIME as update10_57_1_,
+        symptomtyp2_.ID as id1_58_0_,
+        symptomtyp2_.NAME as name2_58_0_,
+        symptomtyp2_.CODE as code3_58_0_,
+        symptomtyp2_.DESCRIPTION as description4_58_0_,
+        symptomtyp2_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp2_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp2_.CREATE_TIME as create7_58_0_,
+        symptomtyp2_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM this_ 
+    left outer join
+        S_SYMPTOM_TYPE symptomtyp2_ 
+            on this_.SYMPTOM_TYPE_ID=symptomtyp2_.ID
+18:43:46.175 +08:00 [DEBUG] [37] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_50_0_,
+        this_.CODE as code2_50_0_,
+        this_.NAME as name3_50_0_,
+        this_.DESCRIPTION as description4_50_0_,
+        this_.DESCRIPTION2 as description5_50_0_,
+        this_.EMPLOYEE_CODE as employee6_50_0_,
+        this_.CREATE_TIME as create7_50_0_,
+        this_.UPDATE_TIME as update8_50_0_ 
+    FROM
+        S_CAUSE this_
+18:43:46.291 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_51_0_,
+        this_.CODE as code2_51_0_,
+        this_.NAME as name3_51_0_,
+        this_.DESCRIPTION as description4_51_0_,
+        this_.DESCRIPTION2 as description5_51_0_,
+        this_.EMPLOYEE_CODE as employee6_51_0_,
+        this_.CREATE_TIME as create7_51_0_,
+        this_.UPDATE_TIME as update8_51_0_ 
+    FROM
+        S_DUTY this_
+18:43:46.498 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_52_0_,
+        this_.CODE as code2_52_0_,
+        this_.NAME as name3_52_0_,
+        this_.DESCRIPTION as description4_52_0_,
+        this_.DESCRIPTION2 as description5_52_0_,
+        this_.EMPLOYEE_CODE as employee6_52_0_,
+        this_.CREATE_TIME as create7_52_0_,
+        this_.UPDATE_TIME as update8_52_0_ 
+    FROM
+        S_REPAIR_TYPE this_
+18:44:26.390 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:44:26.421 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    SELECT
+        worlog0_.ID as id1_73_0_,
+        worlog0_.WORK_ORDER as work2_73_0_,
+        worlog0_.SERIAL_NUMBER as serial3_73_0_,
+        worlog0_.PART_ID as part4_73_0_,
+        worlog0_.PART_NO as part5_73_0_,
+        worlog0_.PRODUCT_LINE_ID as product6_73_0_,
+        worlog0_.PRODUCT_LINE_CODE as product7_73_0_,
+        worlog0_.PROCESS_ID as process8_73_0_,
+        worlog0_.PROCESS_CODE as process9_73_0_,
+        worlog0_.TERMINAL_ID as terminal10_73_0_,
+        worlog0_.TERMINAL_CODE as terminal11_73_0_,
+        worlog0_.QTY as qty12_73_0_,
+        worlog0_.STATUS as status13_73_0_,
+        worlog0_.REFLOW as reflow14_73_0_,
+        worlog0_.REMARK as remark15_73_0_,
+        worlog0_.EMPLOYEE_CODE as employee16_73_0_,
+        worlog0_.CREATE_TIME as create17_73_0_ 
+    FROM
+        WOR_LOG worlog0_ 
+    WHERE
+        worlog0_.ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+18:44:26.582 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:44:26.622 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_LOG_DETAIL
+        (WOR_REPAIR_LOG_ID, DEFECT_ID, DEFECT_CODE, CAUSE_ID, CAUSE_CODE, REPAIRTYPE_ID, REPAIRTYPE_CODE, DUTY_ID, DUTY_CODE, REMARK, LOCATION, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 83 [Type: Int32 (0:0:0)],
+    @p1 = 2 [Type: Int32 (0:0:0)],
+    @p2 = 'TP02' [Type: String (4000:0:0)],
+    @p3 = 1 [Type: Int32 (0:0:0)],
+    @p4 = 'CB' [Type: String (4000:0:0)],
+    @p5 = 1 [Type: Int32 (0:0:0)],
+    @p6 = 'Replace' [Type: String (4000:0:0)],
+    @p7 = 1 [Type: Int32 (0:0:0)],
+    @p8 = 'DUTY01' [Type: String (4000:0:0)],
+    @p9 = '2' [Type: String (4000:0:0)],
+    @p10 = '1' [Type: String (4000:0:0)],
+    @p11 = 'ADMIN' [Type: String (4000:0:0)],
+    @p12 = 2020-11-03T18:44:26.6222415+08:00 [Type: DateTime2 (8:0:0)]
+18:44:26.823 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.TEST_WOR_LOG_ID=@p1 
+    order by
+        worrepairl0_.CREATE_TIME asc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = 126 [Type: Int32 (0:0:0)]
+18:44:27.025 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_79_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_,
+        worrepairl0_.DEFECT_ID as defect3_79_,
+        worrepairl0_.DEFECT_CODE as defect4_79_,
+        worrepairl0_.CAUSE_ID as cause5_79_,
+        worrepairl0_.CAUSE_CODE as cause6_79_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_,
+        worrepairl0_.DUTY_ID as duty9_79_,
+        worrepairl0_.DUTY_CODE as duty10_79_,
+        worrepairl0_.REMARK as remark11_79_,
+        worrepairl0_.LOCATION as location12_79_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_,
+        worrepairl0_.CREATE_TIME as create14_79_ 
+    from
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    where
+        worrepairl0_.WOR_REPAIR_LOG_ID=@p0;
+    @p0 = 83 [Type: Int32 (0:0:0)]
+18:44:27.183 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+18:44:27.224 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:44:27.399 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+18:44:27.425 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+18:44:27.625 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+18:44:27.828 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'TP02' [Type: String (4000:0:0)]
+18:44:28.023 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+18:44:28.116 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+18:44:28.224 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+18:44:31.908 +08:00 [DEBUG] [25] [NHibernate.SQL] 
+    SELECT
+        worrepairl0_.ID as id1_79_0_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_0_,
+        worrepairl0_.DEFECT_ID as defect3_79_0_,
+        worrepairl0_.DEFECT_CODE as defect4_79_0_,
+        worrepairl0_.CAUSE_ID as cause5_79_0_,
+        worrepairl0_.CAUSE_CODE as cause6_79_0_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_0_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_0_,
+        worrepairl0_.DUTY_ID as duty9_79_0_,
+        worrepairl0_.DUTY_CODE as duty10_79_0_,
+        worrepairl0_.REMARK as remark11_79_0_,
+        worrepairl0_.LOCATION as location12_79_0_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_0_,
+        worrepairl0_.CREATE_TIME as create14_79_0_ 
+    FROM
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    WHERE
+        worrepairl0_.ID=@p0;
+    @p0 = 137 [Type: Int32 (0:0:0)]
+18:44:31.989 +08:00 [DEBUG] [25] [NHibernate.SQL] 
+    delete 
+    from
+        WOR_REPAIR_LOG_DETAIL 
+    where
+        ID=@p0;
+    @p0 = 137 [Type: Int32 (0:0:0)]
+18:44:41.644 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:44:41.845 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        worlog0_.ID as id1_73_0_,
+        worlog0_.WORK_ORDER as work2_73_0_,
+        worlog0_.SERIAL_NUMBER as serial3_73_0_,
+        worlog0_.PART_ID as part4_73_0_,
+        worlog0_.PART_NO as part5_73_0_,
+        worlog0_.PRODUCT_LINE_ID as product6_73_0_,
+        worlog0_.PRODUCT_LINE_CODE as product7_73_0_,
+        worlog0_.PROCESS_ID as process8_73_0_,
+        worlog0_.PROCESS_CODE as process9_73_0_,
+        worlog0_.TERMINAL_ID as terminal10_73_0_,
+        worlog0_.TERMINAL_CODE as terminal11_73_0_,
+        worlog0_.QTY as qty12_73_0_,
+        worlog0_.STATUS as status13_73_0_,
+        worlog0_.REFLOW as reflow14_73_0_,
+        worlog0_.REMARK as remark15_73_0_,
+        worlog0_.EMPLOYEE_CODE as employee16_73_0_,
+        worlog0_.CREATE_TIME as create17_73_0_ 
+    FROM
+        WOR_LOG worlog0_ 
+    WHERE
+        worlog0_.ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+18:44:42.005 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+18:44:42.015 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_LOG_DETAIL
+        (WOR_REPAIR_LOG_ID, DEFECT_ID, DEFECT_CODE, CAUSE_ID, CAUSE_CODE, REPAIRTYPE_ID, REPAIRTYPE_CODE, DUTY_ID, DUTY_CODE, REMARK, LOCATION, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 83 [Type: Int32 (0:0:0)],
+    @p1 = 2 [Type: Int32 (0:0:0)],
+    @p2 = 'TP02' [Type: String (4000:0:0)],
+    @p3 = 2 [Type: Int32 (0:0:0)],
+    @p4 = 'CC' [Type: String (4000:0:0)],
+    @p5 = 1 [Type: Int32 (0:0:0)],
+    @p6 = 'Replace' [Type: String (4000:0:0)],
+    @p7 = 1 [Type: Int32 (0:0:0)],
+    @p8 = 'DUTY01' [Type: String (4000:0:0)],
+    @p9 = '2' [Type: String (4000:0:0)],
+    @p10 = '1' [Type: String (4000:0:0)],
+    @p11 = 'ADMIN' [Type: String (4000:0:0)],
+    @p12 = 2020-11-03T18:44:42.0154722+08:00 [Type: DateTime2 (8:0:0)]
+18:44:42.045 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.TEST_WOR_LOG_ID=@p1 
+    order by
+        worrepairl0_.CREATE_TIME asc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = 126 [Type: Int32 (0:0:0)]
+18:44:42.053 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_79_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_,
+        worrepairl0_.DEFECT_ID as defect3_79_,
+        worrepairl0_.DEFECT_CODE as defect4_79_,
+        worrepairl0_.CAUSE_ID as cause5_79_,
+        worrepairl0_.CAUSE_CODE as cause6_79_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_,
+        worrepairl0_.DUTY_ID as duty9_79_,
+        worrepairl0_.DUTY_CODE as duty10_79_,
+        worrepairl0_.REMARK as remark11_79_,
+        worrepairl0_.LOCATION as location12_79_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_,
+        worrepairl0_.CREATE_TIME as create14_79_ 
+    from
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    where
+        worrepairl0_.WOR_REPAIR_LOG_ID=@p0;
+    @p0 = 83 [Type: Int32 (0:0:0)]
+18:44:42.245 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+18:44:42.446 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:44:42.463 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+18:44:42.647 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+18:44:42.807 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+18:44:43.009 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'TP02' [Type: String (4000:0:0)]
+18:44:43.048 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CC' [Type: String (4000:0:0)]
+18:44:43.249 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+18:44:43.407 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+18:44:48.308 +08:00 [DEBUG] [37] [NHibernate.SQL] 
+    SELECT
+        worrepairl0_.ID as id1_79_0_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_0_,
+        worrepairl0_.DEFECT_ID as defect3_79_0_,
+        worrepairl0_.DEFECT_CODE as defect4_79_0_,
+        worrepairl0_.CAUSE_ID as cause5_79_0_,
+        worrepairl0_.CAUSE_CODE as cause6_79_0_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_0_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_0_,
+        worrepairl0_.DUTY_ID as duty9_79_0_,
+        worrepairl0_.DUTY_CODE as duty10_79_0_,
+        worrepairl0_.REMARK as remark11_79_0_,
+        worrepairl0_.LOCATION as location12_79_0_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_0_,
+        worrepairl0_.CREATE_TIME as create14_79_0_ 
+    FROM
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    WHERE
+        worrepairl0_.ID=@p0;
+    @p0 = 138 [Type: Int32 (0:0:0)]
+18:44:48.459 +08:00 [DEBUG] [37] [NHibernate.SQL] 
+    delete 
+    from
+        WOR_REPAIR_LOG_DETAIL 
+    where
+        ID=@p0;
+    @p0 = 138 [Type: Int32 (0:0:0)]
+18:44:50.271 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_31_0_,
+        this_.PART_NO as part2_31_0_,
+        this_.PART_NAME as part3_31_0_,
+        this_.TYPE as type4_31_0_,
+        this_.SPEC1 as spec5_31_0_,
+        this_.SPEC2 as spec6_31_0_,
+        this_.VERSION as version7_31_0_,
+        this_.PART_DL as part8_31_0_,
+        this_.PART_XL as part9_31_0_,
+        this_.VENDOR_PART_NO as vendor10_31_0_,
+        this_.CUSTOMER_PART_NO as customer11_31_0_,
+        this_.UOM as uom12_31_0_,
+        this_.KEYPART as keypart13_31_0_,
+        this_.MATCH_RULE as match14_31_0_,
+        this_.UNIQUE_CHECK as unique15_31_0_,
+        this_.WORKFLOW_ID as workflow16_31_0_,
+        this_.VENDOR_ID as vendor17_31_0_,
+        this_.CUSTOMER_ID as customer18_31_0_,
+        this_.FAMILY_ID as family19_31_0_,
+        this_.MATERIAL_TYPE_ID as material20_31_0_,
+        this_.EMPLOYEE_CODE as employee21_31_0_,
+        this_.CREATE_TIME as create22_31_0_,
+        this_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART this_
+18:44:50.843 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+18:44:50.867 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        worinfo0_.ID as id1_72_,
+        worinfo0_.WORK_ORDER as work2_72_,
+        worinfo0_.TYPE as type3_72_,
+        worinfo0_.PROCESS_ID as process4_72_,
+        worinfo0_.PROCESS_CODE as process5_72_,
+        worinfo0_.ITEM_PART_ID as item6_72_,
+        worinfo0_.ITEM_PART_NO as item7_72_,
+        worinfo0_.SCAN_PART_ID as scan8_72_,
+        worinfo0_.SCAN_PART_NO as scan9_72_,
+        worinfo0_.SCAN_PART_VALUE as scan10_72_,
+        worinfo0_.USED_QTY as used11_72_,
+        worinfo0_.EMPLOYEE_CODE as employee12_72_,
+        worinfo0_.CREATE_TIME as create13_72_,
+        worinfo0_.UPDATE_TIME as update14_72_ 
+    from
+        WOR_INFO worinfo0_ 
+    where
+        worinfo0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+18:44:51.068 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 89 [Type: Int32 (0:0:0)]
+18:44:51.219 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 95 [Type: Int32 (0:0:0)]
+18:44:51.265 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 98 [Type: Int32 (0:0:0)]
+18:44:58.102 +08:00 [DEBUG] [42] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and (
+            worrepairl0_.UPDATE_TIME is not null
+        );
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+18:44:59.722 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+18:44:59.838 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:45:00.192 +08:00 [DEBUG] [39] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_58_0_,
+        this_.NAME as name2_58_0_,
+        this_.CODE as code3_58_0_,
+        this_.DESCRIPTION as description4_58_0_,
+        this_.DESCRIPTION2 as description5_58_0_,
+        this_.EMPLOYEE_CODE as employee6_58_0_,
+        this_.CREATE_TIME as create7_58_0_,
+        this_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE this_
+18:45:03.906 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+18:45:03.913 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:45:04.404 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_58_0_,
+        this_.NAME as name2_58_0_,
+        this_.CODE as code3_58_0_,
+        this_.DESCRIPTION as description4_58_0_,
+        this_.DESCRIPTION2 as description5_58_0_,
+        this_.EMPLOYEE_CODE as employee6_58_0_,
+        this_.CREATE_TIME as create7_58_0_,
+        this_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE this_
+18:45:08.319 +08:00 [DEBUG] [25] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0 
+        and wordefect0_.DEFECT_CODE=@p1 
+        and wordefect0_.TEST_WOR_LOG_ID=@p2;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)], @p1 = 'CM33' [Type: String (4000:0:0)], @p2 = 126 [Type: Int32 (0:0:0)]
+18:45:22.534 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+18:45:22.538 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:45:22.783 +08:00 [DEBUG] [42] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_58_0_,
+        this_.NAME as name2_58_0_,
+        this_.CODE as code3_58_0_,
+        this_.DESCRIPTION as description4_58_0_,
+        this_.DESCRIPTION2 as description5_58_0_,
+        this_.EMPLOYEE_CODE as employee6_58_0_,
+        this_.CREATE_TIME as create7_58_0_,
+        this_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE this_
+18:45:27.428 +08:00 [DEBUG] [25] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+18:45:27.463 +08:00 [DEBUG] [25] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:45:27.984 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_58_0_,
+        this_.NAME as name2_58_0_,
+        this_.CODE as code3_58_0_,
+        this_.DESCRIPTION as description4_58_0_,
+        this_.DESCRIPTION2 as description5_58_0_,
+        this_.EMPLOYEE_CODE as employee6_58_0_,
+        this_.CREATE_TIME as create7_58_0_,
+        this_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE this_
+18:45:28.655 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0 
+        and wordefect0_.DEFECT_CODE=@p1 
+        and wordefect0_.TEST_WOR_LOG_ID=@p2;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)], @p1 = 'CT01' [Type: String (4000:0:0)], @p2 = 126 [Type: Int32 (0:0:0)]
+18:45:28.670 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_DEFECT
+        (WORK_ORDER, SERIAL_NUMBER, TEST_WOR_LOG_ID, DEFECT_ID, DEFECT_CODE, PROCESS_ID, PROCESS_CODE, REMARK, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 'K92-043' [Type: String (4000:0:0)],
+    @p1 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p2 = 126 [Type: Int32 (0:0:0)],
+    @p3 = 0 [Type: Int32 (0:0:0)],
+    @p4 = 'CT01' [Type: String (4000:0:0)],
+    @p5 = 0 [Type: Int32 (0:0:0)],
+    @p6 = '05' [Type: String (4000:0:0)],
+    @p7 = NULL [Type: String (4000:0:0)],
+    @p8 = 'ADMIN' [Type: String (4000:0:0)],
+    @p9 = 2020-11-03T18:45:28.6684952+08:00 [Type: DateTime2 (8:0:0)]
+18:45:28.702 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.TEST_WOR_LOG_ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+18:45:28.902 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'TP02' [Type: String (4000:0:0)]
+18:45:28.905 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+18:45:29.104 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CT01' [Type: String (4000:0:0)]
+18:45:29.303 +08:00 [DEBUG] [33] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+18:45:34.748 +08:00 [DEBUG] [44] [NHibernate.SQL] 
+    SELECT
+        wordefect0_.ID as id1_77_0_,
+        wordefect0_.WORK_ORDER as work2_77_0_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_0_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_0_,
+        wordefect0_.DEFECT_ID as defect5_77_0_,
+        wordefect0_.DEFECT_CODE as defect6_77_0_,
+        wordefect0_.PROCESS_ID as process7_77_0_,
+        wordefect0_.PROCESS_CODE as process8_77_0_,
+        wordefect0_.REMARK as remark9_77_0_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_0_,
+        wordefect0_.CREATE_TIME as create11_77_0_ 
+    FROM
+        WOR_DEFECT wordefect0_ 
+    WHERE
+        wordefect0_.ID=@p0;
+    @p0 = 86 [Type: Int32 (0:0:0)]
+18:45:34.785 +08:00 [DEBUG] [44] [NHibernate.SQL] 
+    delete 
+    from
+        WOR_DEFECT 
+    where
+        ID=@p0;
+    @p0 = 86 [Type: Int32 (0:0:0)]
+18:47:59.324 +08:00 [DEBUG] [37] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_31_0_,
+        this_.PART_NO as part2_31_0_,
+        this_.PART_NAME as part3_31_0_,
+        this_.TYPE as type4_31_0_,
+        this_.SPEC1 as spec5_31_0_,
+        this_.SPEC2 as spec6_31_0_,
+        this_.VERSION as version7_31_0_,
+        this_.PART_DL as part8_31_0_,
+        this_.PART_XL as part9_31_0_,
+        this_.VENDOR_PART_NO as vendor10_31_0_,
+        this_.CUSTOMER_PART_NO as customer11_31_0_,
+        this_.UOM as uom12_31_0_,
+        this_.KEYPART as keypart13_31_0_,
+        this_.MATCH_RULE as match14_31_0_,
+        this_.UNIQUE_CHECK as unique15_31_0_,
+        this_.WORKFLOW_ID as workflow16_31_0_,
+        this_.VENDOR_ID as vendor17_31_0_,
+        this_.CUSTOMER_ID as customer18_31_0_,
+        this_.FAMILY_ID as family19_31_0_,
+        this_.MATERIAL_TYPE_ID as material20_31_0_,
+        this_.EMPLOYEE_CODE as employee21_31_0_,
+        this_.CREATE_TIME as create22_31_0_,
+        this_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART this_
+18:47:59.650 +08:00 [DEBUG] [50] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+18:47:59.680 +08:00 [DEBUG] [50] [NHibernate.SQL] 
+    select
+        worinfo0_.ID as id1_72_,
+        worinfo0_.WORK_ORDER as work2_72_,
+        worinfo0_.TYPE as type3_72_,
+        worinfo0_.PROCESS_ID as process4_72_,
+        worinfo0_.PROCESS_CODE as process5_72_,
+        worinfo0_.ITEM_PART_ID as item6_72_,
+        worinfo0_.ITEM_PART_NO as item7_72_,
+        worinfo0_.SCAN_PART_ID as scan8_72_,
+        worinfo0_.SCAN_PART_NO as scan9_72_,
+        worinfo0_.SCAN_PART_VALUE as scan10_72_,
+        worinfo0_.USED_QTY as used11_72_,
+        worinfo0_.EMPLOYEE_CODE as employee12_72_,
+        worinfo0_.CREATE_TIME as create13_72_,
+        worinfo0_.UPDATE_TIME as update14_72_ 
+    from
+        WOR_INFO worinfo0_ 
+    where
+        worinfo0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+18:47:59.881 +08:00 [DEBUG] [50] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 89 [Type: Int32 (0:0:0)]
+18:47:59.886 +08:00 [DEBUG] [50] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 95 [Type: Int32 (0:0:0)]
+18:48:00.079 +08:00 [DEBUG] [50] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 98 [Type: Int32 (0:0:0)]
+18:48:10.933 +08:00 [DEBUG] [25] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '222' [Type: String (4000:0:0)]
+18:48:11.465 +08:00 [DEBUG] [25] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '222' [Type: String (4000:0:0)]
+18:48:12.233 +08:00 [DEBUG] [49] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '222' [Type: String (4000:0:0)]
+18:48:22.096 +08:00 [DEBUG] [37] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+18:48:22.353 +08:00 [DEBUG] [50] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+18:48:24.513 +08:00 [DEBUG] [50] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+18:48:31.423 +08:00 [DEBUG] [51] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+18:48:31.548 +08:00 [DEBUG] [51] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+18:48:31.630 +08:00 [DEBUG] [51] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_INFO
+        (WORK_ORDER, TYPE, PROCESS_ID, PROCESS_CODE, ITEM_PART_ID, ITEM_PART_NO, SCAN_PART_ID, SCAN_PART_NO, SCAN_PART_VALUE, USED_QTY, EMPLOYEE_CODE, CREATE_TIME, UPDATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 'K92-043' [Type: String (4000:0:0)],
+    @p1 = 'WO' [Type: String (4000:0:0)],
+    @p2 = 8 [Type: Int32 (0:0:0)],
+    @p3 = '05' [Type: String (4000:0:0)],
+    @p4 = 89 [Type: Int32 (0:0:0)],
+    @p5 = '22uF040216V' [Type: String (4000:0:0)],
+    @p6 = 89 [Type: Int32 (0:0:0)],
+    @p7 = '22uF040216V' [Type: String (4000:0:0)],
+    @p8 = '22uF040216V01' [Type: String (4000:0:0)],
+    @p9 = 1 [Type: Int32 (0:0:0)],
+    @p10 = 'ADMIN' [Type: String (4000:0:0)],
+    @p11 = 2020-11-03T18:48:31.6298352+08:00 [Type: DateTime2 (8:0:0)],
+    @p12 = 2020-11-03T18:48:31.6298352+08:00 [Type: DateTime2 (8:0:0)]
+18:48:31.637 +08:00 [DEBUG] [51] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+18:48:31.641 +08:00 [DEBUG] [51] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+18:48:31.665 +08:00 [DEBUG] [51] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_KEYPARTS
+        (WORK_ORDER, SERIAL_NUMBER, REPAIR_LOG_ID, OLD_PART_ID, OLD_PART_NO, NEW_PART_ID, NEW_PART_NO, NEW_PART_SN, REMARK, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 'K92-043' [Type: String (4000:0:0)],
+    @p1 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p2 = NULL [Type: Int32 (0:0:0)],
+    @p3 = 89 [Type: Int32 (0:0:0)],
+    @p4 = '22uF040216V' [Type: String (4000:0:0)],
+    @p5 = 89 [Type: Int32 (0:0:0)],
+    @p6 = '22uF040216V' [Type: String (4000:0:0)],
+    @p7 = '22uF040216V01' [Type: String (4000:0:0)],
+    @p8 = '' [Type: String (4000:0:0)],
+    @p9 = 'ADMIN' [Type: String (4000:0:0)],
+    @p10 = 2020-11-03T18:48:31.6631885+08:00 [Type: DateTime2 (8:0:0)]
+19:14:05.644 +08:00 [DEBUG] [10] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_57_1_,
+        this_.CODE as code2_57_1_,
+        this_.NAME as name3_57_1_,
+        this_.SYMPTOM_TYPE_ID as symptom4_57_1_,
+        this_.LEVEL_ID as level5_57_1_,
+        this_.DESCRIPTION as description6_57_1_,
+        this_.DESCRIPTION2 as description7_57_1_,
+        this_.EMPLOYEE_CODE as employee8_57_1_,
+        this_.CREATE_TIME as create9_57_1_,
+        this_.UPDATE_TIME as update10_57_1_,
+        symptomtyp2_.ID as id1_58_0_,
+        symptomtyp2_.NAME as name2_58_0_,
+        symptomtyp2_.CODE as code3_58_0_,
+        symptomtyp2_.DESCRIPTION as description4_58_0_,
+        symptomtyp2_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp2_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp2_.CREATE_TIME as create7_58_0_,
+        symptomtyp2_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM this_ 
+    left outer join
+        S_SYMPTOM_TYPE symptomtyp2_ 
+            on this_.SYMPTOM_TYPE_ID=symptomtyp2_.ID
+19:14:05.906 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_50_0_,
+        this_.CODE as code2_50_0_,
+        this_.NAME as name3_50_0_,
+        this_.DESCRIPTION as description4_50_0_,
+        this_.DESCRIPTION2 as description5_50_0_,
+        this_.EMPLOYEE_CODE as employee6_50_0_,
+        this_.CREATE_TIME as create7_50_0_,
+        this_.UPDATE_TIME as update8_50_0_ 
+    FROM
+        S_CAUSE this_
+19:14:05.995 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_51_0_,
+        this_.CODE as code2_51_0_,
+        this_.NAME as name3_51_0_,
+        this_.DESCRIPTION as description4_51_0_,
+        this_.DESCRIPTION2 as description5_51_0_,
+        this_.EMPLOYEE_CODE as employee6_51_0_,
+        this_.CREATE_TIME as create7_51_0_,
+        this_.UPDATE_TIME as update8_51_0_ 
+    FROM
+        S_DUTY this_
+19:14:06.207 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_
+19:14:06.256 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+19:14:06.371 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_52_0_,
+        this_.CODE as code2_52_0_,
+        this_.NAME as name3_52_0_,
+        this_.DESCRIPTION as description4_52_0_,
+        this_.DESCRIPTION2 as description5_52_0_,
+        this_.EMPLOYEE_CODE as employee6_52_0_,
+        this_.CREATE_TIME as create7_52_0_,
+        this_.UPDATE_TIME as update8_52_0_ 
+    FROM
+        S_REPAIR_TYPE this_
+19:14:06.644 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_58_0_,
+        this_.NAME as name2_58_0_,
+        this_.CODE as code3_58_0_,
+        this_.DESCRIPTION as description4_58_0_,
+        this_.DESCRIPTION2 as description5_58_0_,
+        this_.EMPLOYEE_CODE as employee6_58_0_,
+        this_.CREATE_TIME as create7_58_0_,
+        this_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE this_
+19:14:19.184 +08:00 [DEBUG] [12] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_57_1_,
+        this_.CODE as code2_57_1_,
+        this_.NAME as name3_57_1_,
+        this_.SYMPTOM_TYPE_ID as symptom4_57_1_,
+        this_.LEVEL_ID as level5_57_1_,
+        this_.DESCRIPTION as description6_57_1_,
+        this_.DESCRIPTION2 as description7_57_1_,
+        this_.EMPLOYEE_CODE as employee8_57_1_,
+        this_.CREATE_TIME as create9_57_1_,
+        this_.UPDATE_TIME as update10_57_1_,
+        symptomtyp2_.ID as id1_58_0_,
+        symptomtyp2_.NAME as name2_58_0_,
+        symptomtyp2_.CODE as code3_58_0_,
+        symptomtyp2_.DESCRIPTION as description4_58_0_,
+        symptomtyp2_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp2_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp2_.CREATE_TIME as create7_58_0_,
+        symptomtyp2_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM this_ 
+    left outer join
+        S_SYMPTOM_TYPE symptomtyp2_ 
+            on this_.SYMPTOM_TYPE_ID=symptomtyp2_.ID
+19:14:19.272 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_50_0_,
+        this_.CODE as code2_50_0_,
+        this_.NAME as name3_50_0_,
+        this_.DESCRIPTION as description4_50_0_,
+        this_.DESCRIPTION2 as description5_50_0_,
+        this_.EMPLOYEE_CODE as employee6_50_0_,
+        this_.CREATE_TIME as create7_50_0_,
+        this_.UPDATE_TIME as update8_50_0_ 
+    FROM
+        S_CAUSE this_
+19:14:19.622 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_51_0_,
+        this_.CODE as code2_51_0_,
+        this_.NAME as name3_51_0_,
+        this_.DESCRIPTION as description4_51_0_,
+        this_.DESCRIPTION2 as description5_51_0_,
+        this_.EMPLOYEE_CODE as employee6_51_0_,
+        this_.CREATE_TIME as create7_51_0_,
+        this_.UPDATE_TIME as update8_51_0_ 
+    FROM
+        S_DUTY this_
+19:14:19.876 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_52_0_,
+        this_.CODE as code2_52_0_,
+        this_.NAME as name3_52_0_,
+        this_.DESCRIPTION as description4_52_0_,
+        this_.DESCRIPTION2 as description5_52_0_,
+        this_.EMPLOYEE_CODE as employee6_52_0_,
+        this_.CREATE_TIME as create7_52_0_,
+        this_.UPDATE_TIME as update8_52_0_ 
+    FROM
+        S_REPAIR_TYPE this_
+19:14:27.398 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) worlog0_.ID as id1_73_,
+        worlog0_.WORK_ORDER as work2_73_,
+        worlog0_.SERIAL_NUMBER as serial3_73_,
+        worlog0_.PART_ID as part4_73_,
+        worlog0_.PART_NO as part5_73_,
+        worlog0_.PRODUCT_LINE_ID as product6_73_,
+        worlog0_.PRODUCT_LINE_CODE as product7_73_,
+        worlog0_.PROCESS_ID as process8_73_,
+        worlog0_.PROCESS_CODE as process9_73_,
+        worlog0_.TERMINAL_ID as terminal10_73_,
+        worlog0_.TERMINAL_CODE as terminal11_73_,
+        worlog0_.QTY as qty12_73_,
+        worlog0_.STATUS as status13_73_,
+        worlog0_.REFLOW as reflow14_73_,
+        worlog0_.REMARK as remark15_73_,
+        worlog0_.EMPLOYEE_CODE as employee16_73_,
+        worlog0_.CREATE_TIME as create17_73_ 
+    from
+        WOR_LOG worlog0_ 
+    where
+        worlog0_.SERIAL_NUMBER=@p0 
+    order by
+        worlog0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+19:14:27.478 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.TEST_WOR_LOG_ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+19:14:27.521 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'TP02' [Type: String (4000:0:0)]
+19:14:27.562 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+19:14:27.721 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+19:14:27.806 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.TEST_WOR_LOG_ID=@p1 
+    order by
+        worrepairl0_.CREATE_TIME asc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = 126 [Type: Int32 (0:0:0)]
+19:14:27.874 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_79_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_,
+        worrepairl0_.DEFECT_ID as defect3_79_,
+        worrepairl0_.DEFECT_CODE as defect4_79_,
+        worrepairl0_.CAUSE_ID as cause5_79_,
+        worrepairl0_.CAUSE_CODE as cause6_79_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_,
+        worrepairl0_.DUTY_ID as duty9_79_,
+        worrepairl0_.DUTY_CODE as duty10_79_,
+        worrepairl0_.REMARK as remark11_79_,
+        worrepairl0_.LOCATION as location12_79_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_,
+        worrepairl0_.CREATE_TIME as create14_79_ 
+    from
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    where
+        worrepairl0_.WOR_REPAIR_LOG_ID=@p0;
+    @p0 = 83 [Type: Int32 (0:0:0)]
+19:14:28.070 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+19:14:28.136 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+19:14:28.270 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+19:14:28.315 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+19:14:28.321 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 79 [Type: Int32 (0:0:0)]
+19:14:36.096 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+19:14:36.131 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        worlog0_.ID as id1_73_0_,
+        worlog0_.WORK_ORDER as work2_73_0_,
+        worlog0_.SERIAL_NUMBER as serial3_73_0_,
+        worlog0_.PART_ID as part4_73_0_,
+        worlog0_.PART_NO as part5_73_0_,
+        worlog0_.PRODUCT_LINE_ID as product6_73_0_,
+        worlog0_.PRODUCT_LINE_CODE as product7_73_0_,
+        worlog0_.PROCESS_ID as process8_73_0_,
+        worlog0_.PROCESS_CODE as process9_73_0_,
+        worlog0_.TERMINAL_ID as terminal10_73_0_,
+        worlog0_.TERMINAL_CODE as terminal11_73_0_,
+        worlog0_.QTY as qty12_73_0_,
+        worlog0_.STATUS as status13_73_0_,
+        worlog0_.REFLOW as reflow14_73_0_,
+        worlog0_.REMARK as remark15_73_0_,
+        worlog0_.EMPLOYEE_CODE as employee16_73_0_,
+        worlog0_.CREATE_TIME as create17_73_0_ 
+    FROM
+        WOR_LOG worlog0_ 
+    WHERE
+        worlog0_.ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+19:14:36.298 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+19:14:36.344 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_LOG_DETAIL
+        (WOR_REPAIR_LOG_ID, DEFECT_ID, DEFECT_CODE, CAUSE_ID, CAUSE_CODE, REPAIRTYPE_ID, REPAIRTYPE_CODE, DUTY_ID, DUTY_CODE, REMARK, LOCATION, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 83 [Type: Int32 (0:0:0)],
+    @p1 = 2 [Type: Int32 (0:0:0)],
+    @p2 = 'TP02' [Type: String (4000:0:0)],
+    @p3 = 1 [Type: Int32 (0:0:0)],
+    @p4 = 'CB' [Type: String (4000:0:0)],
+    @p5 = 1 [Type: Int32 (0:0:0)],
+    @p6 = 'Replace' [Type: String (4000:0:0)],
+    @p7 = 1 [Type: Int32 (0:0:0)],
+    @p8 = 'DUTY01' [Type: String (4000:0:0)],
+    @p9 = '' [Type: String (4000:0:0)],
+    @p10 = '' [Type: String (4000:0:0)],
+    @p11 = 'ADMIN' [Type: String (4000:0:0)],
+    @p12 = 2020-11-03T19:14:36.3310561+08:00 [Type: DateTime2 (8:0:0)]
+19:14:36.485 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.TEST_WOR_LOG_ID=@p1 
+    order by
+        worrepairl0_.CREATE_TIME asc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = 126 [Type: Int32 (0:0:0)]
+19:14:36.520 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_79_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_,
+        worrepairl0_.DEFECT_ID as defect3_79_,
+        worrepairl0_.DEFECT_CODE as defect4_79_,
+        worrepairl0_.CAUSE_ID as cause5_79_,
+        worrepairl0_.CAUSE_CODE as cause6_79_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_,
+        worrepairl0_.DUTY_ID as duty9_79_,
+        worrepairl0_.DUTY_CODE as duty10_79_,
+        worrepairl0_.REMARK as remark11_79_,
+        worrepairl0_.LOCATION as location12_79_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_,
+        worrepairl0_.CREATE_TIME as create14_79_ 
+    from
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    where
+        worrepairl0_.WOR_REPAIR_LOG_ID=@p0;
+    @p0 = 83 [Type: Int32 (0:0:0)]
+19:14:36.678 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+19:14:36.719 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+19:14:36.730 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+19:14:36.791 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+19:14:36.825 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+19:14:36.886 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'TP02' [Type: String (4000:0:0)]
+19:14:36.930 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+19:14:37.082 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+19:14:37.132 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+19:14:43.236 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        worrepairl0_.ID as id1_79_0_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_0_,
+        worrepairl0_.DEFECT_ID as defect3_79_0_,
+        worrepairl0_.DEFECT_CODE as defect4_79_0_,
+        worrepairl0_.CAUSE_ID as cause5_79_0_,
+        worrepairl0_.CAUSE_CODE as cause6_79_0_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_0_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_0_,
+        worrepairl0_.DUTY_ID as duty9_79_0_,
+        worrepairl0_.DUTY_CODE as duty10_79_0_,
+        worrepairl0_.REMARK as remark11_79_0_,
+        worrepairl0_.LOCATION as location12_79_0_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_0_,
+        worrepairl0_.CREATE_TIME as create14_79_0_ 
+    FROM
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    WHERE
+        worrepairl0_.ID=@p0;
+    @p0 = 144 [Type: Int32 (0:0:0)]
+19:14:43.307 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    delete 
+    from
+        WOR_REPAIR_LOG_DETAIL 
+    where
+        ID=@p0;
+    @p0 = 144 [Type: Int32 (0:0:0)]
+19:14:44.266 +08:00 [DEBUG] [17] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_31_0_,
+        this_.PART_NO as part2_31_0_,
+        this_.PART_NAME as part3_31_0_,
+        this_.TYPE as type4_31_0_,
+        this_.SPEC1 as spec5_31_0_,
+        this_.SPEC2 as spec6_31_0_,
+        this_.VERSION as version7_31_0_,
+        this_.PART_DL as part8_31_0_,
+        this_.PART_XL as part9_31_0_,
+        this_.VENDOR_PART_NO as vendor10_31_0_,
+        this_.CUSTOMER_PART_NO as customer11_31_0_,
+        this_.UOM as uom12_31_0_,
+        this_.KEYPART as keypart13_31_0_,
+        this_.MATCH_RULE as match14_31_0_,
+        this_.UNIQUE_CHECK as unique15_31_0_,
+        this_.WORKFLOW_ID as workflow16_31_0_,
+        this_.VENDOR_ID as vendor17_31_0_,
+        this_.CUSTOMER_ID as customer18_31_0_,
+        this_.FAMILY_ID as family19_31_0_,
+        this_.MATERIAL_TYPE_ID as material20_31_0_,
+        this_.EMPLOYEE_CODE as employee21_31_0_,
+        this_.CREATE_TIME as create22_31_0_,
+        this_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART this_
+19:14:44.656 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+19:14:44.699 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        worinfo0_.ID as id1_72_,
+        worinfo0_.WORK_ORDER as work2_72_,
+        worinfo0_.TYPE as type3_72_,
+        worinfo0_.PROCESS_ID as process4_72_,
+        worinfo0_.PROCESS_CODE as process5_72_,
+        worinfo0_.ITEM_PART_ID as item6_72_,
+        worinfo0_.ITEM_PART_NO as item7_72_,
+        worinfo0_.SCAN_PART_ID as scan8_72_,
+        worinfo0_.SCAN_PART_NO as scan9_72_,
+        worinfo0_.SCAN_PART_VALUE as scan10_72_,
+        worinfo0_.USED_QTY as used11_72_,
+        worinfo0_.EMPLOYEE_CODE as employee12_72_,
+        worinfo0_.CREATE_TIME as create13_72_,
+        worinfo0_.UPDATE_TIME as update14_72_ 
+    from
+        WOR_INFO worinfo0_ 
+    where
+        worinfo0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+19:14:44.750 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 89 [Type: Int32 (0:0:0)]
+19:14:44.807 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 95 [Type: Int32 (0:0:0)]
+19:14:44.894 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 98 [Type: Int32 (0:0:0)]
+19:14:55.149 +08:00 [DEBUG] [10] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V' [Type: String (4000:0:0)]
+19:14:55.395 +08:00 [DEBUG] [12] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V' [Type: String (4000:0:0)]
+19:14:57.528 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+19:14:57.873 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+19:14:59.128 +08:00 [DEBUG] [10] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V01' [Type: String (4000:0:0)]
+19:15:04.937 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+19:15:04.978 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+19:15:05.231 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_INFO
+        (WORK_ORDER, TYPE, PROCESS_ID, PROCESS_CODE, ITEM_PART_ID, ITEM_PART_NO, SCAN_PART_ID, SCAN_PART_NO, SCAN_PART_VALUE, USED_QTY, EMPLOYEE_CODE, CREATE_TIME, UPDATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 'K92-043' [Type: String (4000:0:0)],
+    @p1 = 'WO' [Type: String (4000:0:0)],
+    @p2 = 8 [Type: Int32 (0:0:0)],
+    @p3 = '05' [Type: String (4000:0:0)],
+    @p4 = 89 [Type: Int32 (0:0:0)],
+    @p5 = '22uF040216V' [Type: String (4000:0:0)],
+    @p6 = 89 [Type: Int32 (0:0:0)],
+    @p7 = '22uF040216V' [Type: String (4000:0:0)],
+    @p8 = '22uF040216V01' [Type: String (4000:0:0)],
+    @p9 = 1 [Type: Int32 (0:0:0)],
+    @p10 = 'ADMIN' [Type: String (4000:0:0)],
+    @p11 = 2020-11-03T19:15:05.2312136+08:00 [Type: DateTime2 (8:0:0)],
+    @p12 = 2020-11-03T19:15:05.2312136+08:00 [Type: DateTime2 (8:0:0)]
+19:15:05.329 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+19:15:05.372 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+19:15:05.530 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_KEYPARTS
+        (WORK_ORDER, SERIAL_NUMBER, REPAIR_LOG_ID, OLD_PART_ID, OLD_PART_NO, NEW_PART_ID, NEW_PART_NO, NEW_PART_SN, REMARK, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 'K92-043' [Type: String (4000:0:0)],
+    @p1 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p2 = NULL [Type: Int32 (0:0:0)],
+    @p3 = 89 [Type: Int32 (0:0:0)],
+    @p4 = '22uF040216V' [Type: String (4000:0:0)],
+    @p5 = 89 [Type: Int32 (0:0:0)],
+    @p6 = '22uF040216V' [Type: String (4000:0:0)],
+    @p7 = '22uF040216V01' [Type: String (4000:0:0)],
+    @p8 = '' [Type: String (4000:0:0)],
+    @p9 = 'ADMIN' [Type: String (4000:0:0)],
+    @p10 = 2020-11-03T19:15:05.5278078+08:00 [Type: DateTime2 (8:0:0)]
+19:15:34.533 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+19:15:34.628 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        worlog0_.ID as id1_73_0_,
+        worlog0_.WORK_ORDER as work2_73_0_,
+        worlog0_.SERIAL_NUMBER as serial3_73_0_,
+        worlog0_.PART_ID as part4_73_0_,
+        worlog0_.PART_NO as part5_73_0_,
+        worlog0_.PRODUCT_LINE_ID as product6_73_0_,
+        worlog0_.PRODUCT_LINE_CODE as product7_73_0_,
+        worlog0_.PROCESS_ID as process8_73_0_,
+        worlog0_.PROCESS_CODE as process9_73_0_,
+        worlog0_.TERMINAL_ID as terminal10_73_0_,
+        worlog0_.TERMINAL_CODE as terminal11_73_0_,
+        worlog0_.QTY as qty12_73_0_,
+        worlog0_.STATUS as status13_73_0_,
+        worlog0_.REFLOW as reflow14_73_0_,
+        worlog0_.REMARK as remark15_73_0_,
+        worlog0_.EMPLOYEE_CODE as employee16_73_0_,
+        worlog0_.CREATE_TIME as create17_73_0_ 
+    FROM
+        WOR_LOG worlog0_ 
+    WHERE
+        worlog0_.ID=@p0;
+    @p0 = 126 [Type: Int32 (0:0:0)]
+19:15:34.798 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.PROCESS_CODE=@p1 
+    order by
+        worrepairl0_.CREATE_TIME desc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = '05' [Type: String (4000:0:0)]
+19:15:34.829 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_LOG_DETAIL
+        (WOR_REPAIR_LOG_ID, DEFECT_ID, DEFECT_CODE, CAUSE_ID, CAUSE_CODE, REPAIRTYPE_ID, REPAIRTYPE_CODE, DUTY_ID, DUTY_CODE, REMARK, LOCATION, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 83 [Type: Int32 (0:0:0)],
+    @p1 = 2 [Type: Int32 (0:0:0)],
+    @p2 = 'TP02' [Type: String (4000:0:0)],
+    @p3 = 1 [Type: Int32 (0:0:0)],
+    @p4 = 'CB' [Type: String (4000:0:0)],
+    @p5 = 1 [Type: Int32 (0:0:0)],
+    @p6 = 'Replace' [Type: String (4000:0:0)],
+    @p7 = 1 [Type: Int32 (0:0:0)],
+    @p8 = 'DUTY01' [Type: String (4000:0:0)],
+    @p9 = '' [Type: String (4000:0:0)],
+    @p10 = '' [Type: String (4000:0:0)],
+    @p11 = 'ADMIN' [Type: String (4000:0:0)],
+    @p12 = 2020-11-03T19:15:34.8281150+08:00 [Type: DateTime2 (8:0:0)]
+19:15:34.856 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) worrepairl0_.ID as id1_78_,
+        worrepairl0_.WORK_ORDER as work2_78_,
+        worrepairl0_.SERIAL_NUMBER as serial3_78_,
+        worrepairl0_.TEST_WOR_LOG_ID as test4_78_,
+        worrepairl0_.PROCESS_ID as process5_78_,
+        worrepairl0_.PROCESS_CODE as process6_78_,
+        worrepairl0_.REPAIRER as repairer7_78_,
+        worrepairl0_.REPAIR_WOR_LOG_ID as repair8_78_,
+        worrepairl0_.REPAIR_TIME as repair9_78_,
+        worrepairl0_.CREATE_TIME as create10_78_,
+        worrepairl0_.UPDATE_TIME as update11_78_ 
+    from
+        WOR_REPAIR_LOG worrepairl0_ 
+    where
+        worrepairl0_.SERIAL_NUMBER=@p0 
+        and worrepairl0_.TEST_WOR_LOG_ID=@p1 
+    order by
+        worrepairl0_.CREATE_TIME asc;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p1 = 126 [Type: Int32 (0:0:0)]
+19:15:34.878 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        worrepairl0_.ID as id1_79_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_,
+        worrepairl0_.DEFECT_ID as defect3_79_,
+        worrepairl0_.DEFECT_CODE as defect4_79_,
+        worrepairl0_.CAUSE_ID as cause5_79_,
+        worrepairl0_.CAUSE_CODE as cause6_79_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_,
+        worrepairl0_.DUTY_ID as duty9_79_,
+        worrepairl0_.DUTY_CODE as duty10_79_,
+        worrepairl0_.REMARK as remark11_79_,
+        worrepairl0_.LOCATION as location12_79_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_,
+        worrepairl0_.CREATE_TIME as create14_79_ 
+    from
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    where
+        worrepairl0_.WOR_REPAIR_LOG_ID=@p0;
+    @p0 = 83 [Type: Int32 (0:0:0)]
+19:15:34.961 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'CM33' [Type: String (4000:0:0)]
+19:15:34.969 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        symptomtyp0_.ID as id1_58_0_,
+        symptomtyp0_.NAME as name2_58_0_,
+        symptomtyp0_.CODE as code3_58_0_,
+        symptomtyp0_.DESCRIPTION as description4_58_0_,
+        symptomtyp0_.DESCRIPTION2 as description5_58_0_,
+        symptomtyp0_.EMPLOYEE_CODE as employee6_58_0_,
+        symptomtyp0_.CREATE_TIME as create7_58_0_,
+        symptomtyp0_.UPDATE_TIME as update8_58_0_ 
+    FROM
+        S_SYMPTOM_TYPE symptomtyp0_ 
+    WHERE
+        symptomtyp0_.ID=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+19:15:35.028 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+19:15:35.179 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+19:15:35.189 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+19:15:35.205 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) symptom0_.ID as id1_57_,
+        symptom0_.CODE as code2_57_,
+        symptom0_.NAME as name3_57_,
+        symptom0_.SYMPTOM_TYPE_ID as symptom4_57_,
+        symptom0_.LEVEL_ID as level5_57_,
+        symptom0_.DESCRIPTION as description6_57_,
+        symptom0_.DESCRIPTION2 as description7_57_,
+        symptom0_.EMPLOYEE_CODE as employee8_57_,
+        symptom0_.CREATE_TIME as create9_57_,
+        symptom0_.UPDATE_TIME as update10_57_ 
+    from
+        S_SYMPTOM symptom0_ 
+    where
+        symptom0_.CODE=@p0;
+    @p0 = 'TP02' [Type: String (4000:0:0)]
+19:15:35.228 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) cause0_.ID as id1_50_,
+        cause0_.CODE as code2_50_,
+        cause0_.NAME as name3_50_,
+        cause0_.DESCRIPTION as description4_50_,
+        cause0_.DESCRIPTION2 as description5_50_,
+        cause0_.EMPLOYEE_CODE as employee6_50_,
+        cause0_.CREATE_TIME as create7_50_,
+        cause0_.UPDATE_TIME as update8_50_ 
+    from
+        S_CAUSE cause0_ 
+    where
+        cause0_.CODE=@p0;
+    @p0 = 'CB' [Type: String (4000:0:0)]
+19:15:35.429 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) duty0_.ID as id1_51_,
+        duty0_.CODE as code2_51_,
+        duty0_.NAME as name3_51_,
+        duty0_.DESCRIPTION as description4_51_,
+        duty0_.DESCRIPTION2 as description5_51_,
+        duty0_.EMPLOYEE_CODE as employee6_51_,
+        duty0_.CREATE_TIME as create7_51_,
+        duty0_.UPDATE_TIME as update8_51_ 
+    from
+        S_DUTY duty0_ 
+    where
+        duty0_.CODE=@p0;
+    @p0 = 'DUTY01' [Type: String (4000:0:0)]
+19:15:35.576 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) repairtype0_.ID as id1_52_,
+        repairtype0_.CODE as code2_52_,
+        repairtype0_.NAME as name3_52_,
+        repairtype0_.DESCRIPTION as description4_52_,
+        repairtype0_.DESCRIPTION2 as description5_52_,
+        repairtype0_.EMPLOYEE_CODE as employee6_52_,
+        repairtype0_.CREATE_TIME as create7_52_,
+        repairtype0_.UPDATE_TIME as update8_52_ 
+    from
+        S_REPAIR_TYPE repairtype0_ 
+    where
+        repairtype0_.CODE=@p0;
+    @p0 = 'Replace' [Type: String (4000:0:0)]
+19:15:37.440 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        worrepairl0_.ID as id1_79_0_,
+        worrepairl0_.WOR_REPAIR_LOG_ID as wor2_79_0_,
+        worrepairl0_.DEFECT_ID as defect3_79_0_,
+        worrepairl0_.DEFECT_CODE as defect4_79_0_,
+        worrepairl0_.CAUSE_ID as cause5_79_0_,
+        worrepairl0_.CAUSE_CODE as cause6_79_0_,
+        worrepairl0_.REPAIRTYPE_ID as repairtype7_79_0_,
+        worrepairl0_.REPAIRTYPE_CODE as repairtype8_79_0_,
+        worrepairl0_.DUTY_ID as duty9_79_0_,
+        worrepairl0_.DUTY_CODE as duty10_79_0_,
+        worrepairl0_.REMARK as remark11_79_0_,
+        worrepairl0_.LOCATION as location12_79_0_,
+        worrepairl0_.EMPLOYEE_CODE as employee13_79_0_,
+        worrepairl0_.CREATE_TIME as create14_79_0_ 
+    FROM
+        WOR_REPAIR_LOG_DETAIL worrepairl0_ 
+    WHERE
+        worrepairl0_.ID=@p0;
+    @p0 = 145 [Type: Int32 (0:0:0)]
+19:15:37.629 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    delete 
+    from
+        WOR_REPAIR_LOG_DETAIL 
+    where
+        ID=@p0;
+    @p0 = 145 [Type: Int32 (0:0:0)]
+19:15:40.033 +08:00 [DEBUG] [16] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_31_0_,
+        this_.PART_NO as part2_31_0_,
+        this_.PART_NAME as part3_31_0_,
+        this_.TYPE as type4_31_0_,
+        this_.SPEC1 as spec5_31_0_,
+        this_.SPEC2 as spec6_31_0_,
+        this_.VERSION as version7_31_0_,
+        this_.PART_DL as part8_31_0_,
+        this_.PART_XL as part9_31_0_,
+        this_.VENDOR_PART_NO as vendor10_31_0_,
+        this_.CUSTOMER_PART_NO as customer11_31_0_,
+        this_.UOM as uom12_31_0_,
+        this_.KEYPART as keypart13_31_0_,
+        this_.MATCH_RULE as match14_31_0_,
+        this_.UNIQUE_CHECK as unique15_31_0_,
+        this_.WORKFLOW_ID as workflow16_31_0_,
+        this_.VENDOR_ID as vendor17_31_0_,
+        this_.CUSTOMER_ID as customer18_31_0_,
+        this_.FAMILY_ID as family19_31_0_,
+        this_.MATERIAL_TYPE_ID as material20_31_0_,
+        this_.EMPLOYEE_CODE as employee21_31_0_,
+        this_.CREATE_TIME as create22_31_0_,
+        this_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART this_
+19:15:40.286 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+19:15:40.290 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        worinfo0_.ID as id1_72_,
+        worinfo0_.WORK_ORDER as work2_72_,
+        worinfo0_.TYPE as type3_72_,
+        worinfo0_.PROCESS_ID as process4_72_,
+        worinfo0_.PROCESS_CODE as process5_72_,
+        worinfo0_.ITEM_PART_ID as item6_72_,
+        worinfo0_.ITEM_PART_NO as item7_72_,
+        worinfo0_.SCAN_PART_ID as scan8_72_,
+        worinfo0_.SCAN_PART_NO as scan9_72_,
+        worinfo0_.SCAN_PART_VALUE as scan10_72_,
+        worinfo0_.USED_QTY as used11_72_,
+        worinfo0_.EMPLOYEE_CODE as employee12_72_,
+        worinfo0_.CREATE_TIME as create13_72_,
+        worinfo0_.UPDATE_TIME as update14_72_ 
+    from
+        WOR_INFO worinfo0_ 
+    where
+        worinfo0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+19:15:40.435 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 89 [Type: Int32 (0:0:0)]
+19:15:40.598 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 95 [Type: Int32 (0:0:0)]
+19:15:40.637 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        part0_.ID as id1_31_0_,
+        part0_.PART_NO as part2_31_0_,
+        part0_.PART_NAME as part3_31_0_,
+        part0_.TYPE as type4_31_0_,
+        part0_.SPEC1 as spec5_31_0_,
+        part0_.SPEC2 as spec6_31_0_,
+        part0_.VERSION as version7_31_0_,
+        part0_.PART_DL as part8_31_0_,
+        part0_.PART_XL as part9_31_0_,
+        part0_.VENDOR_PART_NO as vendor10_31_0_,
+        part0_.CUSTOMER_PART_NO as customer11_31_0_,
+        part0_.UOM as uom12_31_0_,
+        part0_.KEYPART as keypart13_31_0_,
+        part0_.MATCH_RULE as match14_31_0_,
+        part0_.UNIQUE_CHECK as unique15_31_0_,
+        part0_.WORKFLOW_ID as workflow16_31_0_,
+        part0_.VENDOR_ID as vendor17_31_0_,
+        part0_.CUSTOMER_ID as customer18_31_0_,
+        part0_.FAMILY_ID as family19_31_0_,
+        part0_.MATERIAL_TYPE_ID as material20_31_0_,
+        part0_.EMPLOYEE_CODE as employee21_31_0_,
+        part0_.CREATE_TIME as create22_31_0_,
+        part0_.UPDATE_TIME as update23_31_0_ 
+    FROM
+        S_PART part0_ 
+    WHERE
+        part0_.ID=@p0;
+    @p0 = 98 [Type: Int32 (0:0:0)]
+19:15:48.861 +08:00 [DEBUG] [10] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V02' [Type: String (4000:0:0)]
+19:15:49.113 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V02' [Type: String (4000:0:0)]
+19:15:50.557 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        TOP (1) material0_.ID as id1_30_,
+        material0_.REEL_ID as reel2_30_,
+        material0_.PN as pn3_30_,
+        material0_.MNF_PN as mnf4_30_,
+        material0_.MNF_DATE as mnf5_30_,
+        material0_.MANUFACTURER as manufacturer6_30_,
+        material0_.ORDER_ID as order7_30_,
+        material0_.SUPPLIER as supplier8_30_,
+        material0_.RECEIVE_DATE as receive9_30_,
+        material0_.LOT_NO as lot10_30_,
+        material0_.AMOUNT as amount11_30_,
+        material0_.LEFT_AMOUNT as left12_30_,
+        material0_.TYPE as type13_30_,
+        material0_.REMARK as remark14_30_,
+        material0_.REMARK2 as remark15_30_,
+        material0_.REMARK3 as remark16_30_,
+        material0_.ROHS_STATUS as rohs17_30_,
+        material0_.EMPLOYEE_CODE as employee18_30_,
+        material0_.CREATE_TIME as create19_30_,
+        material0_.UPDATE_TIME as update20_30_ 
+    from
+        MATERIAL material0_ 
+    where
+        material0_.REEL_ID=@p0;
+    @p0 = '22uF040216V02' [Type: String (4000:0:0)]
+19:15:56.007 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+19:15:56.051 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+19:15:56.192 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_INFO
+        (WORK_ORDER, TYPE, PROCESS_ID, PROCESS_CODE, ITEM_PART_ID, ITEM_PART_NO, SCAN_PART_ID, SCAN_PART_NO, SCAN_PART_VALUE, USED_QTY, EMPLOYEE_CODE, CREATE_TIME, UPDATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 'K92-043' [Type: String (4000:0:0)],
+    @p1 = 'WO' [Type: String (4000:0:0)],
+    @p2 = 8 [Type: Int32 (0:0:0)],
+    @p3 = '05' [Type: String (4000:0:0)],
+    @p4 = 89 [Type: Int32 (0:0:0)],
+    @p5 = '22uF040216V' [Type: String (4000:0:0)],
+    @p6 = 89 [Type: Int32 (0:0:0)],
+    @p7 = '22uF040216V' [Type: String (4000:0:0)],
+    @p8 = '22uF040216V02' [Type: String (4000:0:0)],
+    @p9 = 1 [Type: Int32 (0:0:0)],
+    @p10 = 'ADMIN' [Type: String (4000:0:0)],
+    @p11 = 2020-11-03T19:15:56.1922895+08:00 [Type: DateTime2 (8:0:0)],
+    @p12 = 2020-11-03T19:15:56.1922895+08:00 [Type: DateTime2 (8:0:0)]
+19:15:56.207 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        wordefect0_.ID as id1_77_,
+        wordefect0_.WORK_ORDER as work2_77_,
+        wordefect0_.SERIAL_NUMBER as serial3_77_,
+        wordefect0_.TEST_WOR_LOG_ID as test4_77_,
+        wordefect0_.DEFECT_ID as defect5_77_,
+        wordefect0_.DEFECT_CODE as defect6_77_,
+        wordefect0_.PROCESS_ID as process7_77_,
+        wordefect0_.PROCESS_CODE as process8_77_,
+        wordefect0_.REMARK as remark9_77_,
+        wordefect0_.EMPLOYEE_CODE as employee10_77_,
+        wordefect0_.CREATE_TIME as create11_77_ 
+    from
+        WOR_DEFECT wordefect0_ 
+    where
+        wordefect0_.SERIAL_NUMBER=@p0;
+    @p0 = 'k92-043-01' [Type: String (4000:0:0)]
+19:15:56.251 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        wobase0_.ID as id1_47_,
+        wobase0_.WORK_ORDER as work2_47_,
+        wobase0_.PART_ID as part3_47_,
+        wobase0_.TYPE as type4_47_,
+        wobase0_.VERSION as version5_47_,
+        wobase0_.TARGET_QTY as target6_47_,
+        wobase0_.WO_CREATE_TIME as wo7_47_,
+        wobase0_.WO_SCHEDULE_TIME as wo8_47_,
+        wobase0_.WO_SCHEDULE_FINISH_TIME as wo9_47_,
+        wobase0_.[SEQUENCE] as SEQUENCE10_47_,
+        wobase0_.WO_START_TIME as wo11_47_,
+        wobase0_.WO_CLOSE_TIME as wo12_47_,
+        wobase0_.INPUT_QTY as input13_47_,
+        wobase0_.OUTPUT_QTY as output14_47_,
+        wobase0_.SCRAP_QTY as scrap15_47_,
+        wobase0_.WORKFLOW_ID as workflow16_47_,
+        wobase0_.BOP_ID as bop17_47_,
+        wobase0_.WO_STATUS_ID as wo18_47_,
+        wobase0_.PRODUCT_LINE_ID as product19_47_,
+        wobase0_.START_PROCESS_ID as start20_47_,
+        wobase0_.END_PROCESS_ID as end21_47_,
+        wobase0_.RC_BARCODE_RULE_ID as rc22_47_,
+        wobase0_.SN_BARCODE_RULE_ID as sn23_47_,
+        wobase0_.DESCRIPTION as description24_47_,
+        wobase0_.PRINT_QTY as print25_47_,
+        wobase0_.BOM_ID as bom26_47_,
+        wobase0_.PO as po27_47_,
+        wobase0_.EMPLOYEE_CODE as employee28_47_,
+        wobase0_.CREATE_TIME as create29_47_,
+        wobase0_.UPDATE_TIME as update30_47_ 
+    from
+        WO_BASE wobase0_ 
+    where
+        wobase0_.WORK_ORDER=@p0;
+    @p0 = 'K92-043' [Type: String (4000:0:0)]
+19:15:56.451 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WOR_REPAIR_KEYPARTS
+        (WORK_ORDER, SERIAL_NUMBER, REPAIR_LOG_ID, OLD_PART_ID, OLD_PART_NO, NEW_PART_ID, NEW_PART_NO, NEW_PART_SN, REMARK, EMPLOYEE_CODE, CREATE_TIME) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 'K92-043' [Type: String (4000:0:0)],
+    @p1 = 'k92-043-01' [Type: String (4000:0:0)],
+    @p2 = NULL [Type: Int32 (0:0:0)],
+    @p3 = 89 [Type: Int32 (0:0:0)],
+    @p4 = '22uF040216V' [Type: String (4000:0:0)],
+    @p5 = 89 [Type: Int32 (0:0:0)],
+    @p6 = '22uF040216V' [Type: String (4000:0:0)],
+    @p7 = '22uF040216V02' [Type: String (4000:0:0)],
+    @p8 = '' [Type: String (4000:0:0)],
+    @p9 = 'ADMIN' [Type: String (4000:0:0)],
+    @p10 = 2020-11-03T19:15:56.4508092+08:00 [Type: DateTime2 (8:0:0)]

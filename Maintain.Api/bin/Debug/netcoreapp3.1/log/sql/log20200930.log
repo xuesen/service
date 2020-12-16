@@ -1,0 +1,2224 @@
+13:26:51.757 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        sp.ID as PartId,
+        sp.PART_NO as PartNo,
+        sp.PART_NAME as PartName 
+    from
+        S_PART as sp          
+    join
+        S_SETTING as ss 
+            on sp.MATERIAL_TYPE_ID = ss.ID        
+    where
+        ss.CODE = '001' 
+    order by
+        PartName
+13:26:51.757 +08:00 [DEBUG] [12] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 0 [Type: Int32 (0:0:0)]
+13:26:51.758 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        sp.ID as PartId,
+        sp.PART_NO as PartNo,
+        sp.PART_NAME as PartName        
+    from
+        S_PART as sp 
+    join
+        S_SETTING as ss 
+            on sp.MATERIAL_TYPE_ID = ss.ID        
+    where
+        ss.CODE = '002' 
+    order by
+        PartName
+13:26:51.757 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_39_0_,
+        this_.WORKSHOP_ID as workshop2_39_0_,
+        this_.CODE as code3_39_0_,
+        this_.NAME as name4_39_0_,
+        this_.DESCRIPTION as description5_39_0_,
+        this_.DESCRIPTION2 as description6_39_0_,
+        this_.EMPLOYEE_CODE as employee7_39_0_,
+        this_.CREATE_TIME as create8_39_0_,
+        this_.UPDATE_TIME as update9_39_0_ 
+    FROM
+        S_PRODUCT_LINE this_
+13:26:52.252 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_39_0_,
+        this_.WORKSHOP_ID as workshop2_39_0_,
+        this_.CODE as code3_39_0_,
+        this_.NAME as name4_39_0_,
+        this_.DESCRIPTION as description5_39_0_,
+        this_.DESCRIPTION2 as description6_39_0_,
+        this_.EMPLOYEE_CODE as employee7_39_0_,
+        this_.CREATE_TIME as create8_39_0_,
+        this_.UPDATE_TIME as update9_39_0_ 
+    FROM
+        S_PRODUCT_LINE this_
+13:26:52.506 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 0 [Type: Int32 (0:0:0)]
+13:26:52.518 +08:00 [DEBUG] [8] [NHibernate.SQL] 
+    select
+        ssetting0_.ID as id1_7_,
+        ssetting0_.CODE as code2_7_,
+        ssetting0_.NAME as name3_7_,
+        ssetting0_.PROGRAM as program4_7_,
+        ssetting0_.DESCRIPTION as description5_7_,
+        ssetting0_.DESCRIPTION2 as description6_7_,
+        ssetting0_.EMPLOYEE_CODE as employee7_7_,
+        ssetting0_.CREATE_TIME as create8_7_,
+        ssetting0_.UPDATE_TIME as update9_7_ 
+    from
+        S_SETTING ssetting0_ 
+    where
+        ssetting0_.PROGRAM=@p0;
+    @p0 = 'Side' [Type: String (4000:0:0)]
+13:26:52.848 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        ssetting0_.ID as id1_7_,
+        ssetting0_.CODE as code2_7_,
+        ssetting0_.NAME as name3_7_,
+        ssetting0_.PROGRAM as program4_7_,
+        ssetting0_.DESCRIPTION as description5_7_,
+        ssetting0_.DESCRIPTION2 as description6_7_,
+        ssetting0_.EMPLOYEE_CODE as employee7_7_,
+        ssetting0_.CREATE_TIME as create8_7_,
+        ssetting0_.UPDATE_TIME as update9_7_ 
+    from
+        S_SETTING ssetting0_ 
+    where
+        ssetting0_.PROGRAM=@p0;
+    @p0 = 'Side' [Type: String (4000:0:0)]
+13:29:16.827 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+13:29:17.061 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+13:29:17.157 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+13:29:17.389 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+13:29:22.293 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 14 [Type: Int32 (0:0:0)]
+13:29:22.612 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 14 [Type: Int32 (0:0:0)]
+13:29:22.882 +08:00 [DEBUG] [18] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 14 [Type: Int32 (0:0:0)]
+13:29:22.934 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 14 [Type: Int32 (0:0:0)]
+13:29:24.998 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 13 [Type: Int32 (0:0:0)]
+13:29:25.324 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 13 [Type: Int32 (0:0:0)]
+13:29:25.576 +08:00 [DEBUG] [18] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 13 [Type: Int32 (0:0:0)]
+13:29:25.642 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 13 [Type: Int32 (0:0:0)]
+13:29:27.347 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 9 [Type: Int32 (0:0:0)]
+13:29:27.684 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 9 [Type: Int32 (0:0:0)]
+13:29:27.950 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 9 [Type: Int32 (0:0:0)]
+13:29:28.031 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 9 [Type: Int32 (0:0:0)]
+13:29:29.736 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+13:29:30.073 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+13:29:30.310 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+13:29:30.394 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+13:29:31.732 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:29:32.054 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:29:32.318 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:29:32.372 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:29:58.203 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_39_0_,
+        this_.WORKSHOP_ID as workshop2_39_0_,
+        this_.CODE as code3_39_0_,
+        this_.NAME as name4_39_0_,
+        this_.DESCRIPTION as description5_39_0_,
+        this_.DESCRIPTION2 as description6_39_0_,
+        this_.EMPLOYEE_CODE as employee7_39_0_,
+        this_.CREATE_TIME as create8_39_0_,
+        this_.UPDATE_TIME as update9_39_0_ 
+    FROM
+        S_PRODUCT_LINE this_
+13:29:58.526 +08:00 [DEBUG] [27] [NHibernate.SQL] 
+    select
+        sp.ID as PartId,
+        sp.PART_NO as PartNo,
+        sp.PART_NAME as PartName        
+    from
+        S_PART as sp 
+    join
+        S_SETTING as ss 
+            on sp.MATERIAL_TYPE_ID = ss.ID        
+    where
+        ss.CODE = '002' 
+    order by
+        PartName
+13:29:58.527 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:29:58.528 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        ssetting0_.ID as id1_7_,
+        ssetting0_.CODE as code2_7_,
+        ssetting0_.NAME as name3_7_,
+        ssetting0_.PROGRAM as program4_7_,
+        ssetting0_.DESCRIPTION as description5_7_,
+        ssetting0_.DESCRIPTION2 as description6_7_,
+        ssetting0_.EMPLOYEE_CODE as employee7_7_,
+        ssetting0_.CREATE_TIME as create8_7_,
+        ssetting0_.UPDATE_TIME as update9_7_ 
+    from
+        S_SETTING ssetting0_ 
+    where
+        ssetting0_.PROGRAM=@p0;
+    @p0 = 'Side' [Type: String (4000:0:0)]
+13:30:16.512 +08:00 [DEBUG] [25] [NHibernate.SQL] 
+    SELECT
+        WB."WORK_ORDER" AS "WorkOrder",
+        WB."TARGET_QTY" AS "Qty",
+        SP."ID" AS "PartId",
+        SP."PART_NO" AS "PartNo",
+        SWS."NAME" AS "WoStatus",
+        SPL."ID" AS "PdLineId",
+        SPL."CODE" AS "PdLineCode",
+        SE."ID" AS "EquipmentId",
+        SE."CODE" AS "EquipmentCode",
+        SS."NAME" AS "Side",
+        WF."ID" AS "WoFsId" 
+    FROM
+        "WO_BASE" AS WB           
+    JOIN
+        "S_WO_STATUS" AS SWS 
+            ON WB."WO_STATUS_ID" = SWS."ID"           
+    JOIN
+        "S_PART" AS SP 
+            ON SP."ID" = WB."PART_ID"          
+    JOIN
+        "S_PRODUCT_LINE" AS SPL 
+            ON SPL."ID" = WB."PRODUCT_LINE_ID"          
+    JOIN
+        "WO_FS" AS WF 
+            ON WF."WORK_ORDER" = WB."WORK_ORDER"          
+    JOIN
+        "S_EQUIPMENT" AS SE 
+            ON SE."ID" = WF."EQUIPMENT_ID"          
+    JOIN
+        "S_SETTING" AS SS 
+            ON SS."PROGRAM" = 'Side' 
+            AND SS."CODE" = WF."SIDE"        
+    WHERE
+        WF."WORK_ORDER" LIKE '%' + @p0 + '%' 
+        AND WF."SIDE" LIKE '%' + @p1 + '%' 
+        AND WF."EQUIPMENT_ID" LIKE '%' + @p2 + '%';
+    @p0 = 'LHM20200904-00' [Type: String (4000:0:0)], @p1 = '' [Type: String (4000:0:0)], @p2 = '' [Type: String (4000:0:0)]
+13:30:17.871 +08:00 [DEBUG] [26] [NHibernate.SQL] 
+    SELECT
+        wofs0_.ID as id1_0_0_,
+        wofs0_.PART_FS_ID as part2_0_0_,
+        wofs0_.WORK_ORDER as work3_0_0_,
+        wofs0_.PART_ID as part4_0_0_,
+        wofs0_.SIDE as side5_0_0_,
+        wofs0_.EQUIPMENT_ID as equipment6_0_0_,
+        wofs0_.EMPLOYEE_CODE as employee7_0_0_,
+        wofs0_.CREATE_TIME as create8_0_0_,
+        wofs0_.UPDATE_TIME as update9_0_0_ 
+    FROM
+        WO_FS wofs0_ 
+    WHERE
+        wofs0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:30:17.897 +08:00 [DEBUG] [26] [NHibernate.SQL] 
+    select
+        TOP (1) fsstatus0_.ID as id1_77_,
+        fsstatus0_.TERMINAL_ID as terminal2_77_,
+        fsstatus0_.EQUIPMENT_ID as equipment3_77_,
+        fsstatus0_.WORK_ORDER as work4_77_,
+        fsstatus0_.STATUS as status5_77_,
+        fsstatus0_.EMPLOYEE_CODE as employee6_77_,
+        fsstatus0_.CREATE_TIME as create7_77_,
+        fsstatus0_.UPDATE_TIME as update8_77_ 
+    from
+        FS_STATUS fsstatus0_ 
+    where
+        fsstatus0_.WORK_ORDER=@p0;
+    @p0 = 'LHM20200904-00' [Type: String (4000:0:0)]
+13:30:18.368 +08:00 [DEBUG] [28] [NHibernate.SQL] 
+    select
+        wofsdetail0_.ID as id1_1_,
+        wofsdetail0_.WO_FS_Id as wo2_1_,
+        wofsdetail0_.STATION as station3_1_,
+        wofsdetail0_.ITEM_PART_ID as item4_1_,
+        wofsdetail0_.ITEM_COUNT as item5_1_,
+        wofsdetail0_.LOCATION as location6_1_,
+        wofsdetail0_.FEEDER_TYPE as feeder7_1_,
+        wofsdetail0_.FEEDER_SPEC as feeder8_1_ 
+    from
+        WO_FS_DETAIL wofsdetail0_ 
+    where
+        wofsdetail0_.WO_FS_Id=@p0;
+    @p0 = '27' [Type: String (4000:0:0)]
+13:30:18.390 +08:00 [DEBUG] [28] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 21 [Type: Int32 (0:0:0)]
+13:30:18.439 +08:00 [DEBUG] [28] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 91 [Type: Int32 (0:0:0)]
+13:30:18.446 +08:00 [DEBUG] [28] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:30:18.450 +08:00 [DEBUG] [28] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 92 [Type: Int32 (0:0:0)]
+13:37:38.624 +08:00 [DEBUG] [34] [NHibernate.SQL] 
+    select
+        ssetting0_.ID as id1_7_,
+        ssetting0_.CODE as code2_7_,
+        ssetting0_.NAME as name3_7_,
+        ssetting0_.PROGRAM as program4_7_,
+        ssetting0_.DESCRIPTION as description5_7_,
+        ssetting0_.DESCRIPTION2 as description6_7_,
+        ssetting0_.EMPLOYEE_CODE as employee7_7_,
+        ssetting0_.CREATE_TIME as create8_7_,
+        ssetting0_.UPDATE_TIME as update9_7_ 
+    from
+        S_SETTING ssetting0_ 
+    where
+        ssetting0_.PROGRAM=@p0;
+    @p0 = 'Side' [Type: String (4000:0:0)]
+13:37:38.711 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_39_0_,
+        this_.WORKSHOP_ID as workshop2_39_0_,
+        this_.CODE as code3_39_0_,
+        this_.NAME as name4_39_0_,
+        this_.DESCRIPTION as description5_39_0_,
+        this_.DESCRIPTION2 as description6_39_0_,
+        this_.EMPLOYEE_CODE as employee7_39_0_,
+        this_.CREATE_TIME as create8_39_0_,
+        this_.UPDATE_TIME as update9_39_0_ 
+    FROM
+        S_PRODUCT_LINE this_
+13:37:38.715 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 0 [Type: Int32 (0:0:0)]
+13:37:38.867 +08:00 [DEBUG] [38] [NHibernate.SQL] 
+    select
+        sp.ID as PartId,
+        sp.PART_NO as PartNo,
+        sp.PART_NAME as PartName 
+    from
+        S_PART as sp          
+    join
+        S_SETTING as ss 
+            on sp.MATERIAL_TYPE_ID = ss.ID        
+    where
+        ss.CODE = '001' 
+    order by
+        PartName
+13:38:36.638 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        sp.ID as PartId,
+        sp.PART_NO as PartNo,
+        sp.PART_NAME as PartName,
+        sp.SPEC1 as Spec1 
+    from
+        S_PART as sp        
+    join
+        S_SETTING as ss 
+            on sp.MATERIAL_TYPE_ID = ss.ID 
+    where
+        ss.CODE = '001' 
+    order by
+        PartName
+13:38:36.638 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_39_0_,
+        this_.WORKSHOP_ID as workshop2_39_0_,
+        this_.CODE as code3_39_0_,
+        this_.NAME as name4_39_0_,
+        this_.DESCRIPTION as description5_39_0_,
+        this_.DESCRIPTION2 as description6_39_0_,
+        this_.EMPLOYEE_CODE as employee7_39_0_,
+        this_.CREATE_TIME as create8_39_0_,
+        this_.UPDATE_TIME as update9_39_0_ 
+    FROM
+        S_PRODUCT_LINE this_
+13:38:36.638 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 0 [Type: Int32 (0:0:0)]
+13:38:37.262 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        ssetting0_.ID as id1_7_,
+        ssetting0_.CODE as code2_7_,
+        ssetting0_.NAME as name3_7_,
+        ssetting0_.PROGRAM as program4_7_,
+        ssetting0_.DESCRIPTION as description5_7_,
+        ssetting0_.DESCRIPTION2 as description6_7_,
+        ssetting0_.EMPLOYEE_CODE as employee7_7_,
+        ssetting0_.CREATE_TIME as create8_7_,
+        ssetting0_.UPDATE_TIME as update9_7_ 
+    from
+        S_SETTING ssetting0_ 
+    where
+        ssetting0_.PROGRAM=@p0;
+    @p0 = 'Side' [Type: String (4000:0:0)]
+13:38:46.659 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        WB."WORK_ORDER" AS "WorkOrder",
+        WB."TARGET_QTY" AS "Qty",
+        SP."ID" AS "PartId",
+        SP."PART_NO" AS "PartNo",
+        SWS."NAME" AS "WoStatus",
+        SPL."ID" AS "PdLineId",
+        SPL."CODE" AS "PdLineCode",
+        SE."ID" AS "EquipmentId",
+        SE."CODE" AS "EquipmentCode",
+        SS."NAME" AS "Side",
+        WF."ID" AS "WoFsId" 
+    FROM
+        "WO_BASE" AS WB           
+    JOIN
+        "S_WO_STATUS" AS SWS 
+            ON WB."WO_STATUS_ID" = SWS."ID"           
+    JOIN
+        "S_PART" AS SP 
+            ON SP."ID" = WB."PART_ID"          
+    JOIN
+        "S_PRODUCT_LINE" AS SPL 
+            ON SPL."ID" = WB."PRODUCT_LINE_ID"          
+    JOIN
+        "WO_FS" AS WF 
+            ON WF."WORK_ORDER" = WB."WORK_ORDER"          
+    JOIN
+        "S_EQUIPMENT" AS SE 
+            ON SE."ID" = WF."EQUIPMENT_ID"          
+    JOIN
+        "S_SETTING" AS SS 
+            ON SS."PROGRAM" = 'Side' 
+            AND SS."CODE" = WF."SIDE"        
+    WHERE
+        WF."WORK_ORDER" LIKE '%' + @p0 + '%' 
+        AND WF."SIDE" LIKE '%' + @p1 + '%' 
+        AND WF."EQUIPMENT_ID" LIKE '%' + @p2 + '%';
+    @p0 = 'LHM20200904-00' [Type: String (4000:0:0)], @p1 = '' [Type: String (4000:0:0)], @p2 = '' [Type: String (4000:0:0)]
+13:38:53.130 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:38:53.452 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:38:53.702 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:38:53.779 +08:00 [DEBUG] [22] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:38:57.583 +08:00 [DEBUG] [5] [NHibernate.SQL] 
+    select
+        ssetting0_.ID as id1_7_,
+        ssetting0_.CODE as code2_7_,
+        ssetting0_.NAME as name3_7_,
+        ssetting0_.PROGRAM as program4_7_,
+        ssetting0_.DESCRIPTION as description5_7_,
+        ssetting0_.DESCRIPTION2 as description6_7_,
+        ssetting0_.EMPLOYEE_CODE as employee7_7_,
+        ssetting0_.CREATE_TIME as create8_7_,
+        ssetting0_.UPDATE_TIME as update9_7_ 
+    from
+        S_SETTING ssetting0_ 
+    where
+        ssetting0_.PROGRAM=@p0;
+    @p0 = 'Side' [Type: String (4000:0:0)]
+13:38:57.583 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 17 [Type: Int32 (0:0:0)]
+13:38:57.584 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_39_0_,
+        this_.WORKSHOP_ID as workshop2_39_0_,
+        this_.CODE as code3_39_0_,
+        this_.NAME as name4_39_0_,
+        this_.DESCRIPTION as description5_39_0_,
+        this_.DESCRIPTION2 as description6_39_0_,
+        this_.EMPLOYEE_CODE as employee7_39_0_,
+        this_.CREATE_TIME as create8_39_0_,
+        this_.UPDATE_TIME as update9_39_0_ 
+    FROM
+        S_PRODUCT_LINE this_
+13:39:01.372 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        wofs0_.ID as id1_0_0_,
+        wofs0_.PART_FS_ID as part2_0_0_,
+        wofs0_.WORK_ORDER as work3_0_0_,
+        wofs0_.PART_ID as part4_0_0_,
+        wofs0_.SIDE as side5_0_0_,
+        wofs0_.EQUIPMENT_ID as equipment6_0_0_,
+        wofs0_.EMPLOYEE_CODE as employee7_0_0_,
+        wofs0_.CREATE_TIME as create8_0_0_,
+        wofs0_.UPDATE_TIME as update9_0_0_ 
+    FROM
+        WO_FS wofs0_ 
+    WHERE
+        wofs0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:39:01.399 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        TOP (1) fsstatus0_.ID as id1_77_,
+        fsstatus0_.TERMINAL_ID as terminal2_77_,
+        fsstatus0_.EQUIPMENT_ID as equipment3_77_,
+        fsstatus0_.WORK_ORDER as work4_77_,
+        fsstatus0_.STATUS as status5_77_,
+        fsstatus0_.EMPLOYEE_CODE as employee6_77_,
+        fsstatus0_.CREATE_TIME as create7_77_,
+        fsstatus0_.UPDATE_TIME as update8_77_ 
+    from
+        FS_STATUS fsstatus0_ 
+    where
+        fsstatus0_.WORK_ORDER=@p0;
+    @p0 = 'LHM20200904-00' [Type: String (4000:0:0)]
+13:39:01.836 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        wofsdetail0_.ID as id1_1_,
+        wofsdetail0_.WO_FS_Id as wo2_1_,
+        wofsdetail0_.STATION as station3_1_,
+        wofsdetail0_.ITEM_PART_ID as item4_1_,
+        wofsdetail0_.ITEM_COUNT as item5_1_,
+        wofsdetail0_.LOCATION as location6_1_,
+        wofsdetail0_.FEEDER_TYPE as feeder7_1_,
+        wofsdetail0_.FEEDER_SPEC as feeder8_1_ 
+    from
+        WO_FS_DETAIL wofsdetail0_ 
+    where
+        wofsdetail0_.WO_FS_Id=@p0;
+    @p0 = '27' [Type: String (4000:0:0)]
+13:39:01.844 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 21 [Type: Int32 (0:0:0)]
+13:39:01.901 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 91 [Type: Int32 (0:0:0)]
+13:39:01.910 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:39:01.915 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 92 [Type: Int32 (0:0:0)]
+13:39:41.824 +08:00 [DEBUG] [24] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_39_0_,
+        this_.WORKSHOP_ID as workshop2_39_0_,
+        this_.CODE as code3_39_0_,
+        this_.NAME as name4_39_0_,
+        this_.DESCRIPTION as description5_39_0_,
+        this_.DESCRIPTION2 as description6_39_0_,
+        this_.EMPLOYEE_CODE as employee7_39_0_,
+        this_.CREATE_TIME as create8_39_0_,
+        this_.UPDATE_TIME as update9_39_0_ 
+    FROM
+        S_PRODUCT_LINE this_
+13:39:41.827 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 0 [Type: Int32 (0:0:0)]
+13:39:41.829 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        ssetting0_.ID as id1_7_,
+        ssetting0_.CODE as code2_7_,
+        ssetting0_.NAME as name3_7_,
+        ssetting0_.PROGRAM as program4_7_,
+        ssetting0_.DESCRIPTION as description5_7_,
+        ssetting0_.DESCRIPTION2 as description6_7_,
+        ssetting0_.EMPLOYEE_CODE as employee7_7_,
+        ssetting0_.CREATE_TIME as create8_7_,
+        ssetting0_.UPDATE_TIME as update9_7_ 
+    from
+        S_SETTING ssetting0_ 
+    where
+        ssetting0_.PROGRAM=@p0;
+    @p0 = 'Side' [Type: String (4000:0:0)]
+13:39:59.900 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        sp.ID as PartId,
+        sp.PART_NO as PartNo,
+        sp.PART_NAME as PartName,
+        sp.SPEC1 as Spec1 
+    from
+        S_PART as sp        
+    join
+        S_SETTING as ss 
+            on sp.MATERIAL_TYPE_ID = ss.ID 
+    where
+        ss.CODE = '001' 
+    order by
+        PartName
+13:39:59.903 +08:00 [DEBUG] [32] [NHibernate.SQL] 
+    SELECT
+        WB."WORK_ORDER" AS "WorkOrder",
+        WB."TARGET_QTY" AS "Qty",
+        SP."ID" AS "PartId",
+        SP."PART_NO" AS "PartNo",
+        SWS."NAME" AS "WoStatus",
+        SPL."ID" AS "PdLineId",
+        SPL."CODE" AS "PdLineCode",
+        SE."ID" AS "EquipmentId",
+        SE."CODE" AS "EquipmentCode",
+        SS."NAME" AS "Side",
+        WF."ID" AS "WoFsId" 
+    FROM
+        "WO_BASE" AS WB           
+    JOIN
+        "S_WO_STATUS" AS SWS 
+            ON WB."WO_STATUS_ID" = SWS."ID"           
+    JOIN
+        "S_PART" AS SP 
+            ON SP."ID" = WB."PART_ID"          
+    JOIN
+        "S_PRODUCT_LINE" AS SPL 
+            ON SPL."ID" = WB."PRODUCT_LINE_ID"          
+    JOIN
+        "WO_FS" AS WF 
+            ON WF."WORK_ORDER" = WB."WORK_ORDER"          
+    JOIN
+        "S_EQUIPMENT" AS SE 
+            ON SE."ID" = WF."EQUIPMENT_ID"          
+    JOIN
+        "S_SETTING" AS SS 
+            ON SS."PROGRAM" = 'Side' 
+            AND SS."CODE" = WF."SIDE"        
+    WHERE
+        WF."WORK_ORDER" LIKE '%' + @p0 + '%' 
+        AND WF."SIDE" LIKE '%' + @p1 + '%' 
+        AND WF."EQUIPMENT_ID" LIKE '%' + @p2 + '%';
+    @p0 = 'LHM20200904-00' [Type: String (4000:0:0)], @p1 = '' [Type: String (4000:0:0)], @p2 = '' [Type: String (4000:0:0)]
+13:40:03.003 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    SELECT
+        wofs0_.ID as id1_0_0_,
+        wofs0_.PART_FS_ID as part2_0_0_,
+        wofs0_.WORK_ORDER as work3_0_0_,
+        wofs0_.PART_ID as part4_0_0_,
+        wofs0_.SIDE as side5_0_0_,
+        wofs0_.EQUIPMENT_ID as equipment6_0_0_,
+        wofs0_.EMPLOYEE_CODE as employee7_0_0_,
+        wofs0_.CREATE_TIME as create8_0_0_,
+        wofs0_.UPDATE_TIME as update9_0_0_ 
+    FROM
+        WO_FS wofs0_ 
+    WHERE
+        wofs0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:40:03.009 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        TOP (1) fsstatus0_.ID as id1_77_,
+        fsstatus0_.TERMINAL_ID as terminal2_77_,
+        fsstatus0_.EQUIPMENT_ID as equipment3_77_,
+        fsstatus0_.WORK_ORDER as work4_77_,
+        fsstatus0_.STATUS as status5_77_,
+        fsstatus0_.EMPLOYEE_CODE as employee6_77_,
+        fsstatus0_.CREATE_TIME as create7_77_,
+        fsstatus0_.UPDATE_TIME as update8_77_ 
+    from
+        FS_STATUS fsstatus0_ 
+    where
+        fsstatus0_.WORK_ORDER=@p0;
+    @p0 = 'LHM20200904-00' [Type: String (4000:0:0)]
+13:40:03.256 +08:00 [DEBUG] [24] [NHibernate.SQL] 
+    select
+        wofsdetail0_.ID as id1_1_,
+        wofsdetail0_.WO_FS_Id as wo2_1_,
+        wofsdetail0_.STATION as station3_1_,
+        wofsdetail0_.ITEM_PART_ID as item4_1_,
+        wofsdetail0_.ITEM_COUNT as item5_1_,
+        wofsdetail0_.LOCATION as location6_1_,
+        wofsdetail0_.FEEDER_TYPE as feeder7_1_,
+        wofsdetail0_.FEEDER_SPEC as feeder8_1_ 
+    from
+        WO_FS_DETAIL wofsdetail0_ 
+    where
+        wofsdetail0_.WO_FS_Id=@p0;
+    @p0 = '27' [Type: String (4000:0:0)]
+13:40:03.269 +08:00 [DEBUG] [24] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 21 [Type: Int32 (0:0:0)]
+13:40:03.273 +08:00 [DEBUG] [24] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 91 [Type: Int32 (0:0:0)]
+13:40:03.287 +08:00 [DEBUG] [24] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:40:03.291 +08:00 [DEBUG] [24] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 92 [Type: Int32 (0:0:0)]
+13:41:45.203 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        wofs0_.ID as id1_0_0_,
+        wofs0_.PART_FS_ID as part2_0_0_,
+        wofs0_.WORK_ORDER as work3_0_0_,
+        wofs0_.PART_ID as part4_0_0_,
+        wofs0_.SIDE as side5_0_0_,
+        wofs0_.EQUIPMENT_ID as equipment6_0_0_,
+        wofs0_.EMPLOYEE_CODE as employee7_0_0_,
+        wofs0_.CREATE_TIME as create8_0_0_,
+        wofs0_.UPDATE_TIME as update9_0_0_ 
+    FROM
+        WO_FS wofs0_ 
+    WHERE
+        wofs0_.ID=@p0;
+    @p0 = 8 [Type: Int32 (0:0:0)]
+13:41:45.216 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) fsstatus0_.ID as id1_77_,
+        fsstatus0_.TERMINAL_ID as terminal2_77_,
+        fsstatus0_.EQUIPMENT_ID as equipment3_77_,
+        fsstatus0_.WORK_ORDER as work4_77_,
+        fsstatus0_.STATUS as status5_77_,
+        fsstatus0_.EMPLOYEE_CODE as employee6_77_,
+        fsstatus0_.CREATE_TIME as create7_77_,
+        fsstatus0_.UPDATE_TIME as update8_77_ 
+    from
+        FS_STATUS fsstatus0_ 
+    where
+        fsstatus0_.WORK_ORDER=@p0;
+    @p0 = 'LHM20200904-00' [Type: String (4000:0:0)]
+13:41:45.459 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        wofsdetail0_.ID as id1_1_,
+        wofsdetail0_.WO_FS_Id as wo2_1_,
+        wofsdetail0_.STATION as station3_1_,
+        wofsdetail0_.ITEM_PART_ID as item4_1_,
+        wofsdetail0_.ITEM_COUNT as item5_1_,
+        wofsdetail0_.LOCATION as location6_1_,
+        wofsdetail0_.FEEDER_TYPE as feeder7_1_,
+        wofsdetail0_.FEEDER_SPEC as feeder8_1_ 
+    from
+        WO_FS_DETAIL wofsdetail0_ 
+    where
+        wofsdetail0_.WO_FS_Id=@p0;
+    @p0 = '8' [Type: String (4000:0:0)]
+13:41:45.465 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 21 [Type: Int32 (0:0:0)]
+13:41:45.474 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 22 [Type: Int32 (0:0:0)]
+13:41:45.480 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 22 [Type: Int32 (0:0:0)]
+13:41:45.498 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:41:45.504 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 23 [Type: Int32 (0:0:0)]
+13:41:45.508 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 28 [Type: Int32 (0:0:0)]
+13:42:19.848 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        this_.ID as id1_39_0_,
+        this_.WORKSHOP_ID as workshop2_39_0_,
+        this_.CODE as code3_39_0_,
+        this_.NAME as name4_39_0_,
+        this_.DESCRIPTION as description5_39_0_,
+        this_.DESCRIPTION2 as description6_39_0_,
+        this_.EMPLOYEE_CODE as employee7_39_0_,
+        this_.CREATE_TIME as create8_39_0_,
+        this_.UPDATE_TIME as update9_39_0_ 
+    FROM
+        S_PRODUCT_LINE this_
+13:42:19.851 +08:00 [DEBUG] [26] [NHibernate.SQL] 
+    SELECT
+        DISTINCT SE."ID",
+        SE."CODE",
+        SE."NAME" 
+    FROM
+        "S_EQUIPMENT" AS SE           
+    JOIN
+        "S_TERMINAL" AS ST 
+            ON ST."EQUIPMENT_ID" = SE."ID"           
+    JOIN
+        "S_EQUIPMENT_TYPE" AS SETY 
+            ON SE."EQUIPMENT_TYPE_ID" = SETY."ID"          
+    JOIN
+        "S_EQUIPMENT_CATAGORY" AS SEC 
+            ON SEC."ID" = SETY."EQUIPMENT_CATAGORY_ID"           
+    JOIN
+        "S_SETTING" AS SS 
+            ON SEC."CODE" = SS."CODE"        
+    WHERE
+        SS."PROGRAM" = 'SMTEquipmentType'           
+        AND ST."LINE_ID" = @p0;
+    @p0 = 0 [Type: Int32 (0:0:0)]
+13:42:20.178 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        ssetting0_.ID as id1_7_,
+        ssetting0_.CODE as code2_7_,
+        ssetting0_.NAME as name3_7_,
+        ssetting0_.PROGRAM as program4_7_,
+        ssetting0_.DESCRIPTION as description5_7_,
+        ssetting0_.DESCRIPTION2 as description6_7_,
+        ssetting0_.EMPLOYEE_CODE as employee7_7_,
+        ssetting0_.CREATE_TIME as create8_7_,
+        ssetting0_.UPDATE_TIME as update9_7_ 
+    from
+        S_SETTING ssetting0_ 
+    where
+        ssetting0_.PROGRAM=@p0;
+    @p0 = 'Side' [Type: String (4000:0:0)]
+13:42:22.836 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        sp.ID as PartId,
+        sp.PART_NO as PartNo,
+        sp.PART_NAME as PartName,
+        sp.SPEC1 as Spec1 
+    from
+        S_PART as sp        
+    join
+        S_SETTING as ss 
+            on sp.MATERIAL_TYPE_ID = ss.ID 
+    where
+        ss.CODE = '001' 
+    order by
+        PartName
+13:42:38.006 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        WB."WORK_ORDER" AS "WorkOrder",
+        WB."TARGET_QTY" AS "Qty",
+        SP."ID" AS "PartId",
+        SP."PART_NO" AS "PartNo",
+        SWS."NAME" AS "WoStatus",
+        SPL."ID" AS "PdLineId",
+        SPL."CODE" AS "PdLineCode",
+        SE."ID" AS "EquipmentId",
+        SE."CODE" AS "EquipmentCode",
+        SS."NAME" AS "Side",
+        WF."ID" AS "WoFsId" 
+    FROM
+        "WO_BASE" AS WB           
+    JOIN
+        "S_WO_STATUS" AS SWS 
+            ON WB."WO_STATUS_ID" = SWS."ID"           
+    JOIN
+        "S_PART" AS SP 
+            ON SP."ID" = WB."PART_ID"          
+    JOIN
+        "S_PRODUCT_LINE" AS SPL 
+            ON SPL."ID" = WB."PRODUCT_LINE_ID"          
+    JOIN
+        "WO_FS" AS WF 
+            ON WF."WORK_ORDER" = WB."WORK_ORDER"          
+    JOIN
+        "S_EQUIPMENT" AS SE 
+            ON SE."ID" = WF."EQUIPMENT_ID"          
+    JOIN
+        "S_SETTING" AS SS 
+            ON SS."PROGRAM" = 'Side' 
+            AND SS."CODE" = WF."SIDE"        
+    WHERE
+        WF."WORK_ORDER" LIKE '%' + @p0 + '%' 
+        AND WF."SIDE" LIKE '%' + @p1 + '%' 
+        AND WF."EQUIPMENT_ID" LIKE '%' + @p2 + '%';
+    @p0 = 'LHM20200904-00' [Type: String (4000:0:0)], @p1 = '' [Type: String (4000:0:0)], @p2 = '' [Type: String (4000:0:0)]
+13:42:38.718 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        wofs0_.ID as id1_0_0_,
+        wofs0_.PART_FS_ID as part2_0_0_,
+        wofs0_.WORK_ORDER as work3_0_0_,
+        wofs0_.PART_ID as part4_0_0_,
+        wofs0_.SIDE as side5_0_0_,
+        wofs0_.EQUIPMENT_ID as equipment6_0_0_,
+        wofs0_.EMPLOYEE_CODE as employee7_0_0_,
+        wofs0_.CREATE_TIME as create8_0_0_,
+        wofs0_.UPDATE_TIME as update9_0_0_ 
+    FROM
+        WO_FS wofs0_ 
+    WHERE
+        wofs0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:42:38.734 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        TOP (1) fsstatus0_.ID as id1_77_,
+        fsstatus0_.TERMINAL_ID as terminal2_77_,
+        fsstatus0_.EQUIPMENT_ID as equipment3_77_,
+        fsstatus0_.WORK_ORDER as work4_77_,
+        fsstatus0_.STATUS as status5_77_,
+        fsstatus0_.EMPLOYEE_CODE as employee6_77_,
+        fsstatus0_.CREATE_TIME as create7_77_,
+        fsstatus0_.UPDATE_TIME as update8_77_ 
+    from
+        FS_STATUS fsstatus0_ 
+    where
+        fsstatus0_.WORK_ORDER=@p0;
+    @p0 = 'LHM20200904-00' [Type: String (4000:0:0)]
+13:42:39.065 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        wofsdetail0_.ID as id1_1_,
+        wofsdetail0_.WO_FS_Id as wo2_1_,
+        wofsdetail0_.STATION as station3_1_,
+        wofsdetail0_.ITEM_PART_ID as item4_1_,
+        wofsdetail0_.ITEM_COUNT as item5_1_,
+        wofsdetail0_.LOCATION as location6_1_,
+        wofsdetail0_.FEEDER_TYPE as feeder7_1_,
+        wofsdetail0_.FEEDER_SPEC as feeder8_1_ 
+    from
+        WO_FS_DETAIL wofsdetail0_ 
+    where
+        wofsdetail0_.WO_FS_Id=@p0;
+    @p0 = '27' [Type: String (4000:0:0)]
+13:42:39.069 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 21 [Type: Int32 (0:0:0)]
+13:42:39.075 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 91 [Type: Int32 (0:0:0)]
+13:42:39.080 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:42:39.092 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 92 [Type: Int32 (0:0:0)]
+13:43:15.409 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        TOP (1) wofsdetail0_.ID as id1_1_,
+        wofsdetail0_.WO_FS_Id as wo2_1_,
+        wofsdetail0_.STATION as station3_1_,
+        wofsdetail0_.ITEM_PART_ID as item4_1_,
+        wofsdetail0_.ITEM_COUNT as item5_1_,
+        wofsdetail0_.LOCATION as location6_1_,
+        wofsdetail0_.FEEDER_TYPE as feeder7_1_,
+        wofsdetail0_.FEEDER_SPEC as feeder8_1_ 
+    from
+        WO_FS_DETAIL wofsdetail0_ 
+    where
+        wofsdetail0_.STATION=@p0 
+        and wofsdetail0_.ITEM_PART_ID=@p1;
+    @p0 = '27' [Type: String (4000:0:0)], @p1 = 21 [Type: Int32 (0:0:0)]
+13:43:20.792 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    update
+        WO_FS_DETAIL 
+    set
+        WO_FS_Id=@p0,
+        STATION=@p1,
+        ITEM_PART_ID=@p2,
+        ITEM_COUNT=@p3,
+        LOCATION=@p4,
+        FEEDER_TYPE=@p5,
+        FEEDER_SPEC=@p6 
+    where
+        ID=@p7;
+    @p0 = '27' [Type: String (4000:0:0)], @p1 = '27' [Type: String (4000:0:0)], @p2 = 21 [Type: Int32 (0:0:0)], @p3 = 22 [Type: Int32 (0:0:0)], @p4 = 'C2,C3' [Type: String (4000:0:0)], @p5 = 'RF08' [Type: String (4000:0:0)], @p6 = '2' [Type: String (4000:0:0)], @p7 = 91 [Type: Int32 (0:0:0)]
+13:43:20.803 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 91 [Type: Int32 (0:0:0)]
+13:43:20.829 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WO_FS_SUB
+        (WO_FS_DETAIL_ID, SUB_PART_ID) 
+    VALUES
+        (@p0, @p1);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 91 [Type: Int32 (0:0:0)],
+    @p1 = 98 [Type: Int32 (0:0:0)]
+13:43:20.851 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        WO_FS_SUB
+        (WO_FS_DETAIL_ID, SUB_PART_ID) 
+    VALUES
+        (@p0, @p1);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 91 [Type: Int32 (0:0:0)],
+    @p1 = 94 [Type: Int32 (0:0:0)]
+13:43:21.211 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        wofsdetail0_.ID as id1_1_,
+        wofsdetail0_.WO_FS_Id as wo2_1_,
+        wofsdetail0_.STATION as station3_1_,
+        wofsdetail0_.ITEM_PART_ID as item4_1_,
+        wofsdetail0_.ITEM_COUNT as item5_1_,
+        wofsdetail0_.LOCATION as location6_1_,
+        wofsdetail0_.FEEDER_TYPE as feeder7_1_,
+        wofsdetail0_.FEEDER_SPEC as feeder8_1_ 
+    from
+        WO_FS_DETAIL wofsdetail0_ 
+    where
+        wofsdetail0_.WO_FS_Id=@p0;
+    @p0 = '27' [Type: String (4000:0:0)]
+13:43:21.214 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 21 [Type: Int32 (0:0:0)]
+13:43:21.221 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 91 [Type: Int32 (0:0:0)]
+13:43:21.225 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 98 [Type: Int32 (0:0:0)]
+13:43:21.229 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 94 [Type: Int32 (0:0:0)]
+13:43:21.239 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    SELECT
+        spart0_.ID as id1_29_0_,
+        spart0_.WORKFLOW_ID as workflow2_29_0_,
+        spart0_.VENDOR_ID as vendor3_29_0_,
+        spart0_.CUSTOMER_ID as customer4_29_0_,
+        spart0_.FAMILY_ID as family5_29_0_,
+        spart0_.MATERIAL_TYPE_ID as material6_29_0_,
+        spart0_.PART_NO as part7_29_0_,
+        spart0_.PART_NAME as part8_29_0_,
+        spart0_.TYPE as type9_29_0_,
+        spart0_.SPEC1 as spec10_29_0_,
+        spart0_.SPEC2 as spec11_29_0_,
+        spart0_.VERSION as version12_29_0_,
+        spart0_.PART_DL as part13_29_0_,
+        spart0_.PART_XL as part14_29_0_,
+        spart0_.EMPLOYEE_CODE as employee15_29_0_,
+        spart0_.CREATE_TIME as create16_29_0_,
+        spart0_.UPDATE_TIME as update17_29_0_,
+        spart0_.VENDOR_PART_NO as vendor18_29_0_,
+        spart0_.CUSTOMER_PART_NO as customer19_29_0_,
+        spart0_.UOM as uom20_29_0_,
+        spart0_.KEYPART as keypart21_29_0_,
+        spart0_.MATCH_RULE as match22_29_0_,
+        spart0_.UNIQUE_CHECK as unique23_29_0_ 
+    FROM
+        S_PART spart0_ 
+    WHERE
+        spart0_.ID=@p0;
+    @p0 = 27 [Type: Int32 (0:0:0)]
+13:43:21.244 +08:00 [DEBUG] [23] [NHibernate.SQL] 
+    select
+        wofssub0_.ID as id1_2_,
+        wofssub0_.WO_FS_DETAIL_ID as wo2_2_,
+        wofssub0_.SUB_PART_ID as sub3_2_ 
+    from
+        WO_FS_SUB wofssub0_ 
+    where
+        wofssub0_.WO_FS_DETAIL_ID=@p0;
+    @p0 = 92 [Type: Int32 (0:0:0)]

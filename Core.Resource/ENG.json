@@ -1,0 +1,7 @@
+[
+    {"code":"MTN001", "message":"Duplicated key exists:{0}"},
+    {"code":"MTN002", "message":"Data been referenced, can not be deleted."},
+    {"code":"CHK001", "message":"This is the message for CHK001: {0}."},
+    {"code":"CHK002", "message":"This is the message for CHK002: {0}."},
+    {"code":"CHK003", "message":"This is the message for CHK003: {0}."}
+]

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="QcSampleStatus" table="QC_SAMPLE_STATUS" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="BopBaseId">
+      <column name="BOP_BASE_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProcessId">
+      <column name="PROCESS_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProcessCode">
+      <column name="PROCESS_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    
+    <property name="PartId">
+      <column name="PART_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="PartNo">
+      <column name="PART_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="SampleRuleId">
+      <column name="SAMPLE_RULE_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="SamplePlanId">
+      <column name="SAMPLE_PLAN_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="SampleStatus">
+      <column name="SAMPLE_STATUS" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Cache">
+      <column name="CACHE" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Enabled">
+      <column name="ENABLED" sql-type="bit" not-null="true" />
+    </property>
+  
+    <property name="CreateTime">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="UpdateTime">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="OqcSamplingType">
+      <column name="OQC_SAMPLING_TYPE" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="OqcSamplingQty">
+      <column name="OQC_SAMPLING_QTY" sql-type="int" not-null="false" />
+    </property>
+    
+  </class>
+</hibernate-mapping>

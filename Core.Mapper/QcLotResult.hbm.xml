@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="QcLotResult" table="QC_LOT_RESULT" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="LotNubmber">
+      <column name="LOT_NUBMBER" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="PartId">
+      <column name="PART_ID" sql-type="int" not-null="true" />
+    </property>
+      <property name="PartNo">
+        <column name="PART_NO" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Result">
+      <column name="RESULT" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="CriticalQty">
+      <column name="CRITICAL_QTY" sql-type="int" not-null="false" />
+    </property>
+    <property name="MajorQty">
+      <column name="MAJOR_QTY" sql-type="int" not-null="false" />
+    </property>
+    <property name="MinorQty">
+      <column name="MINOR_QTY" sql-type="int" not-null="false" />
+    </property>
+    <property name="LotQty">
+      <column name="LOT_QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="FailQty">
+      <column name="FAIL_QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="SampleQty">
+      <column name="SAMPLE_QTY" sql-type="int" not-null="true" />
+    </property>
+    <property name="PresetSamplePlanId">
+      <column name="PRESET_SAMPLE_PLAN_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ExecuteSamplePlanId">
+      <column name="EXECUTE_SAMPLE_PLAN_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="SampleLevel">
+      <column name="SAMPLE_LEVEL" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="WorkflowId">
+      <column name="WORKFLOW_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="ProcessCode">
+      <column name="PROCESS_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="TerminalId">
+      <column name="TERMINAL_ID" sql-type="int" not-null="true" />
+    </property>
+    <property name="TerminalCode">
+      <column name="TERMINAL_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="EmployeeCode">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="CreateTime">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="UpdateTime">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>   
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Core.Model" namespace="IIMes.Services.Core.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SBopProcessLabel" table="S_BOP_PROCESS_LABEL" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="BopBaseId">
+      <column name="BOP_BASE_ID" sql-type="int" not-null="true" />
+    </property>
+
+    <property name="ProcessId">
+      <column name="PROCESS_ID" sql-type="int" not-null="true" />
+    </property>
+
+    <property name="SpecialCheck">
+      <column name="SPECIAL_CHECK" sql-type="string" not-null="false" />
+    </property>
+
+    <many-to-one name="PrintTemplate">
+      <column name="PRINT_TEMPLATE_ID" sql-type="int" not-null="true" />
+    </many-to-one>
+
+    <property name="Piece">
+      <column name="PIECE" sql-type="int" not-null="true" />
+    </property>
+    
+    <!-- <property name="Trigger">
+      <column name="TRIGGER" sql-type="int" not-null="true" />
+    </property> -->
+
+    <many-to-one name="SSetting">
+      <column name="TRIGGER" sql-type="int" not-null="true" />
+    </many-to-one>
+
+    <property name="Priority">
+      <column name="PRIORITY" sql-type="int" not-null="true" />
+    </property>
+
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME"  not-null="true" />
+    </property>
+    
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" not-null="true" />
+    </property>
+   
+  </class>
+</hibernate-mapping>

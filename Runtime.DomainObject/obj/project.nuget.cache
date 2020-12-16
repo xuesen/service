@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "RSJB5/dua91FI0AvbfKVGFYTs2hDFKFCCZc7/8KyIGOO4R+p98m3YbuWc/NZ/SGptIxucirU2GqJMBaKD6IieA==",
+  "success": true,
+  "projectFilePath": "D:\\LeanMES\\CODE\\service\\Runtime.DomainObject\\Runtime.DomainObject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\itc200005.ITC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\itc200005.ITC\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

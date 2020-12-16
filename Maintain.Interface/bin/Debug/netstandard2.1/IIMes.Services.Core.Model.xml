@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IIMes.Services.Core.Model</name>
+    </assembly>
+    <members>
+        <member name="F:IIMes.Services.Core.Model.QcLotState.IDLE">
+            <summary>
+            IDLE
+            </summary>
+        </member>
+        <member name="F:IIMes.Services.Core.Model.QcLotState.RUNNING">
+            <summary>
+            RUNNING
+            </summary>
+        </member>
+        <member name="F:IIMes.Services.Core.Model.QcLotState.DONE">
+            <summary>
+            DONE
+            </summary>
+        </member>
+        <member name="F:IIMes.Services.Core.Model.QcLotState.CANCELL">
+            <summary>
+            CANCELL
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="IIMes.Services.Runtime.Model" namespace="IIMes.Services.Runtime.Model.Production" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WoBase" table="WO_BASE" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="WorkOrder">
+      <column name="WORK_ORDER" sql-type="nvarchar" not-null="false" />
+    </property>
+    <many-to-one name="Part">
+      <column name="PART_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="Type">
+      <column name="TYPE" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Version">
+      <column name="VERSION" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="TargetQty">
+      <column name="TARGET_QTY" sql-type="int" not-null="false" />
+    </property>
+    <property name="WoCreateTime">
+      <column name="WO_CREATE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="WoScheduleTime">
+      <column name="WO_SCHEDULE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="WoScheduleFinishTime">
+      <column name="WO_SCHEDULE_FINISH_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Sequence">
+      <column name="SEQUENCE" sql-type="int" not-null="false" />
+    </property>
+    <property name="WoStartTime">
+      <column name="WO_START_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="WoCloseTime">
+      <column name="WO_CLOSE_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="InputQty">
+      <column name="INPUT_QTY" sql-type="int" not-null="false" />
+    </property>
+    <property name="OutputQty">
+      <column name="OUTPUT_QTY" sql-type="int" not-null="false" />
+    </property>
+    <property name="ScrapQty">
+      <column name="SCRAP_QTY" sql-type="int" not-null="false" />
+    </property>
+    <many-to-one name="Workflow">
+      <column name="WORKFLOW_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="BopId">
+      <column name="BOP_ID" sql-type="int" not-null="false" />
+    </property>
+    <property name="StatusId">
+      <column name="WO_STATUS_ID" sql-type="int" not-null="true" />
+    </property>
+    <many-to-one name="WoStatus" insert="false" update="false">
+      <column name="WO_STATUS_ID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="ProductLine">
+      <column name="PRODUCT_LINE_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="StartProcess">
+      <column name="START_PROCESS_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="EndProcess">
+      <column name="END_PROCESS_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="RcBarcodeRule">
+      <column name="RC_BARCODE_RULE_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SnBarcodeRule">
+      <column name="SN_BARCODE_RULE_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="Description">
+      <column name="DESCRIPTION" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="PrintQty">
+      <column name="PRINT_QTY" sql-type="int" not-null="false" />
+    </property>
+    <many-to-one name="Bom">
+      <column name="BOM_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="Po">
+      <column name="PO" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Editor">
+      <column name="EMPLOYEE_CODE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Cdt" type="timestamp" update="false">
+      <column name="CREATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="Udt" type="timestamp">
+      <column name="UPDATE_TIME" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

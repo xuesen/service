@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IIMes.Infrastructure.hibernate</name>
+    </assembly>
+    <members>
+        <member name="M:IIMes.Infrastructure.Hibernate.Data.DataInterceptor.AfterTransactionBegin(NHibernate.ITransaction)">
+            <summary>
+            Called when a NHibernate transaction is begun via the NHibernate (see cref="T:NHibernate.ITransaction")
+                        API. Will not be called if transactions are being controlled via some other mechanism.
+            </summary>
+            <param name="tx">transaction.</param>
+        </member>
+    </members>
+</doc>

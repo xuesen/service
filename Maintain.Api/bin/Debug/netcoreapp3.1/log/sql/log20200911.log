@@ -1,0 +1,284 @@
+14:17:28.422 +08:00 [DEBUG] [14] [NHibernate.SQL] 
+    select
+        sfactory0_.ID as id1_34_,
+        sfactory0_.CODE as code2_34_,
+        sfactory0_.NAME as name3_34_,
+        sfactory0_.[
+    GROUP] as GROUP4_34_,
+    sfactory0_.DESCRIPTION as description5_34_,
+    sfactory0_.DESCRIPTION2 as description6_34_,
+    sfactory0_.EMPLOYEE_CODE as employee7_34_,
+    sfactory0_.CREATE_TIME as create8_34_,
+    sfactory0_.UPDATE_TIME as update9_34_ from
+        S_FACTORY sfactory0_ 
+    where
+        sfactory0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+14:37:31.581 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        sfactory0_.ID as id1_34_,
+        sfactory0_.CODE as code2_34_,
+        sfactory0_.NAME as name3_34_,
+        sfactory0_.[
+    GROUP] as GROUP4_34_,
+    sfactory0_.DESCRIPTION as description5_34_,
+    sfactory0_.DESCRIPTION2 as description6_34_,
+    sfactory0_.EMPLOYEE_CODE as employee7_34_,
+    sfactory0_.CREATE_TIME as create8_34_,
+    sfactory0_.UPDATE_TIME as update9_34_ from
+        S_FACTORY sfactory0_ 
+    where
+        sfactory0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+14:40:47.305 +08:00 [DEBUG] [11] [NHibernate.SQL] 
+    select
+        sfactory0_.ID as id1_34_,
+        sfactory0_.CODE as code2_34_,
+        sfactory0_.NAME as name3_34_,
+        sfactory0_.[
+    GROUP] as GROUP4_34_,
+    sfactory0_.DESCRIPTION as description5_34_,
+    sfactory0_.DESCRIPTION2 as description6_34_,
+    sfactory0_.EMPLOYEE_CODE as employee7_34_,
+    sfactory0_.CREATE_TIME as create8_34_,
+    sfactory0_.UPDATE_TIME as update9_34_ from
+        S_FACTORY sfactory0_ 
+    where
+        sfactory0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+14:41:08.367 +08:00 [DEBUG] [18] [NHibernate.SQL] 
+    select
+        sfactory0_.ID as id1_34_,
+        sfactory0_.CODE as code2_34_,
+        sfactory0_.NAME as name3_34_,
+        sfactory0_.[
+    GROUP] as GROUP4_34_,
+    sfactory0_.DESCRIPTION as description5_34_,
+    sfactory0_.DESCRIPTION2 as description6_34_,
+    sfactory0_.EMPLOYEE_CODE as employee7_34_,
+    sfactory0_.CREATE_TIME as create8_34_,
+    sfactory0_.UPDATE_TIME as update9_34_ from
+        S_FACTORY sfactory0_ 
+    where
+        sfactory0_.CODE=@p0;
+    @p0 = 'qwe' [Type: String (4000:0:0)]
+14:41:08.510 +08:00 [DEBUG] [18] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        S_FACTORY
+        (CODE, NAME, [
+    GROUP], DESCRIPTION, DESCRIPTION2, EMPLOYEE_CODE, CREATE_TIME, UPDATE_TIME) 
+VALUES
+    (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 'qwe' [Type: String (4000:0:0)],
+    @p1 = 'qwe' [Type: String (4000:0:0)],
+    @p2 = 'qwe' [Type: String (4000:0:0)],
+    @p3 = 'qwe' [Type: String (4000:0:0)],
+    @p4 = NULL [Type: String (4000:0:0)],
+    @p5 = 'ADMIN' [Type: String (4000:0:0)],
+    @p6 = 2020-09-11T14:41:08.3824916+08:00 [Type: DateTime2 (8:0:0)],
+    @p7 = 2020-09-11T14:41:08.3824916+08:00 [Type: DateTime2 (8:0:0)]
+14:41:10.042 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        sfactory0_.ID as id1_34_,
+        sfactory0_.CODE as code2_34_,
+        sfactory0_.NAME as name3_34_,
+        sfactory0_.[
+    GROUP] as GROUP4_34_,
+    sfactory0_.DESCRIPTION as description5_34_,
+    sfactory0_.DESCRIPTION2 as description6_34_,
+    sfactory0_.EMPLOYEE_CODE as employee7_34_,
+    sfactory0_.CREATE_TIME as create8_34_,
+    sfactory0_.UPDATE_TIME as update9_34_ from
+        S_FACTORY sfactory0_ 
+    where
+        sfactory0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+14:41:22.980 +08:00 [DEBUG] [11] [NHibernate.SQL] 
+    select
+        sfactory0_.ID as id1_34_,
+        sfactory0_.CODE as code2_34_,
+        sfactory0_.NAME as name3_34_,
+        sfactory0_.[
+    GROUP] as GROUP4_34_,
+    sfactory0_.DESCRIPTION as description5_34_,
+    sfactory0_.DESCRIPTION2 as description6_34_,
+    sfactory0_.EMPLOYEE_CODE as employee7_34_,
+    sfactory0_.CREATE_TIME as create8_34_,
+    sfactory0_.UPDATE_TIME as update9_34_ from
+        S_FACTORY sfactory0_ 
+    where
+        sfactory0_.CODE=@p0;
+    @p0 = 'wqeqwe' [Type: String (4000:0:0)]
+14:41:22.985 +08:00 [DEBUG] [11] [NHibernate.SQL] 
+    INSERT 
+    INTO
+        S_FACTORY
+        (CODE, NAME, [
+    GROUP], DESCRIPTION, DESCRIPTION2, EMPLOYEE_CODE, CREATE_TIME, UPDATE_TIME) 
+VALUES
+    (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 'wqeqwe' [Type: String (4000:0:0)],
+    @p1 = 'qwe' [Type: String (4000:0:0)],
+    @p2 = 'qwe' [Type: String (4000:0:0)],
+    @p3 = 'qwe' [Type: String (4000:0:0)],
+    @p4 = NULL [Type: String (4000:0:0)],
+    @p5 = 'ADMIN' [Type: String (4000:0:0)],
+    @p6 = 2020-09-11T14:41:22.9849044+08:00 [Type: DateTime2 (8:0:0)],
+    @p7 = 2020-09-11T14:41:22.9849044+08:00 [Type: DateTime2 (8:0:0)]
+14:41:24.797 +08:00 [DEBUG] [19] [NHibernate.SQL] 
+    select
+        sfactory0_.ID as id1_34_,
+        sfactory0_.CODE as code2_34_,
+        sfactory0_.NAME as name3_34_,
+        sfactory0_.[
+    GROUP] as GROUP4_34_,
+    sfactory0_.DESCRIPTION as description5_34_,
+    sfactory0_.DESCRIPTION2 as description6_34_,
+    sfactory0_.EMPLOYEE_CODE as employee7_34_,
+    sfactory0_.CREATE_TIME as create8_34_,
+    sfactory0_.UPDATE_TIME as update9_34_ from
+        S_FACTORY sfactory0_ 
+    where
+        sfactory0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+15:14:47.101 +08:00 [DEBUG] [10] [NHibernate.SQL] 
+    select
+        sfactory0_.ID as id1_34_,
+        sfactory0_.CODE as code2_34_,
+        sfactory0_.NAME as name3_34_,
+        sfactory0_.[
+    GROUP] as GROUP4_34_,
+    sfactory0_.DESCRIPTION as description5_34_,
+    sfactory0_.DESCRIPTION2 as description6_34_,
+    sfactory0_.EMPLOYEE_CODE as employee7_34_,
+    sfactory0_.CREATE_TIME as create8_34_,
+    sfactory0_.UPDATE_TIME as update9_34_ from
+        S_FACTORY sfactory0_ 
+    where
+        sfactory0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+15:23:57.321 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    select
+        sscrapreas0_.ID as id1_90_,
+        sscrapreas0_.CODE as code2_90_,
+        sscrapreas0_.NAME as name3_90_,
+        sscrapreas0_.DESCRIPTION as description4_90_,
+        sscrapreas0_.DESCRIPTION2 as description5_90_,
+        sscrapreas0_.EMPLOYEE_CODE as employee6_90_,
+        sscrapreas0_.CREATE_TIME as create7_90_,
+        sscrapreas0_.UPDATE_TIME as update8_90_ 
+    from
+        S_SCRAPREASON sscrapreas0_ 
+    where
+        sscrapreas0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+15:24:20.226 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        sscrapreas0_.ID as id1_90_,
+        sscrapreas0_.CODE as code2_90_,
+        sscrapreas0_.NAME as name3_90_,
+        sscrapreas0_.DESCRIPTION as description4_90_,
+        sscrapreas0_.DESCRIPTION2 as description5_90_,
+        sscrapreas0_.EMPLOYEE_CODE as employee6_90_,
+        sscrapreas0_.CREATE_TIME as create7_90_,
+        sscrapreas0_.UPDATE_TIME as update8_90_ 
+    from
+        S_SCRAPREASON sscrapreas0_ 
+    where
+        sscrapreas0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+15:24:27.587 +08:00 [DEBUG] [9] [NHibernate.SQL] 
+    SELECT
+        sscrapreas0_.ID as id1_90_0_,
+        sscrapreas0_.CODE as code2_90_0_,
+        sscrapreas0_.NAME as name3_90_0_,
+        sscrapreas0_.DESCRIPTION as description4_90_0_,
+        sscrapreas0_.DESCRIPTION2 as description5_90_0_,
+        sscrapreas0_.EMPLOYEE_CODE as employee6_90_0_,
+        sscrapreas0_.CREATE_TIME as create7_90_0_,
+        sscrapreas0_.UPDATE_TIME as update8_90_0_ 
+    FROM
+        S_SCRAPREASON sscrapreas0_ 
+    WHERE
+        sscrapreas0_.ID=@p0;
+    @p0 = 3 [Type: Int32 (0:0:0)]
+15:24:27.671 +08:00 [DEBUG] [9] [NHibernate.SQL] Batch commands:
+command 0:
+    UPDATE
+        S_SCRAPREASON 
+    SET
+        CODE = @p0,
+        NAME = @p1,
+        DESCRIPTION = @p2,
+        DESCRIPTION2 = @p3,
+        EMPLOYEE_CODE = @p4,
+        UPDATE_TIME = @p5 
+    WHERE
+        ID = @p6;
+    @p0 = '12' [Type: String (4000:0:0)], @p1 = '34' [Type: String (4000:0:0)], @p2 = '22' [Type: String (4000:0:0)], @p3 = NULL [Type: String (4000:0:0)], @p4 = 'ADMIN' [Type: String (4000:0:0)], @p5 = 2020-09-11T15:24:27.6477968+08:00 [Type: DateTime2 (8:0:0)], @p6 = 3 [Type: Int32 (0:0:0)]
+
+15:24:27.739 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        sscrapreas0_.ID as id1_90_,
+        sscrapreas0_.CODE as code2_90_,
+        sscrapreas0_.NAME as name3_90_,
+        sscrapreas0_.DESCRIPTION as description4_90_,
+        sscrapreas0_.DESCRIPTION2 as description5_90_,
+        sscrapreas0_.EMPLOYEE_CODE as employee6_90_,
+        sscrapreas0_.CREATE_TIME as create7_90_,
+        sscrapreas0_.UPDATE_TIME as update8_90_ 
+    from
+        S_SCRAPREASON sscrapreas0_ 
+    where
+        sscrapreas0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+15:24:36.908 +08:00 [DEBUG] [4] [NHibernate.SQL] 
+    select
+        sscrapreas0_.ID as id1_90_,
+        sscrapreas0_.CODE as code2_90_,
+        sscrapreas0_.NAME as name3_90_,
+        sscrapreas0_.DESCRIPTION as description4_90_,
+        sscrapreas0_.DESCRIPTION2 as description5_90_,
+        sscrapreas0_.EMPLOYEE_CODE as employee6_90_,
+        sscrapreas0_.CREATE_TIME as create7_90_,
+        sscrapreas0_.UPDATE_TIME as update8_90_ 
+    from
+        S_SCRAPREASON sscrapreas0_ 
+    where
+        sscrapreas0_.DESCRIPTION like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
+15:24:38.439 +08:00 [DEBUG] [13] [NHibernate.SQL] 
+    select
+        sscrapreas0_.ID as id1_90_,
+        sscrapreas0_.CODE as code2_90_,
+        sscrapreas0_.NAME as name3_90_,
+        sscrapreas0_.DESCRIPTION as description4_90_,
+        sscrapreas0_.DESCRIPTION2 as description5_90_,
+        sscrapreas0_.EMPLOYEE_CODE as employee6_90_,
+        sscrapreas0_.CREATE_TIME as create7_90_,
+        sscrapreas0_.UPDATE_TIME as update8_90_ 
+    from
+        S_SCRAPREASON sscrapreas0_ 
+    where
+        sscrapreas0_.DESCRIPTION like ('%'+@p0+'%');
+    @p0 = '1' [Type: String (4000:0:0)]
+15:24:42.515 +08:00 [DEBUG] [15] [NHibernate.SQL] 
+    select
+        sscrapreas0_.ID as id1_90_,
+        sscrapreas0_.CODE as code2_90_,
+        sscrapreas0_.NAME as name3_90_,
+        sscrapreas0_.DESCRIPTION as description4_90_,
+        sscrapreas0_.DESCRIPTION2 as description5_90_,
+        sscrapreas0_.EMPLOYEE_CODE as employee6_90_,
+        sscrapreas0_.CREATE_TIME as create7_90_,
+        sscrapreas0_.UPDATE_TIME as update8_90_ 
+    from
+        S_SCRAPREASON sscrapreas0_ 
+    where
+        sscrapreas0_.CODE like ('%'+@p0+'%');
+    @p0 = '' [Type: String (4000:0:0)]
